@@ -16,8 +16,8 @@
 }
 
 body{
-    background:#efefef;
     font-family:'Poppins',sans-serif;
+    background:#efefef;
 }
 
 /* NAVIGATION */
@@ -35,14 +35,19 @@ nav a{
     font-size:15px;
 }
 
-/* HERO IMAGE (FULL WIDTH) */
+/* HERO IMAGE FULLSCREEN */
 .hero-image{
     width:100%;
-    height:900px; /* adjust height if needed */
-    background-image: url("images/dancer_homepage.png");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+    height:100vh; /* full viewport height */
+    overflow:hidden;
+    position:relative;
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover; /* ensures image covers the section without distortion */
+    object-position: center top;
 }
 
 /* LIVE SECTION */
@@ -105,9 +110,10 @@ nav a{
 /* MOBILE */
 @media(max-width:900px){
     .hero-image{
-        height:500px;
-        background-size:cover;
-        background-position:center;
+        height:70vh;
+    }
+    .hero-image img{
+        object-fit:cover;
     }
     .live{
         grid-template-columns:1fr;
@@ -136,7 +142,9 @@ nav a{
 </nav>
 
 <!-- HERO SECTION AS FULL IMAGE -->
-<section class="hero-image"></section>
+<section class="hero-image">
+    <img src="images/dancer_homepage.png" alt="French Up Homepage">
+</section>
 
 <section class="live">
 
