@@ -35,89 +35,14 @@ nav a{
     font-size:15px;
 }
 
-/* HERO */
-.hero{
-    display:flex;
-    min-height:85vh;
-}
-
-.hero-left{
-    width:65%;
-    background:#f51923;
-    color:white;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
-    padding-left:120px;
-
-    border-top-right-radius:45%;
-    border-bottom-right-radius:45%;
-}
-
-.hero-left .the{
-    font-size:60px;
-    color:#2200d8;
-    font-family:cursive;
-    margin-bottom:20px;
-}
-
-.hero-left h1{
-    font-family:'Oswald',sans-serif;
-    font-size:130px;
-    line-height:0.9;
-    letter-spacing:8px;
-}
-
-.hero-left p{
-    margin-top:30px;
-    font-size:28px;
-}
-
-.hero-right{
-    width:35%;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-/* dancer image */
-.dancer-img{
-    position:absolute;
-    width:450px;
-    max-width:90%;
-    right:40px;
-    top:40px;
-    z-index:5;
-}
-
-/* stairs */
-.stairs{
-    position:absolute;
-    bottom:40px;
-    right:40px;
-}
-
-.step{
-    width:120px;
-    height:120px;
-    background:#f51923;
-    border-top:25px solid #2200d8;
-    margin-left:auto;
-}
-
-.step:nth-child(2){
-    width:180px;
-}
-
-.step:nth-child(3){
-    width:240px;
-}
-
-.step:nth-child(4){
-    width:300px;
+/* HERO IMAGE (FULL WIDTH) */
+.hero-image{
+    width:100%;
+    height:900px; /* adjust height if needed */
+    background-image: url("images/dancer_homepage.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 /* LIVE SECTION */
@@ -179,55 +104,25 @@ nav a{
 
 /* MOBILE */
 @media(max-width:900px){
-
-.hero{
-    flex-direction:column;
+    .hero-image{
+        height:500px;
+        background-size:cover;
+        background-position:center;
+    }
+    .live{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+    .divider{
+        display:none;
+    }
+    .live-title{
+        font-size:50px;
+    }
+    .unlock h2{
+        font-size:70px;
+    }
 }
-
-.hero-left{
-    width:100%;
-    padding:60px 30px;
-    border-radius:0;
-}
-
-.hero-left h1{
-    font-size:70px;
-}
-
-.hero-left p{
-    font-size:20px;
-}
-
-.hero-right{
-    width:100%;
-    height:350px;
-}
-
-.dancer-img{
-    width:300px;
-    top:20px;
-    right:20px;
-}
-
-.live{
-    grid-template-columns:1fr;
-    gap:30px;
-}
-
-.divider{
-    display:none;
-}
-
-.live-title{
-    font-size:50px;
-}
-
-.unlock h2{
-    font-size:70px;
-}
-
-}
-
 </style>
 </head>
 
@@ -240,37 +135,8 @@ nav a{
     <a href="#">More</a>
 </nav>
 
-<section class="hero">
-
-    <div class="hero-left">
-
-        <div class="the">The</div>
-
-        <h1>
-            FRENCH<br>
-            UP!
-        </h1>
-
-        <p>Because Language is Power.</p>
-
-    </div>
-
-    <div class="hero-right">
-
-        <img src="images/dancer_homepage.png" alt="French Up Dancer" class="dancer-img">
-
-        <div class="stairs">
-
-            <div class="step"></div>
-            <div class="step"></div>
-            <div class="step"></div>
-            <div class="step"></div>
-
-        </div>
-
-    </div>
-
-</section>
+<!-- HERO SECTION AS FULL IMAGE -->
+<section class="hero-image"></section>
 
 <section class="live">
 
