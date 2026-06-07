@@ -38,7 +38,7 @@ nav a{
 /* HERO IMAGE FULLSCREEN */
 .hero-image{
     width:100%;
-    height:100vh; /* full viewport height */
+    height:100vh;
     overflow:hidden;
     position:relative;
 }
@@ -46,8 +46,34 @@ nav a{
 .hero-image img{
     width:100%;
     height:100%;
-    object-fit:cover; /* ensures image covers the section without distortion */
+    object-fit:cover;
     object-position: center top;
+}
+
+/* TYPEWRITER TEXT POSITIONED BELOW "The French Up" */
+#typewriter-container {
+    position: absolute;
+    top:60%; /* fine-tuned vertical position below the main title */
+    left:12%; /* horizontal alignment slightly right to match the title */
+    font-family: Arial, sans-serif;
+    font-size:25px;
+    color:white;
+    text-align:left;
+    white-space: nowrap;
+}
+
+#typewriter::after {
+    content:'|';
+    display:inline-block;
+    margin-left:5px;
+    animation: blink 0.7s infinite;
+    color:white;
+    width:2px;
+}
+
+@keyframes blink {
+    0%,50%,100% { opacity:1; }
+    25%,75% { opacity:0; }
 }
 
 /* LIVE SECTION */
@@ -115,6 +141,11 @@ nav a{
     .hero-image img{
         object-fit:cover;
     }
+    #typewriter-container{
+        font-size:20px;
+        top:55%; /* move slightly higher on mobile */
+        left:8%;
+    }
     .live{
         grid-template-columns:1fr;
         gap:30px;
@@ -144,6 +175,11 @@ nav a{
 <!-- HERO SECTION AS FULL IMAGE -->
 <section class="hero-image">
     <img src="images/dancer_homepage.png" alt="French Up Homepage">
+
+    <!-- TYPEWRITER TEXT BELOW TITLE -->
+    <div id="typewriter-container">
+        <span id="typewriter"></span>
+    </div>
 </section>
 
 <section class="live">
@@ -176,6 +212,46 @@ nav a{
     <h2>UNLOCK</h2>
 
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const typewriterEl = document.getElementById('typewriter');
+    const text = "Because Language is Power.";
+    const typingSpeed = 150; // milliseconds per character
+    const initialDelay = 1000; // ms before starting
+    const repeatDelay = 2000; // ms before repeating
+
+    function typeWriter() {
+        let i = 0;
+        function typing() {
+            if(i < text.length){
+                typewriterEl.textContent += text.charAt(i);
+                i++;
+                setTimeout(typing, typingSpeed);
+            } else {
+                setTimeout(() => {
+                    typewriterEl.textContent = '';
+                    i = 0;
+                    setTimeout(typing, initialDelay);
+                }, repeatDelay);
+            }
+        }
+        setTimeout(typing, initialDelay);
+    }
+
+    // Trigger animation only when visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                typeWriter();
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(document.getElementById('typewriter-container'));
+});
+</script>
 
 </body>
 </html>
