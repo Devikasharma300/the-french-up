@@ -6,7 +6,10 @@
 
 <title>The French Up</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -16,6 +19,10 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Poppins',sans-serif;
     background:#efefef;
@@ -23,104 +30,103 @@ body{
 }
 
 /* ===================================
-   HEADER
+   FIXED WHITE HEADER
 =================================== */
 
 .floating-header{
-    position:absolute;
 
-    top:48px;
-    left:22px;
-    right:22px;
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:75px;
+
+    background:#ffffff;
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
+
+    padding:0 25px;
 
     z-index:9999;
 }
 
-/* LOGO */
+/* ===================================
+   LOGO BOX
+=================================== */
 
 .logo-box{
 
-    width:132px;
-    height:62px;
+    width:130px;
+    height:65px;
 
-    background:#c94040;
+    background:#d71920;
 
-    color:#fff;
+    color:#ffffff;
+
     text-decoration:none;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-family:'Bebas Neue',sans-serif;
-    font-size:30px;
-    letter-spacing:1px;
+    text-align:center;
+
+    font-family:
+        "Avenir Next",
+        Avenir,
+        Helvetica,
+        sans-serif;
+
+    font-size:18px;
+
+    font-weight:400;
+
+    line-height:1.05;
+
+    letter-spacing:.3px;
 
     text-transform:uppercase;
 }
 
-/* NAVIGATION */
+/* ===================================
+   NAVIGATION
+=================================== */
 
 .main-nav{
 
-    height:62px;
-
-    background:#f7f7f7;
-
     display:flex;
+
     align-items:center;
 
-    padding:0 55px;
-
-    gap:62px;
+    gap:42px;
 }
 
 .main-nav a{
 
     text-decoration:none;
 
-    color:#333;
+    color:#222;
 
-    font-size:14px;
-    font-weight:300;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        Helvetica,
+        sans-serif;
 
-    letter-spacing:1.5px;
+    font-size:16px;
 
-    text-transform:uppercase;
+    font-weight:400;
 
     transition:.3s;
 }
 
 .main-nav a:hover{
-    color:#c94040;
-}
 
-/* CONTACT */
-
-.contact-box{
-
-    width:150px;
-    height:62px;
-
-    background:#ef2020;
-
-    color:#fff;
-    text-decoration:none;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:14px;
-    font-weight:500;
-}
-
-.contact-box:hover{
-    background:#d81a1a;
+    color:#d71920;
 }
 
 /* ===================================
@@ -130,19 +136,23 @@ body{
 .hero-image{
 
     width:100%;
-    height:100vh;
 
-    overflow:hidden;
+    min-height:100vh;
+
+    padding-top:75px;
+
+    background:#ffffff;
+
     position:relative;
 }
 
 .hero-image img{
 
     width:100%;
-    height:100%;
 
-    object-fit:cover;
-    object-position:center center;
+    height:auto;
+
+    display:block;
 }
 
 /* ===================================
@@ -154,9 +164,10 @@ body{
     position:absolute;
 
     left:13%;
-    top:72%;
+    top:79%;
 
     font-family:'Courier New',monospace;
+
     font-size:24px;
 
     color:white;
@@ -182,6 +193,88 @@ body{
     25%,75%{
         opacity:0;
     }
+}
+
+/* ===================================
+   SOCIAL BAR
+=================================== */
+
+.social-bar{
+
+    position:fixed;
+
+    left:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+
+    z-index:9998;
+}
+
+.social-bar a{
+
+    color:#d71920;
+
+    font-size:24px;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.social-bar a:hover{
+
+    opacity:.7;
+}
+
+/* ===================================
+   CHAT BUTTON
+=================================== */
+
+.contact-box{
+
+    position:fixed;
+
+    left:20px;
+
+    bottom:20px;
+
+    width:260px;
+    height:74px;
+
+    background:#ef2020;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:28px;
+
+    z-index:9999;
+}
+
+.contact-box span{
+
+    font-size:42px;
+}
+
+.contact-box:hover{
+
+    background:#d71920;
 }
 
 /* ===================================
@@ -215,6 +308,7 @@ body{
 .divider{
 
     width:2px;
+
     height:120px;
 
     background:#ef2020;
@@ -250,26 +344,31 @@ body{
 
     background:
     linear-gradient(
-        rgba(255,180,100,.4),
-        rgba(255,180,100,.4)
+        rgba(255,180,100,.35),
+        rgba(255,180,100,.35)
     ),
     url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80");
 
     background-size:cover;
+
     background-position:center;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 }
 
 .unlock h2{
 
-    font-family:'Bebas Neue',sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        Helvetica,
+        sans-serif;
 
     font-size:180px;
 
-    letter-spacing:5px;
+    letter-spacing:6px;
 
     color:#ff5722;
 }
@@ -282,50 +381,60 @@ body{
 
     .floating-header{
 
-        position:fixed;
-
         flex-direction:column;
 
-        gap:10px;
+        justify-content:center;
 
-        top:10px;
-        left:10px;
-        right:10px;
-    }
+        gap:12px;
 
-    .logo-box,
-    .contact-box{
+        height:auto;
 
-        width:100%;
-        max-width:300px;
+        padding:15px;
     }
 
     .main-nav{
 
-        width:100%;
-
-        justify-content:center;
+        gap:18px;
 
         flex-wrap:wrap;
 
-        gap:18px;
-
-        padding:15px;
-
-        height:auto;
+        justify-content:center;
     }
 
     .hero-image{
 
-        height:70vh;
+        padding-top:135px;
     }
 
     #typewriter-container{
 
-        font-size:18px;
-
         left:8%;
-        top:68%;
+        top:72%;
+
+        font-size:18px;
+    }
+
+    .social-bar{
+
+        left:10px;
+    }
+
+    .social-bar a{
+
+        font-size:20px;
+    }
+
+    .contact-box{
+
+        width:210px;
+        height:62px;
+
+        font-size:22px;
+    }
+
+    .contact-box span{
+
+        font-size:30px;
     }
 
     .live{
@@ -345,9 +454,14 @@ body{
         font-size:50px;
     }
 
+    .live-text{
+
+        font-size:20px;
+    }
+
     .unlock h2{
 
-        font-size:70px;
+        font-size:80px;
     }
 }
 
@@ -359,7 +473,7 @@ body{
 <header class="floating-header">
 
     <a href="index.html" class="logo-box">
-        FRENCH UP
+        THE<br>FRENCH UP
     </a>
 
     <nav class="main-nav">
@@ -369,11 +483,27 @@ body{
         <a href="#">More</a>
     </nav>
 
-    <a href="mailto:contact.frenchup@gmail.com" class="contact-box">
-        Connect Now ✉
-    </a>
-
 </header>
+
+<div class="social-bar">
+
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+    <a href="#"><i class="fab fa-instagram"></i></a>
+
+    <a href="#"><i class="fab fa-youtube"></i></a>
+
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+</div>
+
+<a href="mailto:contact.frenchup@gmail.com"
+   class="contact-box">
+
+    Connect Now
+    <span>✉️</span>
+
+</a>
 
 <section class="hero-image">
 
