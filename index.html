@@ -6,7 +6,7 @@
 
 <title>The French Up</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -16,7 +16,7 @@
 }
 
 body{
-    font-family:'Poppins',sans-serif;
+    font-family:'Courier New', monospace;
     background:#efefef;
 }
 
@@ -50,12 +50,23 @@ nav a{
     object-position: center top;
 }
 
-/* TYPEWRITER TEXT POSITIONED BELOW "The French Up" */
+/* HERO TITLE */
+.hero-title {
+    position:absolute;
+    top:20%;
+    left:10%;
+    font-family:'Oswald', sans-serif;
+    font-size:100px;
+    color:white;
+    line-height:1;
+}
+
+/* TYPEWRITER TEXT BELOW TITLE */
 #typewriter-container {
-    position: absolute;
-    top:60%; /* fine-tuned vertical position below the main title */
-    left:12%; /* horizontal alignment slightly right to match the title */
-    font-family: Arial, sans-serif;
+    position:absolute;
+    top:calc(20% + 120px); /* dynamically below hero-title */
+    left:10%;
+    font-family:'Courier New', monospace;
     font-size:25px;
     color:white;
     text-align:left;
@@ -127,7 +138,7 @@ nav a{
 }
 
 .unlock h2{
-    font-family:'Oswald',sans-serif;
+    font-family:'Courier New', monospace;
     font-size:180px;
     color:#ff5722;
     letter-spacing:5px;
@@ -141,9 +152,12 @@ nav a{
     .hero-image img{
         object-fit:cover;
     }
+    .hero-title{
+        font-size:60px;
+    }
     #typewriter-container{
-        font-size:20px;
-        top:55%; /* move slightly higher on mobile */
+        font-size:18px;
+        top:calc(20% + 80px);
         left:8%;
     }
     .live{
@@ -175,6 +189,7 @@ nav a{
 <!-- HERO SECTION AS FULL IMAGE -->
 <section class="hero-image">
     <img src="images/dancer_homepage.png" alt="French Up Homepage">
+    <div class="hero-title">The French Up</div>
 
     <!-- TYPEWRITER TEXT BELOW TITLE -->
     <div id="typewriter-container">
@@ -217,9 +232,9 @@ nav a{
 document.addEventListener('DOMContentLoaded', () => {
     const typewriterEl = document.getElementById('typewriter');
     const text = "Because Language is Power.";
-    const typingSpeed = 150; // milliseconds per character
-    const initialDelay = 1000; // ms before starting
-    const repeatDelay = 2000; // ms before repeating
+    const typingSpeed = 150; // ms per character
+    const initialDelay = 1000;
+    const repeatDelay = 2000;
 
     function typeWriter() {
         let i = 0;
@@ -231,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 setTimeout(() => {
                     typewriterEl.textContent = '';
-                    i = 0;
+                    i=0;
                     setTimeout(typing, initialDelay);
                 }, repeatDelay);
             }
