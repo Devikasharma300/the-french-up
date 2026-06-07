@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -22,7 +21,6 @@ body{
 }
 
 /* NAVIGATION */
-
 nav{
     background:#f5f5f5;
     padding:25px 10%;
@@ -38,7 +36,6 @@ nav a{
 }
 
 /* HERO */
-
 .hero{
     display:flex;
     min-height:85vh;
@@ -86,16 +83,17 @@ nav a{
     justify-content:center;
 }
 
-/* dancer placeholder */
-
-.dancer{
-    font-size:180px;
+/* dancer image */
+.dancer-img{
     position:absolute;
-    top:120px;
+    width:450px;
+    max-width:90%;
+    right:40px;
+    top:40px;
+    z-index:5;
 }
 
 /* stairs */
-
 .stairs{
     position:absolute;
     bottom:40px;
@@ -123,11 +121,9 @@ nav a{
 }
 
 /* LIVE SECTION */
-
 .live{
     background:#efefef;
     padding:120px 10%;
-
     display:grid;
     grid-template-columns:1fr 40px 1fr;
     align-items:center;
@@ -160,19 +156,15 @@ nav a{
 }
 
 /* UNLOCK SECTION */
-
 .unlock{
     height:600px;
-
     background:
     linear-gradient(
     rgba(255,180,100,.4),
     rgba(255,180,100,.4)),
     url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80");
-
     background-size:cover;
     background-position:center;
-
     display:flex;
     justify-content:center;
     align-items:center;
@@ -186,7 +178,6 @@ nav a{
 }
 
 /* MOBILE */
-
 @media(max-width:900px){
 
 .hero{
@@ -210,6 +201,12 @@ nav a{
 .hero-right{
     width:100%;
     height:350px;
+}
+
+.dancer-img{
+    width:300px;
+    top:20px;
+    right:20px;
 }
 
 .live{
@@ -260,7 +257,7 @@ nav a{
 
     <div class="hero-right">
 
-        <div class="dancer">💃</div>
+        <img src="images/dancer_homepage.png" alt="French Up Dancer" class="dancer-img">
 
         <div class="stairs">
 
