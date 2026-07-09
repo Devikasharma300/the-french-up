@@ -358,6 +358,8 @@ body{
 
     object-fit:cover;
 
+    object-position:center 65%;
+
     display:block;
 }
 
@@ -449,6 +451,11 @@ body{
 
         height:600px;
     }
+
+    .video-section video{
+
+        object-position:center 65%;
+    }
 }
 
 </style>
@@ -532,9 +539,7 @@ class="contact-box">
     <video
         src="video_learnrealfrench.mp4"
         title="video_learnrealfrench"
-        autoplay
-        muted
-        loop
+        controls
         playsinline>
         Your browser does not support the video tag.
     </video>
