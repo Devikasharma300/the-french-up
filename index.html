@@ -38,10 +38,6 @@
     >
 
     <style>
-        /* ===================================
-           GLOBAL RESET
-        =================================== */
-
         *,
         *::before,
         *::after {
@@ -57,7 +53,6 @@
         body {
             min-height: 100%;
             overflow-x: hidden;
-
             background-color: #ffffff;
             color: #222222;
 
@@ -79,9 +74,7 @@
             color: inherit;
         }
 
-        /* ===================================
-           FIXED HEADER
-        =================================== */
+        /* HEADER */
 
         .floating-header {
             position: fixed;
@@ -100,10 +93,6 @@
             background-color: #ffffff;
         }
 
-        /* ===================================
-           LOGO
-        =================================== */
-
         .logo-box {
             display: flex;
             align-items: center;
@@ -114,13 +103,6 @@
 
             background-color: #cf1b1b;
             color: #ffffff;
-
-            font-family:
-                "Avenir Next",
-                Avenir,
-                Helvetica,
-                Arial,
-                sans-serif;
 
             font-size: 13px;
             font-weight: 400;
@@ -144,10 +126,6 @@
             outline-offset: 3px;
         }
 
-        /* ===================================
-           NAVIGATION
-        =================================== */
-
         .main-nav {
             display: flex;
             align-items: center;
@@ -156,18 +134,9 @@
 
         .main-nav a {
             color: #222222;
-
-            font-family:
-                "Avenir Next",
-                Avenir,
-                Helvetica,
-                Arial,
-                sans-serif;
-
             font-size: 13px;
             font-weight: 400;
             text-decoration: none;
-
             transition: color 0.3s ease;
         }
 
@@ -181,17 +150,13 @@
             outline-offset: 4px;
         }
 
-        /* ===================================
-           HERO SECTION
-        =================================== */
+        /* HERO */
 
         .hero-image {
             position: relative;
-
             width: 100%;
             min-height: 100vh;
             padding-top: 52px;
-
             overflow: hidden;
             background-color: #ffffff;
         }
@@ -201,17 +166,12 @@
             height: auto;
         }
 
-        /* ===================================
-           TYPEWRITER
-        =================================== */
-
         #typewriter-container {
             position: absolute;
             top: 79%;
             left: 13%;
 
             color: #ffffff;
-
             font-family: "Courier New", Courier, monospace;
             font-size: 24px;
             line-height: 1.3;
@@ -237,9 +197,7 @@
             }
         }
 
-        /* ===================================
-           SOCIAL MEDIA BAR
-        =================================== */
+        /* SOCIAL BAR */
 
         .social-bar {
             position: fixed;
@@ -263,7 +221,6 @@
             height: 32px;
 
             color: #8a8a8a;
-
             font-size: 18px;
             text-decoration: none;
 
@@ -283,9 +240,7 @@
             outline-offset: 2px;
         }
 
-        /* ===================================
-           CONNECT BUTTON
-        =================================== */
+        /* CONNECT BUTTON */
 
         .contact-box {
             position: fixed;
@@ -333,9 +288,7 @@
             outline-offset: 3px;
         }
 
-        /* ===================================
-           WE BUILD TOGETHER
-        =================================== */
+        /* WE BUILD TOGETHER */
 
         .wbt-section {
             display: grid;
@@ -347,7 +300,6 @@
 
             justify-content: center;
             align-items: center;
-
             column-gap: 48px;
 
             width: 100%;
@@ -360,7 +312,6 @@
             margin: 0;
 
             color: #ef2020;
-
             font-family: "Playfair Display", Georgia, serif;
             font-size: 46px;
             font-weight: 700;
@@ -371,7 +322,6 @@
         .wbt-divider {
             width: 2px;
             height: 120px;
-
             background-color: #ef2020;
         }
 
@@ -404,14 +354,6 @@
             margin-top: 26px;
 
             color: #ef2020;
-
-            font-family:
-                "Avenir Next",
-                Avenir,
-                Helvetica,
-                Arial,
-                sans-serif;
-
             font-size: 18px;
             text-decoration: none;
 
@@ -431,9 +373,7 @@
             outline-offset: 4px;
         }
 
-        /* ===================================
-           VIDEO SECTION
-        =================================== */
+        /* VIDEO */
 
         .video-section {
             display: flex;
@@ -460,9 +400,7 @@
             object-position: center 2%;
         }
 
-        /* ===================================
-           QUESTIONS AND CONNECTIONS
-        =================================== */
+        /* QUESTIONS AND CONNECTIONS */
 
         .connections-section {
             display: flex;
@@ -518,31 +456,26 @@
             line-height: inherit;
         }
 
-        /* ===================================
-           FULL-WIDTH IMAGE SECTION
-        =================================== */
+        /* FULL-WIDTH IMAGE */
 
         .learn-your-way-section {
             width: 100%;
             padding: 90px 0;
-
             background-color: #ffffff;
         }
 
         .learn-your-way-section img {
+            display: block;
             width: 100%;
             height: auto;
             object-fit: cover;
         }
 
-        /* ===================================
-           TABLET
-        =================================== */
+        /* TABLET */
 
         @media (max-width: 900px) {
             .floating-header {
                 position: relative;
-
                 flex-direction: column;
                 justify-content: center;
                 gap: 10px;
@@ -565,7 +498,6 @@
             #typewriter-container {
                 top: 82%;
                 left: 8%;
-
                 font-size: 16px;
             }
 
@@ -579,7 +511,6 @@
 
                 width: 150px;
                 min-height: 46px;
-
                 font-size: 16px;
             }
 
@@ -634,9 +565,7 @@
             }
         }
 
-        /* ===================================
-           MOBILE
-        =================================== */
+        /* MOBILE */
 
         @media (max-width: 560px) {
             .main-nav {
@@ -677,7 +606,6 @@
                 width: 142px;
                 min-height: 44px;
                 padding: 8px 12px;
-
                 font-size: 15px;
             }
 
@@ -705,10 +633,6 @@
                 padding: 50px 0;
             }
         }
-
-        /* ===================================
-           REDUCED MOTION
-        =================================== */
 
         @media (prefers-reduced-motion: reduce) {
             html {
@@ -897,7 +821,7 @@
             aria-label="Learn French your way with AI"
         >
             <img
-                src="images/learn_french_your_way_AI.png"
+                src="images/learn%20french%20your%20way%20AI.jpg"
                 alt="Learn French your way with AI"
             >
         </section>
