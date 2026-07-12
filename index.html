@@ -9,6 +9,11 @@
         content="width=device-width, initial-scale=1.0"
     >
 
+    <meta
+        name="description"
+        content="Online French classes that connect language, pronunciation, culture, questions, and meaningful understanding."
+    >
+
     <title>The French Up</title>
 
     <link
@@ -126,9 +131,7 @@
             text-transform: uppercase;
             white-space: nowrap;
 
-            transition:
-                background-color 0.3s ease,
-                transform 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         .logo-box:hover,
@@ -462,6 +465,100 @@
         }
 
         /* ===================================
+           QUESTIONS AND CONNECTIONS SECTION
+        =================================== */
+
+        .connections-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            min-height: 560px;
+            padding: 140px 12%;
+
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .connections-content {
+            width: 100%;
+            max-width: 940px;
+            margin: 0 auto;
+        }
+
+        .connections-title {
+            max-width: 850px;
+            margin: 0 auto;
+
+            color: #ef2020;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .connections-description {
+            max-width: 680px;
+            margin: 34px auto 0;
+
+            color: #ef2020;
+
+            font-family:
+                "Avenir Light",
+                "Avenir Next",
+                Avenir,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.75;
+            text-align: center;
+        }
+
+        .connections-link {
+            display: inline-block;
+            margin-top: 34px;
+
+            color: #ef2020;
+
+            font-family:
+                "Avenir Next",
+                Avenir,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            text-decoration: none;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .connections-link::after {
+            content: " →";
+        }
+
+        .connections-link:hover,
+        .connections-link:focus-visible {
+            color: #c61616;
+            transform: translateX(4px);
+        }
+
+        .connections-link:focus-visible {
+            outline: 2px solid #ef2020;
+            outline-offset: 5px;
+        }
+
+        /* ===================================
            TABLET
         =================================== */
 
@@ -553,6 +650,25 @@
             .video-section {
                 padding: 18px;
             }
+
+            .connections-section {
+                min-height: 500px;
+                padding: 110px 10%;
+            }
+
+            .connections-title {
+                font-size: 42px;
+            }
+
+            .connections-description {
+                max-width: 600px;
+                margin-top: 28px;
+                font-size: 17px;
+            }
+
+            .connections-link {
+                margin-top: 28px;
+            }
         }
 
         /* ===================================
@@ -606,6 +722,27 @@
 
             .video-section {
                 padding: 10px;
+            }
+
+            .connections-section {
+                min-height: auto;
+                padding: 90px 8%;
+            }
+
+            .connections-title {
+                font-size: 38px;
+                line-height: 1.18;
+            }
+
+            .connections-description {
+                margin-top: 24px;
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .connections-link {
+                margin-top: 26px;
+                font-size: 16px;
             }
         }
 
@@ -702,7 +839,6 @@
         aria-label="Email The French Up"
     >
         Connect Now
-
         <span aria-hidden="true">✉️</span>
     </a>
 
@@ -774,6 +910,33 @@
                 >
                     Your browser does not support the video tag.
                 </video>
+            </div>
+        </section>
+
+        <section
+            class="connections-section"
+            aria-labelledby="connections-heading"
+        >
+            <div class="connections-content">
+                <h2
+                    id="connections-heading"
+                    class="connections-title"
+                >
+                    French learning built on questions and connections.
+                </h2>
+
+                <p class="connections-description">
+                    We make it both fun and easy for people to understand
+                    how the language works and why it works that way.
+                </p>
+
+                <a
+                    href="#"
+                    class="connections-link"
+                    aria-label="Learn more about our approach to French learning"
+                >
+                    Learn More
+                </a>
             </div>
         </section>
     </main>
