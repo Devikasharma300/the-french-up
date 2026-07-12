@@ -482,11 +482,6 @@
             margin: 0 auto;
         }
 
-        /*
-           All statement text remains inside
-           one semantic h2.
-        */
-
         .connections-title {
             width: 100%;
             max-width: 900px;
@@ -505,13 +500,8 @@
             hyphens: auto;
         }
 
-        /*
-           Learn More remains a semantic h5
-           and is displayed at 22px.
-        */
-
         .connections-learn-more {
-            margin-top: 42px;
+            display: inline;
 
             color: #ef2020;
 
@@ -525,36 +515,24 @@
 
             font-size: 22px;
             font-weight: 300;
-            line-height: 1.4;
-            text-align: left;
+            line-height: inherit;
         }
 
-        .connections-learn-more a {
-            display: inline-block;
+        /* ===================================
+           FULL-WIDTH IMAGE SECTION
+        =================================== */
 
-            color: inherit;
+        .learn-your-way-section {
+            width: 100%;
+            padding: 90px 0;
 
-            letter-spacing: 0.2px;
-            text-decoration: none;
-
-            transition:
-                color 0.3s ease,
-                transform 0.3s ease;
+            background-color: #ffffff;
         }
 
-        .connections-learn-more a::after {
-            content: " →";
-        }
-
-        .connections-learn-more a:hover,
-        .connections-learn-more a:focus-visible {
-            color: #c61616;
-            transform: translateX(4px);
-        }
-
-        .connections-learn-more a:focus-visible {
-            outline: 2px solid #ef2020;
-            outline-offset: 5px;
+        .learn-your-way-section img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
         /* ===================================
@@ -648,8 +626,11 @@
             }
 
             .connections-learn-more {
-                margin-top: 36px;
                 font-size: 22px;
+            }
+
+            .learn-your-way-section {
+                padding: 70px 0;
             }
         }
 
@@ -712,14 +693,16 @@
             .connections-title {
                 font-size: 32px;
                 line-height: 1.3;
-
                 text-align: left;
                 text-align-last: left;
             }
 
             .connections-learn-more {
-                margin-top: 30px;
                 font-size: 22px;
+            }
+
+            .learn-your-way-section {
+                padding: 50px 0;
             }
         }
 
@@ -902,17 +885,21 @@
                     French learning built on questions and connections.
                     We make it both fun and easy for people to understand
                     how the language works and why it works that way.
-                </h2>
-
-                <h5 class="connections-learn-more">
-                    <a
-                        href="/about-our-method"
-                        aria-label="Learn more about The French Up teaching method"
-                    >
+                    <span class="connections-learn-more">
                         Learn More
-                    </a>
-                </h5>
+                    </span>
+                </h2>
             </div>
+        </section>
+
+        <section
+            class="learn-your-way-section"
+            aria-label="Learn French your way with AI"
+        >
+            <img
+                src="images/learn_french_your_way_AI.png"
+                alt="Learn French your way with AI"
+            >
         </section>
     </main>
 
