@@ -11,7 +11,7 @@
 
     <meta
         name="description"
-        content="Online French classes built around questions, connections, pronunciation, grammar, vocabulary, and culture."
+        content="Online French classes built around questions, connections, grammar, pronunciation, vocabulary, and culture."
     >
 
     <title>The French Up | Online French Classes</title>
@@ -80,7 +80,7 @@
         }
 
         /* ===================================
-           FIXED TOP HEADER
+           FIXED HEADER
         =================================== */
 
         .floating-header {
@@ -202,7 +202,7 @@
         }
 
         /* ===================================
-           TYPEWRITER TEXT
+           TYPEWRITER
         =================================== */
 
         #typewriter-container {
@@ -334,7 +334,7 @@
         }
 
         /* ===================================
-           WE BUILD TOGETHER SECTION
+           WE BUILD TOGETHER
         =================================== */
 
         .wbt-section {
@@ -461,7 +461,7 @@
         }
 
         /* ===================================
-           QUESTIONS AND CONNECTIONS SECTION
+           QUESTIONS AND CONNECTIONS
         =================================== */
 
         .connections-section {
@@ -470,26 +470,26 @@
             justify-content: center;
 
             width: 100%;
-            min-height: 620px;
+            min-height: 650px;
             padding: 150px 12%;
 
             background-color: #ffffff;
-            text-align: center;
         }
 
         .connections-content {
             width: 100%;
-            max-width: 1050px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         /*
-           Complete heading text stays together
-           in one semantic H2.
+           All statement text remains inside
+           one semantic h2.
         */
 
         .connections-title {
-            max-width: 980px;
+            width: 100%;
+            max-width: 900px;
             margin: 0 auto;
 
             color: #ef2020;
@@ -497,13 +497,17 @@
             font-family: "Playfair Display", Georgia, serif;
             font-size: 46px;
             font-weight: 700;
-            line-height: 1.25;
-            text-align: center;
+            line-height: 1.28;
+
+            text-align: justify;
+            text-align-last: left;
+            text-justify: inter-word;
+            hyphens: auto;
         }
 
         /*
-           H5 requested for the Learn More label.
-           15px is used instead of 5px for readability.
+           Learn More remains a semantic h5
+           and is displayed at 22px.
         */
 
         .connections-learn-more {
@@ -519,17 +523,19 @@
                 Arial,
                 sans-serif;
 
-            font-size: 15px;
+            font-size: 22px;
             font-weight: 300;
             line-height: 1.4;
-            text-align: center;
+            text-align: left;
         }
 
         .connections-learn-more a {
+            display: inline-block;
+
             color: inherit;
+
+            letter-spacing: 0.2px;
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
 
             transition:
                 color 0.3s ease,
@@ -543,6 +549,7 @@
         .connections-learn-more a:hover,
         .connections-learn-more a:focus-visible {
             color: #c61616;
+            transform: translateX(4px);
         }
 
         .connections-learn-more a:focus-visible {
@@ -626,17 +633,28 @@
             }
 
             .connections-section {
-                min-height: 540px;
-                padding: 120px 9%;
+                min-height: 560px;
+                padding: 110px 9%;
+            }
+
+            .connections-content,
+            .connections-title {
+                max-width: 720px;
             }
 
             .connections-title {
-                font-size: 42px;
+                font-size: 40px;
+                line-height: 1.3;
+            }
+
+            .connections-learn-more {
+                margin-top: 36px;
+                font-size: 22px;
             }
         }
 
         /* ===================================
-           SMALL MOBILE
+           MOBILE
         =================================== */
 
         @media (max-width: 560px) {
@@ -688,22 +706,25 @@
 
             .connections-section {
                 min-height: auto;
-                padding: 100px 8%;
+                padding: 90px 8%;
             }
 
             .connections-title {
-                font-size: 36px;
-                line-height: 1.25;
+                font-size: 32px;
+                line-height: 1.3;
+
+                text-align: left;
+                text-align-last: left;
             }
 
             .connections-learn-more {
-                margin-top: 34px;
-                font-size: 15px;
+                margin-top: 30px;
+                font-size: 22px;
             }
         }
 
         /* ===================================
-           REDUCED MOTION ACCESSIBILITY
+           REDUCED MOTION
         =================================== */
 
         @media (prefers-reduced-motion: reduce) {
