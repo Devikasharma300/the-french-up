@@ -1,631 +1,833 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>The French Up</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:#efefef;
-    overflow-x:hidden;
-}
-
-/* ===================================
-   FIXED TOP BAR
-=================================== */
-
-.floating-header{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-    right:0;
-
-    height:52px;
-
-    background:#ffffff;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:0 18px;
-
-    z-index:9999;
-}
-
-/* ===================================
-   LOGO
-=================================== */
-
-.logo-box{
-
-    width:120px;
-    height:42px;
-
-    background:#cf1b1b;
-
-    color:#ffffff;
-
-    text-decoration:none;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-family:
-        "Avenir Next",
-        Avenir,
-        Helvetica,
-        sans-serif;
-
-    font-size:13px;
-
-    font-weight:400;
-
-    letter-spacing:.3px;
-
-    text-transform:uppercase;
-
-    white-space:nowrap;
-}
-
-/* ===================================
-   NAVIGATION
-=================================== */
-
-.main-nav{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:32px;
-}
-
-.main-nav a{
-
-    text-decoration:none;
-
-    color:#222;
-
-    font-family:
-        "Avenir Next",
-        Avenir,
-        Helvetica,
-        sans-serif;
-
-    font-size:13px;
-
-    font-weight:400;
-
-    transition:.3s;
-}
-
-.main-nav a:hover{
-
-    color:#cf1b1b;
-}
-
-/* ===================================
-   HERO IMAGE
-=================================== */
-
-.hero-image{
-
-    width:100%;
-
-    min-height:100vh;
-
-    padding-top:52px;
-
-    background:#ffffff;
-
-    position:relative;
-}
-
-.hero-image img{
-
-    width:100%;
-
-    display:block;
-
-    height:auto;
-}
-
-/* ===================================
-   TYPEWRITER
-=================================== */
-
-#typewriter-container{
-
-    position:absolute;
-
-    left:13%;
-    top:79%;
-
-    font-family:'Courier New',monospace;
-
-    font-size:24px;
-
-    color:white;
-
-    white-space:nowrap;
-}
-
-#typewriter::after{
-
-    content:"|";
-
-    margin-left:4px;
-
-    animation:blink .8s infinite;
-}
-
-@keyframes blink{
-
-    0%,50%,100%{
-        opacity:1;
-    }
-
-    25%,75%{
-        opacity:0;
-    }
-}
-
-/* ===================================
-   SOCIAL BAR
-=================================== */
-
-.social-bar{
-
-    position:fixed;
-
-    right:18px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    display:flex;
-    flex-direction:column;
-
-    gap:10px;
-
-    z-index:9998;
-}
-
-.social-bar a{
-
-    color:#8a8a8a;
-
-    font-size:18px;
-
-    text-decoration:none;
-
-    transition:.3s;
-}
-
-.social-bar a:hover{
-
-    color:#555;
-}
-
-/* ===================================
-   CONNECT BUTTON
-=================================== */
-
-.contact-box{
-
-    position:fixed;
-
-    right:20px;
-    bottom:20px;
-
-    width:170px;
-    height:52px;
-
-    background:#ef2020;
-
-    color:#ffffff;
-
-    text-decoration:none;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    gap:8px;
-
-    font-family:'Playfair Display',serif;
-
-    font-size:18px;
-
-    z-index:9999;
-}
-
-.contact-box span{
-
-    font-size:22px;
-}
-
-.contact-box:hover{
-
-    background:#d71920;
-}
-
-/* ===================================
-   LIVE / TEXT SECTION
-=================================== */
-
-.live{
-
-    background:#efefef;
-
-    padding:120px 10%;
-
-    display:grid;
-
-    grid-template-columns:1fr 40px 1fr;
-
-    align-items:center;
-}
-
-.live-title{
-
-    font-family:'Playfair Display',serif;
-
-    color:#ef2020;
-
-    font-size:70px;
-
-    line-height:1.1;
-}
-
-.divider{
-
-    width:2px;
-
-    height:120px;
-
-    background:#ef2020;
-
-    margin:auto;
-}
-
-.live-text{
-
-    color:#444;
-
-    font-size:24px;
-
-    line-height:1.8;
-}
-
-.watch{
-
-    margin-top:30px;
-
-    color:#ef2020;
-
-    font-size:22px;
-}
-
-/* ===================================
-   VIDEO SECTION
-=================================== */
-
-.video-section{
-
-    width:100%;
-
-    aspect-ratio:16 / 9;
-
-    background:#ffffff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:35px;
-
-    overflow:hidden;
-}
-
-.video-section video{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-    object-position:center 2%;
-
-    display:block;
-}
-
-/* ===================================
-   MOBILE
-=================================== */
-
-@media(max-width:900px){
-
-    .floating-header{
-
-        flex-direction:column;
-
-        height:auto;
-
-        padding:12px;
-
-        gap:10px;
-    }
-
-    .main-nav{
-
-        gap:16px;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-    }
-
-    .hero-image{
-
-        padding-top:90px;
-
-        min-height:auto;
-    }
-
-    .hero-image img{
-
-        width:100%;
-
-        height:auto;
-
-        display:block;
-    }
-
-    #typewriter-container{
-
-        left:8%;
-
-        top:82%;
-
-        font-size:16px;
-    }
-
-    .social-bar{
-
-        right:10px;
-    }
-
-    .social-bar a{
-
-        font-size:16px;
-    }
-
-    .contact-box{
-
-        width:150px;
-        height:46px;
-
-        font-size:16px;
-    }
-
-    .contact-box span{
-
-        font-size:20px;
-    }
-
-    .live{
-
-        grid-template-columns:1fr;
-
-        gap:22px;
-
-        padding:50px 8% 55px;
-    }
-
-    .divider{
-
-        display:none;
-    }
-
-    .live-title{
-
-        font-size:38px;
-
-        line-height:1.1;
-    }
-
-    .live-text{
-
-        font-size:16px;
-
-        line-height:1.65;
-    }
-
-    .watch{
-
-        margin-top:22px;
-
-        font-size:18px;
-    }
-
-    .video-section{
-
-        width:100%;
-
-        aspect-ratio:16 / 9;
-
-        padding:18px;
-    }
-
-    .video-section video{
-
-        object-fit:contain;
-
-        object-position:center 2%;
-    }
-}
-
-</style>
-</head>
-
-<body>
-
-<header class="floating-header">
-
-    <a href="index.html" class="logo-box">
-        THE FRENCH UP
-    </a>
-
-    <nav class="main-nav">
-        <a href="#">Home</a>
-        <a href="#">Courses</a>
-        <a href="#">Group Classes</a>
-        <a href="#">More</a>
-    </nav>
-
-</header>
-
-<div class="social-bar">
-
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-
-    <a href="#"><i class="fab fa-instagram"></i></a>
-
-    <a href="#"><i class="fab fa-youtube"></i></a>
-
-    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-
-</div>
-
-<a href="mailto:contact.frenchup@gmail.com"
-class="contact-box">
-
-    Connect Now
-    <span>✉️</span>
-
-</a>
-
-<section class="hero-image">
-
-    <img src="images/dancer_homepage.png"
-         alt="French Up Homepage">
-
-    <div id="typewriter-container">
-        <span id="typewriter"></span>
-    </div>
-
-</section>
-
-<section class="live">
-
-    <div class="live-title">
-        We Build<br>
-        Together
-    </div>
-
-    <div class="divider"></div>
-
-    <div>
-
-        <div class="live-text">
-            Virtual French classes that connect grammar, vocabulary,
-            pronunciation, and culture. Simple, structured, and shaped
-            for real progress.
-        </div>
-
-        <div class="watch">
-            Start Online
-        </div>
-
-    </div>
-
-</section>
-
-<section class="video-section">
-
-    <video
-        src="video_learnrealfrench.mp4"
-        title="video_learnrealfrench"
-        controls
-        playsinline>
-        Your browser does not support the video tag.
-    </video>
-
-</section>
-
-<script>
-
-document.addEventListener('DOMContentLoaded',()=>{
-
-    const el=document.getElementById('typewriter');
-
-    const text="Because Language is Power.";
-
-    const typingSpeed=150;
-    const initialDelay=1000;
-    const repeatDelay=2000;
-
-    function typeWriter(){
-
-        let i=0;
-
-        function typing(){
-
-            if(i<text.length){
-
-                el.textContent+=text.charAt(i);
-
-                i++;
-
-                setTimeout(typing,typingSpeed);
-
-            }else{
-
-                setTimeout(()=>{
-
-                    el.textContent='';
-
-                    i=0;
-
-                    setTimeout(typing,initialDelay);
-
-                },repeatDelay);
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>The French Up</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <style>
+        /* ===================================
+           GLOBAL RESET
+        =================================== */
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100%;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #222222;
+            font-family:
+                "Avenir Next",
+                Avenir,
+                Helvetica,
+                Arial,
+                sans-serif;
+        }
+
+        img,
+        video {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* ===================================
+           FIXED TOP HEADER
+        =================================== */
+
+        .floating-header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            min-height: 52px;
+            padding: 5px 18px;
+
+            background-color: #ffffff;
+        }
+
+        /* ===================================
+           LOGO
+        =================================== */
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 120px;
+            min-height: 42px;
+
+            background-color: #cf1b1b;
+            color: #ffffff;
+
+            font-family:
+                "Avenir Next",
+                Avenir,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            line-height: 1;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .logo-box:hover,
+        .logo-box:focus-visible {
+            background-color: #b51616;
+        }
+
+        .logo-box:focus-visible {
+            outline: 3px solid #222222;
+            outline-offset: 3px;
+        }
+
+        /* ===================================
+           NAVIGATION
+        =================================== */
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .main-nav a {
+            position: relative;
+
+            color: #222222;
+
+            font-family:
+                "Avenir Next",
+                Avenir,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            font-size: 13px;
+            font-weight: 400;
+            text-decoration: none;
+
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover,
+        .main-nav a:focus-visible {
+            color: #cf1b1b;
+        }
+
+        .main-nav a:focus-visible {
+            outline: 2px solid #cf1b1b;
+            outline-offset: 4px;
+        }
+
+        /* ===================================
+           HERO SECTION
+        =================================== */
+
+        .hero-image {
+            position: relative;
+
+            width: 100%;
+            min-height: 100vh;
+            padding-top: 52px;
+
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* ===================================
+           TYPEWRITER TEXT
+        =================================== */
+
+        #typewriter-container {
+            position: absolute;
+            top: 79%;
+            left: 13%;
+
+            color: #ffffff;
+
+            font-family: "Courier New", Courier, monospace;
+            font-size: 24px;
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+
+        #typewriter::after {
+            content: "|";
+
+            margin-left: 4px;
+
+            animation: cursor-blink 0.8s infinite;
+        }
+
+        @keyframes cursor-blink {
+            0%,
+            50%,
+            100% {
+                opacity: 1;
+            }
+
+            25%,
+            75% {
+                opacity: 0;
             }
         }
 
-        setTimeout(typing,initialDelay);
-    }
+        /* ===================================
+           SOCIAL MEDIA BAR
+        =================================== */
 
-    typeWriter();
-});
+        .social-bar {
+            position: fixed;
+            top: 50%;
+            right: 18px;
+            z-index: 9998;
 
-</script>
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
 
+            transform: translateY(-50%);
+        }
+
+        .social-bar a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 32px;
+            height: 32px;
+
+            color: #8a8a8a;
+
+            font-size: 18px;
+            text-decoration: none;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .social-bar a:hover,
+        .social-bar a:focus-visible {
+            color: #cf1b1b;
+            transform: translateX(-3px);
+        }
+
+        .social-bar a:focus-visible {
+            outline: 2px solid #cf1b1b;
+            outline-offset: 2px;
+        }
+
+        /* ===================================
+           CONNECT BUTTON
+        =================================== */
+
+        .contact-box {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            width: 170px;
+            min-height: 52px;
+            padding: 10px 16px;
+
+            background-color: #ef2020;
+            color: #ffffff;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+            text-decoration: none;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .contact-box span {
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .contact-box:hover,
+        .contact-box:focus-visible {
+            background-color: #d71920;
+            transform: translateY(-2px);
+        }
+
+        .contact-box:focus-visible {
+            outline: 3px solid #222222;
+            outline-offset: 3px;
+        }
+
+        /* ===================================
+           WE BUILD TOGETHER SECTION
+        =================================== */
+
+        .wbt-section {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+            align-items: center;
+
+            width: 100%;
+            padding: 120px 10%;
+
+            background-color: #ffffff;
+        }
+
+        /*
+           Heading 2:
+           Playfair Display Bold
+           46px
+           Semantic HTML tag: h2
+        */
+
+        .wbt-title {
+            color: #ef2020;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 1.12;
+            letter-spacing: 0;
+        }
+
+        .wbt-divider {
+            width: 2px;
+            height: 120px;
+            margin: auto;
+
+            background-color: #ef2020;
+        }
+
+        .wbt-content {
+            max-width: 620px;
+        }
+
+        /*
+           Paragraph 2:
+           Avenir Light
+           16px
+           Semantic HTML tag: p
+        */
+
+        .wbt-description {
+            color: #444444;
+
+            font-family:
+                "Avenir Light",
+                "Avenir Next",
+                Avenir,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.75;
+        }
+
+        .wbt-link {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            color: #ef2020;
+
+            font-family:
+                "Avenir Next",
+                Avenir,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            font-size: 18px;
+            font-weight: 400;
+            text-decoration: none;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .wbt-link:hover,
+        .wbt-link:focus-visible {
+            color: #c61616;
+            transform: translateX(4px);
+        }
+
+        .wbt-link:focus-visible {
+            outline: 2px solid #ef2020;
+            outline-offset: 4px;
+        }
+
+        /* ===================================
+           VIDEO SECTION
+        =================================== */
+
+        .video-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            padding: 35px;
+
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-section video {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+            object-position: center 2%;
+        }
+
+        /* ===================================
+           TABLET AND MOBILE
+        =================================== */
+
+        @media (max-width: 900px) {
+            .floating-header {
+                position: relative;
+
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+
+                min-height: auto;
+                padding: 12px;
+            }
+
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px 18px;
+            }
+
+            .hero-image {
+                min-height: auto;
+                padding-top: 0;
+            }
+
+            #typewriter-container {
+                top: 82%;
+                left: 8%;
+
+                font-size: 16px;
+            }
+
+            .social-bar {
+                right: 8px;
+            }
+
+            .social-bar a {
+                font-size: 16px;
+            }
+
+            .contact-box {
+                right: 14px;
+                bottom: 14px;
+
+                width: 150px;
+                min-height: 46px;
+
+                font-size: 16px;
+            }
+
+            .contact-box span {
+                font-size: 20px;
+            }
+
+            .wbt-section {
+                grid-template-columns: 1fr;
+                gap: 24px;
+
+                padding: 64px 8%;
+            }
+
+            .wbt-divider {
+                display: none;
+            }
+
+            .wbt-title {
+                font-size: 46px;
+            }
+
+            .wbt-description {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .wbt-link {
+                margin-top: 22px;
+                font-size: 17px;
+            }
+
+            .video-section {
+                padding: 18px;
+            }
+        }
+
+        /* ===================================
+           SMALL MOBILE
+        =================================== */
+
+        @media (max-width: 560px) {
+            .main-nav {
+                gap: 10px 14px;
+            }
+
+            .main-nav a {
+                font-size: 12px;
+            }
+
+            #typewriter-container {
+                top: 78%;
+                right: 20px;
+                left: 6%;
+
+                overflow-wrap: anywhere;
+
+                font-size: 13px;
+                white-space: normal;
+            }
+
+            .social-bar {
+                display: none;
+            }
+
+            .wbt-section {
+                padding: 52px 7%;
+            }
+
+            .wbt-title {
+                font-size: 40px;
+            }
+
+            .contact-box {
+                width: 142px;
+                min-height: 44px;
+                padding: 8px 12px;
+
+                font-size: 15px;
+            }
+
+            .video-section {
+                padding: 10px;
+            }
+        }
+
+        /* ===================================
+           REDUCED MOTION ACCESSIBILITY
+        =================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="floating-header">
+        <a
+            href="index.html"
+            class="logo-box"
+            aria-label="The French Up home page"
+        >
+            The French Up
+        </a>
+
+        <nav
+            class="main-nav"
+            aria-label="Main navigation"
+        >
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">Group Classes</a>
+            <a href="#">More</a>
+        </nav>
+    </header>
+
+    <aside
+        class="social-bar"
+        aria-label="Social media links"
+    >
+        <a
+            href="#"
+            aria-label="Visit The French Up on Facebook"
+        >
+            <i
+                class="fa-brands fa-facebook-f"
+                aria-hidden="true"
+            ></i>
+        </a>
+
+        <a
+            href="#"
+            aria-label="Visit The French Up on Instagram"
+        >
+            <i
+                class="fa-brands fa-instagram"
+                aria-hidden="true"
+            ></i>
+        </a>
+
+        <a
+            href="#"
+            aria-label="Visit The French Up on YouTube"
+        >
+            <i
+                class="fa-brands fa-youtube"
+                aria-hidden="true"
+            ></i>
+        </a>
+
+        <a
+            href="#"
+            aria-label="Visit The French Up on LinkedIn"
+        >
+            <i
+                class="fa-brands fa-linkedin-in"
+                aria-hidden="true"
+            ></i>
+        </a>
+    </aside>
+
+    <a
+        href="mailto:contact.frenchup@gmail.com"
+        class="contact-box"
+        aria-label="Email The French Up"
+    >
+        Connect Now
+
+        <span aria-hidden="true">✉️</span>
+    </a>
+
+    <main>
+        <section
+            class="hero-image"
+            aria-label="The French Up introduction"
+        >
+            <img
+                src="images/dancer_homepage.png"
+                alt="A dancer representing The French Up language-learning experience"
+            >
+
+            <div
+                id="typewriter-container"
+                aria-label="Because language is power"
+            >
+                <span
+                    id="typewriter"
+                    aria-hidden="true"
+                ></span>
+            </div>
+        </section>
+
+        <section
+            class="wbt-section"
+            aria-labelledby="wbt-heading"
+        >
+            <h2
+                id="wbt-heading"
+                class="wbt-title"
+            >
+                We Build<br>
+                Together
+            </h2>
+
+            <div
+                class="wbt-divider"
+                aria-hidden="true"
+            ></div>
+
+            <div class="wbt-content">
+                <p class="wbt-description">
+                    Virtual French classes that connect grammar, vocabulary,
+                    pronunciation, and culture. Simple, structured, and shaped
+                    for real progress.
+                </p>
+
+                <a
+                    href="#"
+                    class="wbt-link"
+                >
+                    Start Online
+                </a>
+            </div>
+        </section>
+
+        <section
+            class="video-section"
+            aria-label="Learn real French video"
+        >
+            <div class="video-wrapper">
+                <video
+                    src="video_learnrealfrench.mp4"
+                    title="Learn real French"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const typewriterElement =
+                document.getElementById("typewriter");
+
+            if (!typewriterElement) {
+                return;
+            }
+
+            const text = "Because Language is Power.";
+            const typingSpeed = 150;
+            const initialDelay = 1000;
+            const repeatDelay = 2000;
+
+            let characterIndex = 0;
+            let typingTimer;
+
+            function typeText() {
+                if (characterIndex < text.length) {
+                    typewriterElement.textContent +=
+                        text.charAt(characterIndex);
+
+                    characterIndex += 1;
+
+                    typingTimer = window.setTimeout(
+                        typeText,
+                        typingSpeed
+                    );
+
+                    return;
+                }
+
+                typingTimer = window.setTimeout(() => {
+                    typewriterElement.textContent = "";
+                    characterIndex = 0;
+
+                    typingTimer = window.setTimeout(
+                        typeText,
+                        initialDelay
+                    );
+                }, repeatDelay);
+            }
+
+            const reducedMotionQuery = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            );
+
+            if (reducedMotionQuery.matches) {
+                typewriterElement.textContent = text;
+                return;
+            }
+
+            typingTimer = window.setTimeout(
+                typeText,
+                initialDelay
+            );
+
+            window.addEventListener("beforeunload", () => {
+                window.clearTimeout(typingTimer);
+            });
+        });
+    </script>
 </body>
 </html>
+```
