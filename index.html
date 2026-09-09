@@ -169,6 +169,47 @@
             outline-offset: 4px;
         }
 
+        /* COURSES DROPDOWN */
+
+        .main-nav .has-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+
+            min-width: 220px;
+            margin-top: 12px;
+            padding: 10px 0;
+
+            background-color: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+            z-index: 10000;
+        }
+
+        .main-nav .has-dropdown:hover .dropdown-menu,
+        .main-nav .has-dropdown:focus-within .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .dropdown-menu a:hover,
+        .dropdown-menu a:focus-visible {
+            background-color: #f2f2f2;
+            color: #cf1b1b;
+        }
+
         /* HERO */
 
         .hero-image {
@@ -995,7 +1036,17 @@
             aria-label="Main navigation"
         >
             <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
+
+            <span class="has-dropdown">
+                <a href="courses.html">Courses</a>
+                <div class="dropdown-menu">
+                    <a href="courses/general-french.html">General French</a>
+                    <a href="courses/exam-success.html">Exam Success</a>
+                    <a href="courses/ib-french-support.html">IB French Support</a>
+                    <a href="courses/french-skills-lab.html">French Skills Lab</a>
+                </div>
+            </span>
+
             <a href="#">Group Classes</a>
             <a href="#">More</a>
         </nav>
