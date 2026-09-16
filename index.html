@@ -598,69 +598,55 @@
             font-size: 43px;
             line-height: 1.2;
             white-space: nowrap;
+            margin-bottom: 90px;
         }
 
-        .goal-label {
-            text-align: center;
-
-            color: #222222;
-            font-family: "Playfair Display", Georgia, serif;
-            font-weight: 700;
-            font-size: 22px;
-            letter-spacing: 0.3px;
-
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        .goal-grid {
+        .topic-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
+            gap: 56px;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .goal-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 18px;
-
-            padding: 50px 24px;
-
-            background-color: #ef2020;
-            color: #ffffff;
+        .topic-card {
+            display: block;
             text-decoration: none;
-            text-align: center;
-            border-radius: 6px;
-
-            transition:
-                background-color 0.3s ease,
-                transform 0.3s ease;
+            color: inherit;
+            transition: transform 0.3s ease;
         }
 
-        .goal-card:hover,
-        .goal-card:focus-visible {
-            background-color: #cf1b1b;
+        .topic-card:hover,
+        .topic-card:focus-visible {
             transform: translateY(-4px);
         }
 
-        .goal-card:focus-visible {
-            outline: 3px solid #222222;
+        .topic-card:focus-visible {
+            outline: 2px solid #ef2020;
             outline-offset: 4px;
         }
 
-        .goal-card i {
-            font-size: 34px;
+        .topic-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
         }
 
-        .goal-card span {
-            font-family: "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
-            font-weight: 600;
-            font-size: 15px;
+        .topic-card p {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #444444;
             line-height: 1.5;
+        }
+
+        .topic-card .card-title {
+            margin-top: 16px;
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #222222;
         }
 
         /* ---------- PROCESS (red band) ---------- */
@@ -941,7 +927,7 @@
                 padding: 70px 0;
             }
 
-            .goal-grid,
+            .topic-grid,
             .process-grid,
             .testimonial-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1022,7 +1008,7 @@
                 padding: 50px 0;
             }
 
-            .goal-grid,
+            .topic-grid,
             .process-grid,
             .testimonial-grid {
                 grid-template-columns: 1fr;
@@ -1242,54 +1228,6 @@
             </div>
         </section>
 
-        <!-- PROCESS steps -->
-        <section class="process-section" aria-label="How it works">
-            <div class="process-grid">
-                <div>
-                    <div class="step-number">01</div>
-                    <div class="step-label">Choose Your Goal</div>
-                </div>
-                <div>
-                    <div class="step-number">02</div>
-                    <div class="step-label">Choose Your Format</div>
-                </div>
-                <div>
-                    <div class="step-number">03</div>
-                    <div class="step-label">Find Your Level</div>
-                </div>
-                <div>
-                    <div class="step-number">04</div>
-                    <div class="step-label">Start Learning</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GOALS: You Choose the Goal -->
-        <section class="topics-section" aria-labelledby="topics-heading">
-            <h2 id="topics-heading" class="topics-title">You Choose the Goal. We Guide the Journey.</h2>
-
-            <p class="goal-label">I want to&hellip;</p>
-
-            <div class="goal-grid">
-                <a class="goal-card" href="courses/general-french.html">
-                    <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
-                    <span>Learn or improve my French</span>
-                </a>
-                <a class="goal-card" href="courses/exam-success.html">
-                    <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
-                    <span>Get ready for TCF, SLE, or DELF-DALF</span>
-                </a>
-                <a class="goal-card" href="courses/ib-french-support.html">
-                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                    <span>Get academic French support for school</span>
-                </a>
-                <a class="goal-card" href="courses/french-skills-lab.html">
-                    <i class="fa-solid fa-comments" aria-hidden="true"></i>
-                    <span>Improve specific skills and confidence</span>
-                </a>
-            </div>
-        </section>
-
         <section
             class="video-section"
             aria-label="Learn real French video"
@@ -1334,6 +1272,56 @@
                 src="images/learn%20french%20your%20way%20AI.jpg"
                 alt="Learn French your way with AI"
             >
+        </section>
+
+        <!-- GOALS: You Choose the Goal -->
+        <section class="topics-section" aria-labelledby="topics-heading">
+            <h2 id="topics-heading" class="topics-title">You Choose the Goal. We Guide the Journey.</h2>
+
+            <div class="topic-grid">
+                <a class="topic-card" href="courses/general-french.html">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=560&fit=crop" alt="Single student studying French independently">
+                    <p class="card-title">General French</p>
+                    <p>Build your French from beginner to advanced</p>
+                </a>
+                <a class="topic-card" href="courses/exam-success.html">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=560&fit=crop" alt="Student focused on exam preparation">
+                    <p class="card-title">Exam Success</p>
+                    <p>Prepare for important French assessments</p>
+                </a>
+                <a class="topic-card" href="courses/ib-french-support.html">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=560&fit=crop" alt="Students learning together in a classroom">
+                    <p class="card-title">IB French Support</p>
+                    <p>Academic French support for students and schools</p>
+                </a>
+                <a class="topic-card" href="courses/french-skills-lab.html">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=560&fit=crop" alt="Two people practicing French conversation">
+                    <p class="card-title">French Skills Lab</p>
+                    <p>Improve specific skills and confidence</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- PROCESS steps -->
+        <section class="process-section" aria-label="How it works">
+            <div class="process-grid">
+                <div>
+                    <div class="step-number">01</div>
+                    <div class="step-label">Choose Your Goal</div>
+                </div>
+                <div>
+                    <div class="step-number">02</div>
+                    <div class="step-label">Choose Your Format</div>
+                </div>
+                <div>
+                    <div class="step-number">03</div>
+                    <div class="step-label">Find Your Level</div>
+                </div>
+                <div>
+                    <div class="step-number">04</div>
+                    <div class="step-label">Start Learning</div>
+                </div>
+            </div>
         </section>
 
         <!-- TESTIMONIALS -->
@@ -1472,3 +1460,4 @@
     </script>
 </body>
 </html>
+
