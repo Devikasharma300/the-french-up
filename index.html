@@ -175,39 +175,95 @@
             position: relative;
         }
 
+        .dropdown-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+
+            background: none;
+            border: none;
+            padding: 0;
+
+            color: #222222;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 400;
+            cursor: pointer;
+
+            transition: color 0.3s ease;
+        }
+
+        .dropdown-toggle:hover,
+        .dropdown-toggle:focus-visible,
+        .has-dropdown.open .dropdown-toggle {
+            color: #cf1b1b;
+        }
+
+        .dropdown-toggle:focus-visible {
+            outline: 2px solid #cf1b1b;
+            outline-offset: 4px;
+        }
+
+        .dropdown-toggle .caret {
+            font-size: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .has-dropdown.open .dropdown-toggle .caret,
+        .has-dropdown:hover .dropdown-toggle .caret {
+            transform: rotate(180deg);
+        }
+
+        /* This outer wrapper starts flush against the nav item (no gap),
+           so the mouse never leaves a hoverable area between "Courses"
+           and the menu. The visual gap is created with padding-top
+           on the INSIDE, which is still part of the hoverable zone. */
         .dropdown-menu {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
 
+            padding-top: 14px;
             min-width: 220px;
-            margin-top: 12px;
+
+            z-index: 10000;
+        }
+
+        .has-dropdown:hover .dropdown-menu,
+        .has-dropdown:focus-within .dropdown-menu,
+        .has-dropdown.open .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu-inner {
             padding: 10px 0;
 
             background-color: #ffffff;
             border-radius: 4px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-
-            z-index: 10000;
+            overflow: hidden;
         }
 
-        .main-nav .has-dropdown:hover .dropdown-menu,
-        .main-nav .has-dropdown:focus-within .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-menu a {
+        .dropdown-menu-inner a {
             display: block;
             padding: 10px 20px;
+
+            font-family: "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
             font-size: 13px;
+            font-weight: 400;
             white-space: nowrap;
+
+            transition:
+                background-color 0.2s ease,
+                color 0.2s ease;
         }
 
-        .dropdown-menu a:hover,
-        .dropdown-menu a:focus-visible {
-            background-color: #f2f2f2;
-            color: #cf1b1b;
+        .dropdown-menu-inner a:hover,
+        .dropdown-menu-inner a:focus-visible {
+            background-color: #cf1b1b;
+            color: #ffffff;
+            outline: none;
         }
 
         /* HERO */
@@ -890,7 +946,8 @@
                 gap: 10px 14px;
             }
 
-            .main-nav a {
+            .main-nav a,
+            .dropdown-toggle {
                 font-size: 12px;
             }
 
@@ -1037,17 +1094,28 @@
         >
             <a href="index.html">Home</a>
 
-            <span class="has-dropdown">
-                <a href="courses.html">Courses</a>
-                <div class="dropdown-menu">
-                    <a href="courses/general-french.html">General French</a>
-                    <a href="courses/exam-success.html">Exam Success</a>
-                    <a href="courses/ib-french-support.html">IB French Support</a>
-                    <a href="courses/french-skills-lab.html">French Skills Lab</a>
+            <span class="has-dropdown" id="courses-dropdown">
+                <button
+                    type="button"
+                    class="dropdown-toggle"
+                    aria-expanded="false"
+                    aria-controls="courses-dropdown-menu"
+                >
+                    Courses
+                    <span class="caret" aria-hidden="true">▾</span>
+                </button>
+
+                <div class="dropdown-menu" id="courses-dropdown-menu">
+                    <div class="dropdown-menu-inner">
+                        <a href="courses/general-french.html">General French</a>
+                        <a href="courses/exam-success.html">Exam Success</a>
+                        <a href="courses/ib-french-support.html">IB French Support</a>
+                        <a href="courses/french-skills-lab.html">French Skills Lab</a>
+                    </div>
                 </div>
             </span>
 
-            <a href="#">Group Classes</a>
+            <a href="#">About Us</a>
             <a href="#">More</a>
         </nav>
     </header>
@@ -1310,60 +1378,83 @@
             const typewriterElement =
                 document.getElementById("typewriter");
 
-            if (!typewriterElement) {
-                return;
-            }
+            if (typewriterElement) {
+                const text = "Because Language is Power.";
+                const typingSpeed = 150;
+                const initialDelay = 1000;
+                const repeatDelay = 2000;
 
-            const text = "Because Language is Power.";
-            const typingSpeed = 150;
-            const initialDelay = 1000;
-            const repeatDelay = 2000;
+                let characterIndex = 0;
+                let typingTimer;
 
-            let characterIndex = 0;
-            let typingTimer;
+                function typeText() {
+                    if (characterIndex < text.length) {
+                        typewriterElement.textContent +=
+                            text.charAt(characterIndex);
 
-            function typeText() {
-                if (characterIndex < text.length) {
-                    typewriterElement.textContent +=
-                        text.charAt(characterIndex);
+                        characterIndex += 1;
 
-                    characterIndex += 1;
+                        typingTimer = window.setTimeout(
+                            typeText,
+                            typingSpeed
+                        );
 
-                    typingTimer = window.setTimeout(
-                        typeText,
-                        typingSpeed
-                    );
+                        return;
+                    }
 
-                    return;
+                    typingTimer = window.setTimeout(() => {
+                        typewriterElement.textContent = "";
+                        characterIndex = 0;
+
+                        typingTimer = window.setTimeout(
+                            typeText,
+                            initialDelay
+                        );
+                    }, repeatDelay);
                 }
 
-                typingTimer = window.setTimeout(() => {
-                    typewriterElement.textContent = "";
-                    characterIndex = 0;
+                const reducedMotionQuery = window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                );
 
+                if (reducedMotionQuery.matches) {
+                    typewriterElement.textContent = text;
+                } else {
                     typingTimer = window.setTimeout(
                         typeText,
                         initialDelay
                     );
-                }, repeatDelay);
+
+                    window.addEventListener("beforeunload", () => {
+                        window.clearTimeout(typingTimer);
+                    });
+                }
             }
 
-            const reducedMotionQuery = window.matchMedia(
-                "(prefers-reduced-motion: reduce)"
-            );
+            /* COURSES DROPDOWN: click/tap to open, so it works on
+               mobile too (not just hover), and never navigates away. */
+            const dropdownWrapper = document.getElementById("courses-dropdown");
+            const dropdownToggle = dropdownWrapper.querySelector(".dropdown-toggle");
 
-            if (reducedMotionQuery.matches) {
-                typewriterElement.textContent = text;
-                return;
-            }
+            dropdownToggle.addEventListener("click", (event) => {
+                event.stopPropagation();
 
-            typingTimer = window.setTimeout(
-                typeText,
-                initialDelay
-            );
+                const isOpen = dropdownWrapper.classList.toggle("open");
+                dropdownToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
 
-            window.addEventListener("beforeunload", () => {
-                window.clearTimeout(typingTimer);
+            document.addEventListener("click", (event) => {
+                if (!dropdownWrapper.contains(event.target)) {
+                    dropdownWrapper.classList.remove("open");
+                    dropdownToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    dropdownWrapper.classList.remove("open");
+                    dropdownToggle.setAttribute("aria-expanded", "false");
+                }
             });
         });
     </script>
