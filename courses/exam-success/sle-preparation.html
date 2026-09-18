@@ -1,6 +1,661 @@
----
-layout: default
-title: SLE Preparation
----
-<h1>SLE Preparation</h1>
-<p>Content about SLE preparation goes here.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SLE Level B and Level C preparation for the Government of Canada Second Language Evaluation, focused on the Oral Language Assessment.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.thefrenchup.com/courses/exam-success/sle-preparation.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The French Up">
+    <meta property="og:title" content="SLE Preparation | The French Up">
+    <meta property="og:description" content="Specialized preparation for the Government of Canada Second Language Evaluation, built around the Oral Language Assessment.">
+    <meta property="og:url" content="https://www.thefrenchup.com/courses/exam-success/sle-preparation.html">
+
+    <title>SLE Preparation | The French Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            min-height: 100%;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #222222;
+            font-family: "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+        }
+        img { display: block; max-width: 100%; }
+        a { color: inherit; }
+        h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; }
+
+        /* HEADER (matches site) */
+        .floating-header {
+            position: fixed; top: 0; right: 0; left: 0; z-index: 9999;
+            display: flex; align-items: center; justify-content: space-between;
+            min-height: 52px; padding: 5px 18px;
+            background-color: #ffffff; border-bottom: 1px solid #eeeeee;
+        }
+        .logo-box {
+            display: flex; align-items: center; justify-content: center;
+            width: 120px; min-height: 42px;
+            background-color: #cf1b1b; color: #ffffff;
+            font-size: 13px; font-weight: 400; letter-spacing: 0.3px; line-height: 1;
+            text-align: center; text-decoration: none; text-transform: uppercase; white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+        .logo-box:hover, .logo-box:focus-visible { background-color: #b51616; }
+        .logo-box:focus-visible { outline: 3px solid #222222; outline-offset: 3px; }
+        .main-nav { display: flex; align-items: center; gap: 32px; }
+        .main-nav a { color: #222222; font-size: 13px; font-weight: 400; text-decoration: none; transition: color 0.3s ease; }
+        .main-nav a:hover, .main-nav a:focus-visible { color: #cf1b1b; }
+        .main-nav a:focus-visible { outline: 2px solid #cf1b1b; outline-offset: 4px; }
+        .main-nav .has-dropdown { position: relative; }
+        .dropdown-toggle {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: none; border: none; padding: 0;
+            color: #222222; font-family: inherit; font-size: 13px; font-weight: 400; cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .dropdown-toggle:hover, .dropdown-toggle:focus-visible, .has-dropdown.open .dropdown-toggle { color: #cf1b1b; }
+        .dropdown-toggle:focus-visible { outline: 2px solid #cf1b1b; outline-offset: 4px; }
+        .dropdown-toggle .caret { font-size: 10px; transition: transform 0.2s ease; }
+        .has-dropdown.open .dropdown-toggle .caret, .has-dropdown:hover .dropdown-toggle .caret { transform: rotate(180deg); }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; padding-top: 14px; min-width: 220px; z-index: 10000; }
+        .has-dropdown:hover .dropdown-menu, .has-dropdown:focus-within .dropdown-menu, .has-dropdown.open .dropdown-menu { display: block; }
+        .dropdown-menu-inner { padding: 10px 0; background-color: #ffffff; border-radius: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); overflow: hidden; }
+        .dropdown-menu-inner a { display: block; padding: 10px 20px; font-size: 13px; font-weight: 400; white-space: nowrap; transition: background-color 0.2s ease, color 0.2s ease; }
+        .dropdown-menu-inner a:hover, .dropdown-menu-inner a:focus-visible { background-color: #cf1b1b; color: #ffffff; outline: none; }
+
+        /* CONTACT BUTTON (matches site) */
+        .contact-box {
+            position: fixed; right: 20px; bottom: 20px; z-index: 9999;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            width: 170px; min-height: 52px; padding: 10px 16px;
+            background-color: #ef2020; color: #ffffff;
+            font-family: "Playfair Display", Georgia, serif; font-size: 18px; font-weight: 700; line-height: 1.2;
+            text-align: center; text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .contact-box span { font-size: 22px; line-height: 1; }
+        .contact-box:hover, .contact-box:focus-visible { background-color: #d71920; transform: translateY(-2px); }
+        .contact-box:focus-visible { outline: 3px solid #222222; outline-offset: 3px; }
+
+        /* HERO BAND (red, Algonquin-style) */
+        .course-band {
+            margin-top: 52px;
+            background-color: #ef2020;
+            color: #ffffff;
+            padding: 20px 8% 30px;
+        }
+        .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.8); margin-bottom: 14px; }
+        .breadcrumb a { text-decoration: none; color: rgba(255,255,255,0.8); transition: color 0.2s ease; }
+        .breadcrumb a:hover, .breadcrumb a:focus-visible { color: #ffffff; }
+        .breadcrumb span[aria-hidden] { margin: 0 6px; color: rgba(255,255,255,0.5); }
+        .course-band h1 { font-size: 36px; line-height: 1.2; max-width: 780px; }
+
+        /* TOP: PHOTO + SIDEBAR */
+        .course-top {
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(300px, 380px);
+            gap: 48px;
+            padding: 46px 8% 0;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+        .course-photo {
+            width: 100%;
+            aspect-ratio: 16 / 11;
+            object-fit: cover;
+        }
+
+        /* SIDEBAR */
+        .course-sidebar { align-self: start; }
+        .price-display { margin-bottom: 4px; display: flex; align-items: baseline; gap: 6px; }
+        .price-display .price {
+            font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 40px; color: #222222; line-height: 1;
+        }
+        .price-display .price-unit { font-size: 14px; font-weight: 300; color: #888888; }
+
+        .duration-row {
+            display: flex; align-items: center; gap: 8px;
+            margin-bottom: 20px;
+            font-size: 13px; color: #666666; font-weight: 300;
+        }
+        .duration-row svg { flex-shrink: 0; }
+
+        .sidebar-divider { border-top: 1px solid #eaeaea; margin: 20px 0; }
+
+        .format-toggle {
+            display: grid; grid-template-columns: 1fr 1fr;
+            border: 1px solid #dddddd;
+        }
+        .format-option { position: relative; }
+        .format-option input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+        .format-option label {
+            display: block; padding: 12px 8px; text-align: center;
+            font-size: 13px; font-weight: 400; color: #666666; cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .format-option:first-child label { border-right: 1px solid #dddddd; }
+        .format-option input:checked + label { background-color: #ef2020; color: #ffffff; }
+        .format-option input:focus-visible + label { outline: 2px solid #ef2020; outline-offset: -4px; }
+
+        .enrollment-note {
+            margin-top: 12px; font-size: 12.5px; font-weight: 300; color: #888888; line-height: 1.5;
+        }
+
+        .session-heading {
+            margin-top: 24px; margin-bottom: 12px;
+            font-size: 13px; font-weight: 700; color: #222222;
+            text-transform: none;
+        }
+        .session-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+        }
+        .session-btn {
+            border: 1px solid #dddddd; background-color: #ffffff;
+            padding: 10px 8px; font-family: inherit; font-size: 12.5px; font-weight: 400; color: #444444;
+            cursor: pointer; text-align: center; line-height: 1.4;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+        .session-btn:hover { border-color: #ef2020; }
+        .session-btn.active { background-color: #ef2020; border-color: #ef2020; color: #ffffff; }
+        .session-btn:focus-visible { outline: 2px solid #ef2020; outline-offset: 2px; }
+
+        .session-detail {
+            margin-top: 18px; padding-top: 16px; border-top: 1px solid #f0f0f0;
+        }
+        .session-detail p.detail-dates { font-size: 13.5px; font-weight: 400; color: #222222; margin-bottom: 10px; line-height: 1.5; }
+        .session-detail .detail-line {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 13px; font-weight: 300; color: #555555; margin-bottom: 6px;
+        }
+        .session-detail .detail-line svg { flex-shrink: 0; }
+
+        .private-note {
+            margin-top: 18px; padding-top: 16px; border-top: 1px solid #f0f0f0;
+        }
+        .private-note p { font-size: 13.5px; font-weight: 300; color: #555555; line-height: 1.6; margin-bottom: 10px; }
+
+        .register-btn {
+            display: block; width: 100%; margin-top: 24px;
+            padding: 14px; border: none;
+            background-color: #222222; color: #ffffff;
+            font-family: inherit; font-size: 14px; font-weight: 400;
+            text-align: center; text-decoration: none; cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .register-btn:hover, .register-btn:focus-visible { background-color: #ef2020; }
+
+        .sidebar-fineprint {
+            margin-top: 20px; font-size: 12px; font-weight: 300; color: #999999; line-height: 1.5;
+        }
+        .sidebar-fineprint a { color: #ef2020; text-decoration: underline; }
+
+        /* TABS SECTION (Algonquin-style: menu left, content right) */
+        .info-section {
+            display: grid;
+            grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+            gap: 0;
+            padding: 60px 8% 100px;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+        .info-tabs {
+            display: flex; flex-direction: column;
+            border-top: 1px solid #eaeaea;
+        }
+        .info-tab {
+            display: flex; align-items: center; justify-content: space-between;
+            width: 100%; border: none; border-bottom: 1px solid #eaeaea;
+            background-color: #ffffff; cursor: pointer;
+            padding: 16px 18px;
+            font-family: inherit; font-size: 14px; font-weight: 400; color: #444444;
+            text-align: left;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .info-tab:hover { color: #ef2020; }
+        .info-tab:focus-visible { outline: 2px solid #ef2020; outline-offset: -3px; }
+        .info-tab.active { background-color: #ef2020; color: #ffffff; }
+        .info-tab .tab-icon { font-size: 14px; opacity: 0.8; }
+
+        .info-panels { padding: 4px 0 0 56px; }
+        .info-panel { display: none; }
+        .info-panel.active { display: block; }
+        .info-panel h2 { font-size: 26px; color: #222222; margin-bottom: 18px; }
+        .info-panel p { font-size: 15px; font-weight: 300; line-height: 1.75; color: #444444; max-width: 62ch; margin-bottom: 14px; }
+        .info-panel p strong { color: #222222; font-weight: 400; }
+
+        .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+        .check-list li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 15px; font-weight: 300; line-height: 1.5; color: #444444;
+        }
+        .check-list li::before {
+            content: ""; flex-shrink: 0; width: 16px; height: 16px; margin-top: 2px; border-radius: 50%;
+            background-color: #ef2020;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M20.285 6.708l-11.4 11.4-5.17-5.17 1.414-1.414 3.756 3.756 9.986-9.986z'/%3E%3C/svg%3E") center / 10px no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M20.285 6.708l-11.4 11.4-5.17-5.17 1.414-1.414 3.756 3.756 9.986-9.986z'/%3E%3C/svg%3E") center / 10px no-repeat;
+        }
+        .learn-heading { margin-top: 28px; font-size: 16px; color: #222222; margin-bottom: 12px; }
+
+        .contact-panel-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            margin-top: 10px; padding: 12px 22px;
+            background-color: #ef2020; color: #ffffff;
+            font-size: 14px; font-weight: 400; text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .contact-panel-btn:hover, .contact-panel-btn:focus-visible { background-color: #cf1b1b; }
+
+        /* REGISTER FORM SECTION */
+        .register-section { background-color: #f7f7f7; padding: 80px 8%; }
+        .register-inner { max-width: 560px; margin: 0 auto; }
+        .register-inner h2 { font-size: 30px; color: #222222; margin-bottom: 10px; text-align: center; }
+        .register-inner > p { text-align: center; font-size: 14px; font-weight: 300; color: #666666; margin-bottom: 36px; }
+        .register-form label { display: block; font-size: 13px; font-weight: 300; margin-bottom: 6px; color: #444444; }
+        .register-form input, .register-form select {
+            width: 100%; padding: 11px 12px; border: 1px solid #cccccc; background-color: #ffffff;
+            font-size: 14px; font-family: inherit; margin-bottom: 18px;
+        }
+        .register-form .register-submit {
+            width: 100%; padding: 14px; border: none; background-color: #ef2020; color: #ffffff;
+            font-family: inherit; font-size: 15px; font-weight: 400; cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .register-form .register-submit:hover, .register-form .register-submit:focus-visible { background-color: #cf1b1b; }
+        .register-form-note { margin-top: 14px; font-size: 12px; font-weight: 300; color: #999999; text-align: center; }
+
+        /* FOOTER (matches site) */
+        .site-footer {
+            display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+            padding: 22px 8% 100px; background-color: #ffffff; font-size: 12px; font-weight: 300; color: #555555;
+        }
+        .site-footer a { color: #555555; text-decoration: underline; }
+        .footer-social { display: flex; gap: 16px; }
+        .footer-social a { color: #8a8a8a; font-size: 16px; text-decoration: none; transition: color 0.3s ease; }
+        .footer-social a:hover { color: #ef2020; }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .floating-header {
+                position: relative; flex-direction: column; justify-content: center; gap: 10px;
+                min-height: auto; padding: 12px;
+            }
+            .main-nav { flex-wrap: wrap; justify-content: center; gap: 12px 18px; }
+            .course-band { margin-top: 0; padding: 26px 8%; }
+            .course-band h1 { font-size: 30px; }
+            .course-top { grid-template-columns: 1fr; gap: 30px; padding-top: 30px; }
+            .info-section { grid-template-columns: 1fr; padding-top: 40px; }
+            .info-panels { padding-left: 0; padding-top: 30px; }
+            .contact-box { right: 14px; bottom: 14px; width: 150px; min-height: 46px; font-size: 16px; }
+        }
+        @media (max-width: 560px) {
+            .course-band { padding: 22px 7%; }
+            .course-band h1 { font-size: 26px; }
+            .course-top { padding-left: 7%; padding-right: 7%; }
+            .info-section { padding-left: 7%; padding-right: 7%; }
+            .session-grid { grid-template-columns: 1fr; }
+            .register-section { padding: 60px 7%; }
+            .register-inner h2 { font-size: 24px; }
+            .contact-box { width: 142px; min-height: 44px; padding: 8px 12px; font-size: 15px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="floating-header">
+        <a href="../../index.html" class="logo-box" aria-label="The French Up home page">The French Up</a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="../../index.html">Home</a>
+
+            <span class="has-dropdown" id="courses-dropdown">
+                <button type="button" class="dropdown-toggle" aria-expanded="false" aria-controls="courses-dropdown-menu">
+                    Courses
+                    <span class="caret" aria-hidden="true">▾</span>
+                </button>
+                <div class="dropdown-menu" id="courses-dropdown-menu">
+                    <div class="dropdown-menu-inner">
+                        <a href="../general-french.html">General French</a>
+                        <a href="../exam-success.html">Exam Success</a>
+                        <a href="../ib-french-support.html">IB French Support</a>
+                        <a href="../french-skills-lab.html">French Skills Lab</a>
+                    </div>
+                </div>
+            </span>
+
+            <a href="../../index.html#wbt-heading">About Us</a>
+            <a href="#">More</a>
+        </nav>
+    </header>
+
+    <a href="mailto:contact.frenchup@gmail.com?subject=SLE%20Preparation%20-%20Question" class="contact-box" aria-label="Email The French Up">
+        <span aria-hidden="true">💬</span>
+        Let's Chat!
+    </a>
+
+    <main>
+        <div class="course-band">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../../index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="../exam-success.html">Exam Success</a>
+                <span aria-hidden="true">/</span>
+                SLE Preparation
+            </nav>
+            <h1>SLE Level B / Level C Preparation</h1>
+        </div>
+
+        <div class="course-top">
+            <img
+                class="course-photo"
+                src="https://images.unsplash.com/photo-1616587659117-e60354acfd90?w=1400&h=960&fit=crop&q=80"
+                alt="A woman in a red sweater practicing conversational French on a laptop video call"
+            >
+
+            <aside class="course-sidebar">
+                <div class="price-display">
+                    <span class="price" id="price-amount">$475</span>
+                    <span class="price-unit" id="price-unit">/ student</span>
+                </div>
+
+                <div class="duration-row">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M12 7v5l3 3"></path>
+                    </svg>
+                    10 hours total
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="format-toggle" role="radiogroup" aria-label="Choose group or private coaching">
+                    <div class="format-option">
+                        <input type="radio" name="format" id="format-group" value="group" checked>
+                        <label for="format-group">Group Program</label>
+                    </div>
+                    <div class="format-option">
+                        <input type="radio" name="format" id="format-private" value="private">
+                        <label for="format-private">Private Coaching</label>
+                    </div>
+                </div>
+
+                <p class="enrollment-note" id="enrollment-note">
+                    Group sessions require a minimum enrollment of 4 students to start.
+                </p>
+
+                <div id="group-block">
+                    <p class="session-heading">Select a Session</p>
+                    <div class="session-grid" id="session-grid">
+                        <button type="button" class="session-btn active" data-session="0">Jan 13 &ndash; Feb 10</button>
+                        <button type="button" class="session-btn" data-session="1">Feb 17 &ndash; Mar 17</button>
+                        <button type="button" class="session-btn" data-session="2">Mar 24 &ndash; Apr 21</button>
+                        <button type="button" class="session-btn" data-session="3">Apr 28 &ndash; May 26</button>
+                    </div>
+
+                    <div class="session-detail" id="session-detail">
+                        <p class="detail-dates" id="detail-dates">Jan 13 &ndash; Feb 10, 2027 (Tuesdays, 5 sessions)</p>
+                        <div class="detail-line">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M12 7v5l3 3"></path>
+                            </svg>
+                            <span id="detail-time">6:00 &ndash; 8:00 PM EST</span>
+                        </div>
+                        <div class="detail-line">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2">
+                                <path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"></path>
+                                <circle cx="12" cy="10" r="2.5"></circle>
+                            </svg>
+                            <span>Virtual, Microsoft Teams</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="private-block" style="display:none;">
+                    <div class="private-note">
+                        <p>Private coaching is scheduled one-on-one, around your availability.</p>
+                        <div class="detail-line">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2">
+                                <path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"></path>
+                                <circle cx="12" cy="10" r="2.5"></circle>
+                            </svg>
+                            <span>Virtual, Microsoft Teams</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#register" class="register-btn" id="register-cta">Register for Group Program</a>
+
+                <p class="sidebar-fineprint">
+                    Have questions first? <a href="mailto:contact.frenchup@gmail.com?subject=SLE%20Preparation%20-%20Question">Email us</a>.
+                </p>
+            </aside>
+        </div>
+
+        <div class="info-section">
+            <div class="info-tabs" role="tablist" aria-label="Course information">
+                <button type="button" class="info-tab active" data-tab="about" role="tab" aria-selected="true">About This Course</button>
+                <button type="button" class="info-tab" data-tab="prereq" role="tab" aria-selected="false">Prerequisites</button>
+                <button type="button" class="info-tab" data-tab="who" role="tab" aria-selected="false">Who Should Attend</button>
+                <button type="button" class="info-tab" data-tab="contact" role="tab" aria-selected="false">Contact</button>
+            </div>
+
+            <div class="info-panels">
+                <section class="info-panel active" id="panel-about" role="tabpanel">
+                    <h2>About This Course</h2>
+                    <p>
+                        Specialized preparation for the Government of Canada Second
+                        Language Evaluation. This program focuses on the skills
+                        required to succeed in the Oral Language Assessment.
+                    </p>
+
+                    <h3 class="learn-heading">What You Will Learn</h3>
+                    <ul class="check-list">
+                        <li>Workplace vocabulary</li>
+                        <li>Oral interview practice</li>
+                        <li>Expanding answers</li>
+                        <li>Grammar accuracy</li>
+                        <li>Mock evaluations</li>
+                        <li>Level C communication strategies</li>
+                    </ul>
+                </section>
+
+                <section class="info-panel" id="panel-prereq" role="tabpanel">
+                    <h2>Prerequisites</h2>
+                    <p>Students should already have conversational French.</p>
+                    <p><strong>Recommended:</strong> B1&ndash;B2 level.</p>
+                </section>
+
+                <section class="info-panel" id="panel-who" role="tabpanel">
+                    <h2>Who Should Attend</h2>
+                    <ul class="check-list">
+                        <li>Government employees</li>
+                        <li>Federal job applicants</li>
+                        <li>Professionals preparing for SLE testing</li>
+                    </ul>
+                </section>
+
+                <section class="info-panel" id="panel-contact" role="tabpanel">
+                    <h2>Contact</h2>
+                    <p>
+                        For more information about group or private registration, or
+                        to be notified of upcoming sessions, please contact us.
+                    </p>
+                    <a href="mailto:contact.frenchup@gmail.com?subject=SLE%20Preparation%20-%20Question" class="contact-panel-btn">
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        Email Us
+                    </a>
+                </section>
+            </div>
+        </div>
+
+        <section class="register-section" id="register" aria-labelledby="register-heading">
+            <div class="register-inner">
+                <h2 id="register-heading">Reserve Your Spot</h2>
+                <p>Tell us a bit about yourself and we'll confirm your session details by email.</p>
+
+                <form class="register-form" action="mailto:contact.frenchup@gmail.com" method="POST" enctype="text/plain">
+                    <input type="hidden" name="subject" value="SLE Preparation Registration">
+
+                    <label for="reg-name">Full name *</label>
+                    <input type="text" id="reg-name" name="name" required>
+
+                    <label for="reg-email">Email *</label>
+                    <input type="email" id="reg-email" name="email" required>
+
+                    <label for="reg-format">Program *</label>
+                    <select id="reg-format" name="program" required>
+                        <option value="Group Program - Jan 13-Feb 10 ($475/student)">Group Program &mdash; $475/student</option>
+                        <option value="Private Coaching ($700)">Private Coaching &mdash; $700</option>
+                    </select>
+
+                    <button type="submit" class="register-submit">Send Registration Request</button>
+                </form>
+
+                <p class="register-form-note">
+                    This opens your email client to send us your request. We'll follow up to confirm your session and payment.
+                </p>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <span>&copy; 2026 The French Up. All rights reserved.</span>
+            <div class="footer-social">
+                <a href="#" aria-label="Visit The French Up on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Visit The French Up on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Visit The French Up on YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Visit The French Up on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            /* COURSES DROPDOWN */
+            const dropdownWrapper = document.getElementById("courses-dropdown");
+            const dropdownToggle = dropdownWrapper.querySelector(".dropdown-toggle");
+            dropdownToggle.addEventListener("click", (event) => {
+                event.stopPropagation();
+                const isOpen = dropdownWrapper.classList.toggle("open");
+                dropdownToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+            document.addEventListener("click", (event) => {
+                if (!dropdownWrapper.contains(event.target)) {
+                    dropdownWrapper.classList.remove("open");
+                    dropdownToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    dropdownWrapper.classList.remove("open");
+                    dropdownToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            /* INFO TABS */
+            const tabs = document.querySelectorAll(".info-tab");
+            const panels = document.querySelectorAll(".info-panel");
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    tabs.forEach((t) => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+                    panels.forEach((p) => p.classList.remove("active"));
+                    tab.classList.add("active");
+                    tab.setAttribute("aria-selected", "true");
+                    document.getElementById("panel-" + tab.dataset.tab).classList.add("active");
+                });
+            });
+
+            /* SESSION DATA */
+            const sessions = [
+                { dates: "Jan 13 &ndash; Feb 10, 2027 (Tuesdays, 5 sessions)", time: "6:00 &ndash; 8:00 PM EST", reg: "Group Program - Jan 13-Feb 10 ($475/student)" },
+                { dates: "Feb 17 &ndash; Mar 17, 2027 (Wednesdays, 5 sessions)", time: "12:00 &ndash; 2:00 PM EST", reg: "Group Program - Feb 17-Mar 17 ($475/student)" },
+                { dates: "Mar 24 &ndash; Apr 21, 2027 (Thursdays, 5 sessions)", time: "6:00 &ndash; 8:00 PM EST", reg: "Group Program - Mar 24-Apr 21 ($475/student)" },
+                { dates: "Apr 28 &ndash; May 26, 2027 (Saturdays, 5 sessions)", time: "10:00 AM &ndash; 12:00 PM EST", reg: "Group Program - Apr 28-May 26 ($475/student)" }
+            ];
+
+            const sessionButtons = document.querySelectorAll(".session-btn");
+            const detailDates = document.getElementById("detail-dates");
+            const detailTime = document.getElementById("detail-time");
+            const regFormat = document.getElementById("reg-format");
+            let currentSessionIndex = 0;
+
+            function applySession(index) {
+                const s = sessions[index];
+                detailDates.innerHTML = s.dates;
+                detailTime.innerHTML = s.time;
+                if (regFormat && document.querySelector('input[name="format"]:checked').value === "group") {
+                    updateGroupOption(s.reg);
+                }
+            }
+
+            function updateGroupOption(text) {
+                const groupOption = regFormat.querySelector('option[value^="Group Program"]');
+                if (groupOption) {
+                    groupOption.value = text;
+                    groupOption.textContent = "Group Program \u2014 $475/student";
+                    groupOption.selected = true;
+                }
+            }
+
+            sessionButtons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    sessionButtons.forEach((b) => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    currentSessionIndex = parseInt(btn.dataset.session, 10);
+                    applySession(currentSessionIndex);
+                });
+            });
+
+            /* GROUP / PRIVATE TOGGLE */
+            const pricing = {
+                group: { amount: "$475", unit: "/ student", cta: "Register for Group Program" },
+                private: { amount: "$700", unit: "", cta: "Register for Private Coaching" }
+            };
+
+            const priceAmount = document.getElementById("price-amount");
+            const priceUnit = document.getElementById("price-unit");
+            const registerCta = document.getElementById("register-cta");
+            const enrollmentNote = document.getElementById("enrollment-note");
+            const groupBlock = document.getElementById("group-block");
+            const privateBlock = document.getElementById("private-block");
+            const radios = document.querySelectorAll('input[name="format"]');
+
+            function applyFormat(key) {
+                const data = pricing[key];
+                priceAmount.textContent = data.amount;
+                priceUnit.textContent = data.unit;
+                registerCta.textContent = data.cta;
+
+                if (key === "group") {
+                    groupBlock.style.display = "";
+                    privateBlock.style.display = "none";
+                    enrollmentNote.style.display = "";
+                    applySession(currentSessionIndex);
+                } else {
+                    groupBlock.style.display = "none";
+                    privateBlock.style.display = "";
+                    enrollmentNote.style.display = "none";
+                    const privateOption = regFormat.querySelector('option[value^="Private"]');
+                    if (privateOption) privateOption.selected = true;
+                }
+            }
+
+            radios.forEach((radio) => {
+                radio.addEventListener("change", (event) => applyFormat(event.target.value));
+            });
+        });
+    </script>
+</body>
+</html>
