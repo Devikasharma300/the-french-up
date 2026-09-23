@@ -178,6 +178,13 @@
         }
         .session-detail .detail-line svg { flex-shrink: 0; }
 
+        .detail-line span {
+            font-family: "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            font-weight: 300;
+            color: #555555;
+        }
+
         .private-note {
             margin-top: 18px; padding-top: 16px; border-top: 1px solid #f0f0f0;
         }
@@ -256,7 +263,7 @@
 
         /* REGISTER FORM SECTION */
         .register-section { background-color: #f7f7f7; padding: 80px 8%; }
-        .register-inner { max-width: 560px; margin: 0 auto; }
+        .register-inner { max-width: 720px; margin: 0 auto; }
         .register-inner h2 { font-size: 30px; color: #222222; margin-bottom: 10px; text-align: center; }
         .register-inner > p { text-align: center; font-size: 14px; font-weight: 300; color: #666666; margin-bottom: 36px; }
         .register-form label { display: block; font-size: 13px; font-weight: 300; margin-bottom: 6px; color: #444444; }
@@ -271,6 +278,18 @@
         }
         .register-form .register-submit:hover, .register-form .register-submit:focus-visible { background-color: #cf1b1b; }
         .register-form-note { margin-top: 14px; font-size: 12px; font-weight: 300; color: #999999; text-align: center; }
+
+        .gform-wrapper {
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .gform-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 1400px;
+            border: none;
+        }
 
         /* FOOTER (matches site) */
         .site-footer {
@@ -360,8 +379,8 @@
         <div class="course-top">
             <img
                 class="course-photo"
-                src="https://images.unsplash.com/photo-1758518730250-9fde74eb4757?w=1400&h=960&fit=crop&q=80"
-                alt="An adult student smiling while answering questions in a mock oral interview"
+                src="images/sle_success.jpg"
+                alt="A smiling adult student preparing for the SLE oral evaluation"
             >
 
             <aside class="course-sidebar">
@@ -398,20 +417,20 @@
                 <div id="group-block">
                     <p class="session-heading">Select a Session</p>
                     <div class="session-grid" id="session-grid">
-                        <button type="button" class="session-btn active" data-session="0">Jan 13 &ndash; Feb 10</button>
-                        <button type="button" class="session-btn" data-session="1">Feb 17 &ndash; Mar 17</button>
-                        <button type="button" class="session-btn" data-session="2">Mar 24 &ndash; Apr 21</button>
-                        <button type="button" class="session-btn" data-session="3">Apr 28 &ndash; May 26</button>
+                        <button type="button" class="session-btn active" data-session="0">Jan 12 &ndash; Feb 11</button>
+                        <button type="button" class="session-btn" data-session="1">Feb 16 &ndash; Mar 18</button>
+                        <button type="button" class="session-btn" data-session="2">Mar 23 &ndash; Apr 22</button>
+                        <button type="button" class="session-btn" data-session="3">Apr 27 &ndash; May 27</button>
                     </div>
 
                     <div class="session-detail" id="session-detail">
-                        <p class="detail-dates" id="detail-dates">Jan 13 &ndash; Feb 10, 2027 (Tuesdays, 5 sessions)</p>
+                        <p class="detail-dates" id="detail-dates">Jan 12 &ndash; Feb 11, 2027 (Tuesdays &amp; Thursdays, 10 sessions)</p>
                         <div class="detail-line">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2">
                                 <circle cx="12" cy="12" r="9"></circle>
                                 <path d="M12 7v5l3 3"></path>
                             </svg>
-                            <span id="detail-time">6:00 &ndash; 8:00 PM EST</span>
+                            <span id="detail-time">6:00 &ndash; 7:00 PM EST</span>
                         </div>
                         <div class="detail-line">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2">
@@ -493,9 +512,11 @@
                         For more information about group or private registration, or
                         to be notified of upcoming sessions, please contact us.
                     </p>
+                    <p><strong>Call:</strong> <a href="tel:+16139089604">(+1) 613 908 9604</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contact.frenchup@gmail.com?subject=SLE%20Preparation%20-%20Question">contact.frenchup@gmail.com</a></p>
                     <a href="mailto:contact.frenchup@gmail.com?subject=SLE%20Preparation%20-%20Question" class="contact-panel-btn">
                         <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-                        Email Us
+                        Contact Us Now
                     </a>
                 </section>
             </div>
@@ -504,29 +525,15 @@
         <section class="register-section" id="register" aria-labelledby="register-heading">
             <div class="register-inner">
                 <h2 id="register-heading">Reserve Your Spot</h2>
-                <p>Tell us a bit about yourself and we'll confirm your session details by email.</p>
+                <p>Fill out the form below and select "SLE Preparation" from the course dropdown &mdash; we'll follow up by email to confirm your session and payment.</p>
 
-                <form class="register-form" action="mailto:contact.frenchup@gmail.com" method="POST" enctype="text/plain">
-                    <input type="hidden" name="subject" value="SLE Preparation Registration">
-
-                    <label for="reg-name">Full name *</label>
-                    <input type="text" id="reg-name" name="name" required>
-
-                    <label for="reg-email">Email *</label>
-                    <input type="email" id="reg-email" name="email" required>
-
-                    <label for="reg-format">Program *</label>
-                    <select id="reg-format" name="program" required>
-                        <option value="Group Program - Jan 13-Feb 10 ($475/student)">Group Program &mdash; $475/student</option>
-                        <option value="Private Coaching ($700)">Private Coaching &mdash; $700</option>
-                    </select>
-
-                    <button type="submit" class="register-submit">Send Registration Request</button>
-                </form>
-
-                <p class="register-form-note">
-                    This opens your email client to send us your request. We'll follow up to confirm your session and payment.
-                </p>
+                <div class="gform-wrapper">
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScCkO2v0sqZXiM2xHBkGkVNuf7m3m9hE6PN01SoGi52A72rtA/viewform?embedded=true"
+                        title="The French Up &mdash; Course Registration"
+                        loading="lazy"
+                    >Loading&hellip;</iframe>
+                </div>
             </div>
         </section>
 
@@ -579,34 +586,21 @@
 
             /* SESSION DATA */
             const sessions = [
-                { dates: "Jan 13 &ndash; Feb 10, 2027 (Tuesdays, 5 sessions)", time: "6:00 &ndash; 8:00 PM EST", reg: "Group Program - Jan 13-Feb 10 ($475/student)" },
-                { dates: "Feb 17 &ndash; Mar 17, 2027 (Wednesdays, 5 sessions)", time: "12:00 &ndash; 2:00 PM EST", reg: "Group Program - Feb 17-Mar 17 ($475/student)" },
-                { dates: "Mar 24 &ndash; Apr 21, 2027 (Thursdays, 5 sessions)", time: "6:00 &ndash; 8:00 PM EST", reg: "Group Program - Mar 24-Apr 21 ($475/student)" },
-                { dates: "Apr 28 &ndash; May 26, 2027 (Saturdays, 5 sessions)", time: "10:00 AM &ndash; 12:00 PM EST", reg: "Group Program - Apr 28-May 26 ($475/student)" }
+                { dates: "Jan 12 &ndash; Feb 11, 2027 (Tuesdays &amp; Thursdays, 10 sessions)", time: "6:00 &ndash; 7:00 PM EST", reg: "Group Program - Jan 12-Feb 11, evenings ($475/student)" },
+                { dates: "Feb 16 &ndash; Mar 18, 2027 (Tuesdays &amp; Thursdays, 10 sessions)", time: "1:00 &ndash; 2:00 PM EST", reg: "Group Program - Feb 16-Mar 18, afternoons ($475/student)" },
+                { dates: "Mar 23 &ndash; Apr 22, 2027 (Tuesdays &amp; Thursdays, 10 sessions)", time: "10:00 &ndash; 11:00 AM EST", reg: "Group Program - Mar 23-Apr 22, mornings ($475/student)" },
+                { dates: "Apr 27 &ndash; May 27, 2027 (Tuesdays &amp; Thursdays, 10 sessions)", time: "6:00 &ndash; 7:00 PM EST", reg: "Group Program - Apr 27-May 27, evenings ($475/student)" }
             ];
 
             const sessionButtons = document.querySelectorAll(".session-btn");
             const detailDates = document.getElementById("detail-dates");
             const detailTime = document.getElementById("detail-time");
-            const regFormat = document.getElementById("reg-format");
             let currentSessionIndex = 0;
 
             function applySession(index) {
                 const s = sessions[index];
                 detailDates.innerHTML = s.dates;
                 detailTime.innerHTML = s.time;
-                if (regFormat && document.querySelector('input[name="format"]:checked').value === "group") {
-                    updateGroupOption(s.reg);
-                }
-            }
-
-            function updateGroupOption(text) {
-                const groupOption = regFormat.querySelector('option[value^="Group Program"]');
-                if (groupOption) {
-                    groupOption.value = text;
-                    groupOption.textContent = "Group Program \u2014 $475/student";
-                    groupOption.selected = true;
-                }
             }
 
             sessionButtons.forEach((btn) => {
@@ -647,8 +641,6 @@
                     groupBlock.style.display = "none";
                     privateBlock.style.display = "";
                     enrollmentNote.style.display = "none";
-                    const privateOption = regFormat.querySelector('option[value^="Private"]');
-                    if (privateOption) privateOption.selected = true;
                 }
             }
 
