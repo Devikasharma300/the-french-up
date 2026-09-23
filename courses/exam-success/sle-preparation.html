@@ -645,45 +645,6 @@
             background-color: #cf1b1b;
         }
 
-        /* REGISTER FORM */
-        .register-section {
-            background-color: #f7f7f7;
-            padding: 80px 8%;
-        }
-
-        .register-inner {
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .register-inner h2 {
-            font-size: 30px;
-            color: #222222;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .register-inner > p {
-            text-align: center;
-            font-size: 14px;
-            font-weight: 300;
-            color: #666666;
-            margin-bottom: 36px;
-        }
-
-        .gform-wrapper {
-            width: 100%;
-            background-color: #ffffff;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        }
-
-        .gform-wrapper iframe {
-            display: block;
-            width: 100%;
-            height: 1400px;
-            border: none;
-        }
-
         /* FOOTER */
         .site-footer {
             display: flex;
@@ -791,14 +752,6 @@
 
             .session-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .register-section {
-                padding: 60px 7%;
-            }
-
-            .register-inner h2 {
-                font-size: 24px;
             }
 
             .contact-box {
@@ -1008,7 +961,7 @@
             </a>
 
             <p class="sidebar-fineprint">
-                Have questions first?
+                Registration opens in a new window. Have questions?
                 <a href="mailto:contact.frenchup@gmail.com?subject=SLE%20Preparation%20-%20Question">
                     Email us
                 </a>.
@@ -1107,32 +1060,6 @@
 
         </div>
     </div>
-
-    <section class="register-section" id="register" aria-labelledby="register-heading">
-
-        <div class="register-inner">
-
-            <h2 id="register-heading">
-                Reserve Your Spot
-            </h2>
-
-            <p>
-                Fill out the form below and select "SLE Preparation" from the course dropdown.
-                We'll follow up by email to confirm your session and payment.
-            </p>
-
-            <div class="gform-wrapper">
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLScCkO2v0sqZXiM2xHBkGkVNuf7m3m9hE6PN01SoGi52A72rtA/viewform?embedded=true"
-                    title="The French Up — Course Registration"
-                    loading="lazy"
-                >
-                    Loading…
-                </iframe>
-            </div>
-
-        </div>
-    </section>
 
     <footer class="site-footer">
 
@@ -1272,7 +1199,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const params = new URLSearchParams();
 
-        /* Course */
         params.set(
             "entry.839337160",
             "SLE Preparation"
@@ -1280,13 +1206,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (selectedFormat === "group") {
 
-            /* Group or Private */
             params.set(
                 "entry.1332690371",
                 "Group program"
             );
 
-            /* Preferred session */
             params.set(
                 "entry.604533261",
                 sessions[currentSessionIndex].formValue
@@ -1294,12 +1218,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else {
 
-            /* Group or Private */
             params.set(
                 "entry.1332690371",
                 "Private coaching"
             );
-
         }
 
         registerCta.href =
