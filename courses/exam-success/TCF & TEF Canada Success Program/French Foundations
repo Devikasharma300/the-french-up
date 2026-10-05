@@ -1,1 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="French Foundations at The French Up — a beginner-to-elementary French program building speaking, listening, reading and writing before exam preparation."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://www.thefrenchup.com/courses/tcf-tef/french-foundations.html"
+    >
+
+    <title>French Foundations | The French Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100%;
+            overflow-x: hidden;
+
+            background-color: #ffffff;
+            color: #222222;
+
+            font-family:
+                "Avenir Next",
+                Avenir,
+                Helvetica,
+                Arial,
+                sans-serif;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 700;
+        }
+
+        /* HEADER */
+
+        .floating-header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            min-height: 52px;
+            padding: 5px 18px;
+
+            background-color: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 120px;
+            min-height: 42px;
+
+            background-color: #cf1b1b;
+            color: #ffffff;
+
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            line-height: 1;
+
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .logo-box:hover,
+        .logo-box:focus-visible {
+            background-color: #b51616;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .main-nav a {
+            color: #222222;
+            font-size: 13px;
+            text-decoration: none;
+
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover,
+        .main-nav a:focus-visible {
+            color: #cf1b1b;
+        }
+
+        .main-nav .has-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+
+            padding: 0;
+
+            background: none;
+            border: none;
+
+            color: #222222;
+
+            font-family: inherit;
+            font-size: 13px;
+
+            cursor: pointer;
+
+            transition: color 0.3s ease;
+        }
+
+        .dropdown-toggle:hover,
+        .has-dropdown.open .dropdown-toggle {
+            color: #cf1b1b;
+        }
+
+        .caret {
+            font-size: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .has-dropdown.open .caret,
+        .has-dropdown:hover .caret {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            display: none;
+
+            position: absolute;
+            top: 100%;
+            left: 0;
+
+            min-width: 220px;
+            padding-top: 14px;
+
+            z-index: 10000;
+        }
+
+        .has-dropdown:hover .dropdown-menu,
+        .has-dropdown:focus-within .dropdown-menu,
+        .has-dropdown.open .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu-inner {
+            padding: 10px 0;
+
+            background-color: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+            overflow: hidden;
+        }
+
+        .dropdown-menu-inner a {
+            display: block;
+
+            padding: 10px 20px;
+            font-size: 13px;
+
+            white-space: nowrap;
+
+            transition:
+                background-color 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .dropdown-menu-inner a:hover,
+        .dropdown-menu-inner a:focus-visible {
+            background-color: #cf1b1b;
+            color: #ffffff;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            width: 170px;
+            min-height: 52px;
+            padding: 10px 16px;
+
+            background-color: #ef2020;
+            color: #ffffff;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.2;
+
+            text-align: center;
+            text-decoration: none;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .contact-box:hover,
+        .contact-box:focus-visible {
+            background-color: #d71920;
+            transform: translateY(-2px);
+        }
+
+        /* HERO BAND */
+
+        .course-band {
+            margin-top: 52px;
+            padding: 20px 4% 30px;
+
+            background-color: #ef2020;
+            color: #ffffff;
+        }
+
+        .breadcrumb {
+            margin-bottom: 14px;
+
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 12px;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover,
+        .breadcrumb a:focus-visible {
+            color: #ffffff;
+        }
+
+        .breadcrumb span[aria-hidden] {
+            margin: 0 6px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .course-band h1 {
+            max-width: 780px;
+
+            font-size: 34px;
+            line-height: 1.25;
+        }
+
+        /* COURSE TOP */
+
+        .course-top {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.6fr)
+                minmax(300px, 380px);
+
+            gap: 48px;
+
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 46px 4% 0;
+        }
+
+        .course-photo {
+            width: 100%;
+            aspect-ratio: 16 / 11;
+
+            margin-top: 48px;
+
+            object-fit: cover;
+        }
+
+        /* SIDEBAR */
+
+        .course-sidebar {
+            align-self: start;
+        }
+
+        .price-display {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+
+            margin-bottom: 4px;
+        }
+
+        .price-display .price {
+            color: #222222;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .price-display .price-unit {
+            color: #888888;
+
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .duration-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 20px;
+
+            color: #666666;
+
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        .duration-row svg {
+            flex-shrink: 0;
+        }
+
+        .sidebar-divider {
+            margin: 20px 0;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .cohort-note {
+            padding: 16px 18px;
+
+            background-color: #f9f9f9;
+            border: 1px solid #eaeaea;
+        }
+
+        .cohort-note .cohort-label {
+            display: block;
+            margin-bottom: 4px;
+
+            color: #999999;
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .cohort-note .cohort-value {
+            color: #222222;
+
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .sidebar-who {
+            margin-top: 18px;
+
+            color: #666666;
+
+            font-size: 13.5px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .sidebar-who strong {
+            color: #222222;
+            font-weight: 400;
+        }
+
+        .register-btn {
+            display: block;
+
+            width: 100%;
+            margin-top: 22px;
+            padding: 14px;
+
+            background-color: #222222;
+            border: none;
+
+            color: #ffffff;
+
+            font-family: inherit;
+            font-size: 14px;
+
+            text-align: center;
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .register-btn:hover,
+        .register-btn:focus-visible {
+            background-color: #ef2020;
+        }
+
+        .sidebar-fineprint {
+            margin-top: 20px;
+
+            color: #999999;
+
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .sidebar-fineprint a {
+            color: #ef2020;
+            text-decoration: underline;
+        }
+
+        /* INFO SECTION */
+
+        .info-section {
+            display: grid;
+
+            grid-template-columns:
+                minmax(220px, 260px)
+                minmax(0, 1fr);
+
+            gap: 0;
+
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 60px 4% 100px;
+        }
+
+        .info-tabs {
+            display: flex;
+            flex-direction: column;
+
+            border-top: 1px solid #eaeaea;
+        }
+
+        .info-tab {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 100%;
+            padding: 16px 18px;
+
+            background-color: #ffffff;
+            border: none;
+            border-bottom: 1px solid #eaeaea;
+
+            color: #444444;
+
+            font-family: inherit;
+            font-size: 14px;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .info-tab:hover {
+            color: #ef2020;
+        }
+
+        .info-tab.active {
+            background-color: #ef2020;
+            color: #ffffff;
+        }
+
+        .info-panels {
+            padding: 4px 0 0 56px;
+        }
+
+        .info-panel {
+            display: none;
+        }
+
+        .info-panel.active {
+            display: block;
+        }
+
+        .info-panel h2 {
+            margin-bottom: 18px;
+
+            color: #222222;
+
+            font-size: 26px;
+        }
+
+        .info-panel p {
+            max-width: 62ch;
+            margin-bottom: 14px;
+
+            color: #444444;
+
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.75;
+        }
+
+        .check-list {
+            display: flex;
+            flex-direction: column;
+
+            gap: 10px;
+
+            margin-top: 4px;
+            margin-bottom: 14px;
+
+            list-style: none;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 10px;
+
+            color: #444444;
+
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .check-list li::before {
+            content: "✓";
+
+            flex-shrink: 0;
+
+            color: #ef2020;
+            font-weight: 700;
+        }
+
+        .learn-heading {
+            margin-top: 28px;
+            margin-bottom: 12px;
+
+            color: #222222;
+
+            font-size: 16px;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 14px;
+
+            margin-top: 6px;
+        }
+
+        .learn-item {
+            padding: 18px 20px;
+            border: 1px solid #eaeaea;
+        }
+
+        .learn-item h4 {
+            margin-bottom: 6px;
+
+            color: #222222;
+
+            font-size: 15.5px;
+        }
+
+        .learn-item p {
+            margin: 0;
+
+            color: #666666;
+
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .levels-note {
+            padding: 16px 18px;
+            margin: 18px 0 4px;
+
+            background-color: #f9f9f9;
+            border-left: 3px solid #ef2020;
+
+            color: #555555;
+
+            font-size: 13.5px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .contact-panel-btn {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 8px;
+
+            margin-top: 10px;
+            padding: 12px 22px;
+
+            background-color: #ef2020;
+            color: #ffffff;
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-panel-btn:hover,
+        .contact-panel-btn:focus-visible {
+            background-color: #cf1b1b;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            gap: 16px;
+
+            padding: 34px 4% 70px;
+
+            background-color: #f2f2f2;
+            color: #555555;
+
+            font-size: 12px;
+            font-weight: 300;
+
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+        .site-footer a {
+            color: #555555;
+            text-decoration: underline;
+        }
+
+        .footer-policy-link:hover,
+        .footer-policy-link:focus-visible {
+            color: #ef2020;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            color: #8a8a8a;
+            font-size: 16px;
+            text-decoration: none;
+
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover,
+        .footer-social a:focus-visible {
+            color: #ef2020;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+
+            .floating-header {
+                position: relative;
+
+                flex-direction: column;
+                justify-content: center;
+
+                gap: 10px;
+
+                min-height: auto;
+                padding: 12px;
+            }
+
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                gap: 12px 18px;
+            }
+
+            .course-band {
+                margin-top: 0;
+            }
+
+            .course-top {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding-top: 30px;
+            }
+
+            .course-photo {
+                margin-top: 0;
+            }
+
+            .info-section {
+                grid-template-columns: 1fr;
+                padding-top: 40px;
+            }
+
+            .info-panels {
+                padding-left: 0;
+                padding-top: 30px;
+            }
+
+            .learn-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                right: 14px;
+                bottom: 14px;
+                width: 150px;
+                min-height: 46px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .course-band h1 {
+                font-size: 26px;
+            }
+
+            .contact-box {
+                width: 142px;
+                min-height: 44px;
+                padding: 8px 12px;
+                font-size: 15px;
+            }
+
+            .site-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="floating-header">
+
+        <a
+            href="../../index.html"
+            class="logo-box"
+            aria-label="The French Up home page"
+        >
+            The French Up
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <a href="../../index.html">Home</a>
+
+            <span class="has-dropdown" id="courses-dropdown">
+
+                <button
+                    type="button"
+                    class="dropdown-toggle"
+                    aria-expanded="false"
+                    aria-controls="courses-dropdown-menu"
+                >
+                    Courses
+                    <span class="caret" aria-hidden="true">▾</span>
+                </button>
+
+                <div class="dropdown-menu" id="courses-dropdown-menu">
+                    <div class="dropdown-menu-inner">
+
+                        <a href="../general-french.html">General French</a>
+                        <a href="../exam-success.html">Exam Success</a>
+                        <a href="../tcf-tef-onepage.html">TCF & TEF Canada</a>
+                        <a href="../ib-french-support.html">IB French Support</a>
+                        <a href="../french-skills-lab.html">French Skills Lab</a>
+
+                    </div>
+                </div>
+
+            </span>
+
+            <a href="../../index.html#wbt-heading">About Us</a>
+            <a href="#">More</a>
+
+        </nav>
+    </header>
+
+
+    <a
+        href="mailto:contact.frenchup@gmail.com?subject=French%20Foundations%20-%20Question"
+        class="contact-box"
+        aria-label="Email The French Up"
+    >
+        <span aria-hidden="true">💬</span>
+        Let's Chat!
+    </a>
+
+
+    <main>
+
+        <div class="course-band">
+
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+
+                <a href="https://devikasharma300.github.io/the-french-up/index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="https://devikasharma300.github.io/the-french-up/courses/exam-success.html">Exam Success</a>
+                <span aria-hidden="true">/</span>
+                <a href="../tcf-tef-onepage.html">TCF & TEF Canada Success Program</a>
+                <span aria-hidden="true">/</span>
+                French Foundations
+
+            </nav>
+
+            <h1>French Foundations</h1>
+
+        </div>
+
+
+        <div class="course-top">
+
+            <img
+                class="course-photo"
+                src="../../images/French%20Foundations_TCF&TEF.jpg"
+                alt="A beginner French class in progress"
+            >
+
+            <aside class="course-sidebar">
+
+                <div class="price-display">
+                    <span class="price">$549</span>
+                    <span class="price-unit">/ student</span>
+                </div>
+
+                <div class="duration-row">
+
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M12 7v5l3 3"></path>
+                    </svg>
+
+                    12 weeks · 36 one-hour sessions
+
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="cohort-note">
+                    <span class="cohort-label">Next Cohort</span>
+                    <span class="cohort-value">
+                        Rolling enrollment — contact us to find your next start date.
+                    </span>
+                </div>
+
+                <p class="sidebar-who">
+                    For <strong>complete beginners and elementary learners (A0–A2)</strong>.
+                    Includes three internal progression stages — you're placed
+                    based on your current French, at no extra cost.
+                </p>
+
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScCkO2v0sqZXiM2xHBkGkVNuf7m3m9hE6PN01SoGi52A72rtA/viewform?usp=header"
+                    class="register-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Register for French Foundations
+                </a>
+
+                <p class="sidebar-fineprint">
+                    Prefer 1-on-1 instruction? Private coaching is available
+                    at $65/hour alongside this program.
+                    <a href="mailto:contact.frenchup@gmail.com?subject=Private%20Coaching%20-%20Question">
+                        Ask us about it
+                    </a>.
+                </p>
+
+            </aside>
+
+        </div>
+
+
+        <section class="info-section">
+
+            <div class="info-tabs" role="tablist" aria-label="Course information">
+
+                <button type="button" class="info-tab active" data-tab="about" role="tab" aria-selected="true">
+                    About This Course
+                </button>
+
+                <button type="button" class="info-tab" data-tab="prereq" role="tab" aria-selected="false">
+                    Prerequisites
+                </button>
+
+                <button type="button" class="info-tab" data-tab="who" role="tab" aria-selected="false">
+                    Who Should Attend
+                </button>
+
+                <button type="button" class="info-tab" data-tab="contact" role="tab" aria-selected="false">
+                    Contact
+                </button>
+
+            </div>
+
+
+            <div class="info-panels">
+
+                <section class="info-panel active" id="panel-about" role="tabpanel">
+
+                    <h2>About This Course</h2>
+
+                    <p>
+                        French Foundations is designed for complete beginners
+                        and elementary learners who need to build a solid
+                        base before moving toward TCF or TEF-focused
+                        training. You'll develop the grammar, vocabulary, and
+                        four-skill basics needed for everyday communication.
+                    </p>
+
+                    <div class="levels-note">
+                        This program is organized in three progressive
+                        internal stages — Foundations Level 1, 2 and 3 — but
+                        you won't need to choose one yourself. We assess
+                        your current French and place you in the right
+                        group, and you move through the stages as you're
+                        ready, with no separate enrollment or extra fee
+                        between them.
+                    </div>
+
+                    <h3 class="learn-heading">What You'll Learn</h3>
+
+                    <div class="learn-grid">
+
+                        <div class="learn-item">
+                            <h4>Speaking</h4>
+                            <p>Build confidence forming sentences, answering questions, and talking about everyday situations.</p>
+                        </div>
+
+                        <div class="learn-item">
+                            <h4>Listening</h4>
+                            <p>Understand common words, phrases, questions, and increasingly natural spoken French.</p>
+                        </div>
+
+                        <div class="learn-item">
+                            <h4>Reading</h4>
+                            <p>Understand short messages, everyday texts, and increasingly detailed written information.</p>
+                        </div>
+
+                        <div class="learn-item">
+                            <h4>Writing</h4>
+                            <p>Construct clear sentences and communicate basic information accurately in writing.</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="info-panel" id="panel-prereq" role="tabpanel">
+
+                    <h2>Prerequisites</h2>
+
+                    <p>
+                        This is a Beginner to Elementary program (CEFR
+                        A0–A2). You should enroll in this course if:
+                    </p>
+
+                    <ul class="check-list">
+                        <li>you have little to no previous French instruction</li>
+                        <li>you have some French but want to build a stronger foundation before moving to intermediate-level programs</li>
+                    </ul>
+
+                </section>
+
+
+                <section class="info-panel" id="panel-who" role="tabpanel">
+
+                    <h2>Who Should Attend</h2>
+
+                    <p>
+                        This course is designed for anyone starting or
+                        restarting their French, including:
+                    </p>
+
+                    <ul class="check-list">
+                        <li>Complete beginners with no prior French instruction</li>
+                        <li>Elementary learners looking to solidify basics before the TCF/TEF Pathway</li>
+                        <li>Anyone planning to eventually work toward the TCF Canada or TEF Canada</li>
+                    </ul>
+
+                </section>
+
+
+                <section class="info-panel" id="panel-contact" role="tabpanel">
+
+                    <h2>Contact</h2>
+
+                    <p>
+                        For more information about registration, placement,
+                        or upcoming cohorts, please contact us.
+                    </p>
+
+                    <p>
+                        <strong>Call:</strong>
+                        <a href="tel:+16139089604">(+1) 613 908 9604</a>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:contact.frenchup@gmail.com?subject=French%20Foundations%20-%20Question">
+                            contact.frenchup@gmail.com
+                        </a>
+                    </p>
+
+                    <a
+                        href="mailto:contact.frenchup@gmail.com?subject=French%20Foundations%20-%20Question"
+                        class="contact-panel-btn"
+                    >
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        Contact Us Now
+                    </a>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <footer class="site-footer">
+
+            <div class="footer-left">
+
+                <span>&copy; 2026 The French Up. All rights reserved.</span>
+
+                <a
+                    href="https://devikasharma300.github.io/the-french-up/cancellation-policy.html"
+                    class="footer-policy-link"
+                >
+                    Cancellation Policy
+                </a>
+
+            </div>
+
+            <div class="footer-social">
+
+                <a href="#" aria-label="Visit The French Up on Facebook">
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" aria-label="Visit The French Up on Instagram">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" aria-label="Visit The French Up on YouTube">
+                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" aria-label="Visit The French Up on LinkedIn">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const dropdownWrapper = document.getElementById("courses-dropdown");
+            const dropdownToggle = dropdownWrapper.querySelector(".dropdown-toggle");
+
+            dropdownToggle.addEventListener("click", (event) => {
+                event.stopPropagation();
+                const isOpen = dropdownWrapper.classList.toggle("open");
+                dropdownToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!dropdownWrapper.contains(event.target)) {
+                    dropdownWrapper.classList.remove("open");
+                    dropdownToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    dropdownWrapper.classList.remove("open");
+                    dropdownToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            const tabs = document.querySelectorAll(".info-tab");
+            const panels = document.querySelectorAll(".info-panel");
+
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+
+                    tabs.forEach((t) => {
+                        t.classList.remove("active");
+                        t.setAttribute("aria-selected", "false");
+                    });
+
+                    panels.forEach((p) => p.classList.remove("active"));
+
+                    tab.classList.add("active");
+                    tab.setAttribute("aria-selected", "true");
+
+                    document.getElementById("panel-" + tab.dataset.tab).classList.add("active");
+
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
