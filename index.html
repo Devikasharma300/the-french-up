@@ -8,27 +8,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="description"
-        content="Online French classes built around questions, connections, grammar, pronunciation, vocabulary, and culture."
-    >
-
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.thefrenchup.com/">
-
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="The French Up">
-    <meta property="og:title" content="The French Up | Online French Classes">
-    <meta property="og:description" content="Online French classes built around your goal, TCF, SLE, IB support, or everyday conversation, taught one-on-one and built around how you learn best.">
-    <meta property="og:url" content="https://www.thefrenchup.com/">
-    <meta property="og:image" content="images/dancer_homepage.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The French Up | Online French Classes">
-    <meta name="twitter:description" content="Online French classes built around your goal, TCF, SLE, IB support, or everyday conversation.">
-    <meta name="twitter:image" content="images/dancer_homepage.png">
-
-    <title>The French Up | Online French Classes</title>
+    <title>The French Up | Dancer Scroll Animation</title>
 
     <link
         rel="preconnect"
@@ -42,13 +22,8 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet"
-    >
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     >
 
     <style>
@@ -60,15 +35,15 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
+        html,
         body {
+            width: 100%;
             min-height: 100%;
+
             overflow-x: hidden;
-            background-color: #ffffff;
-            color: #222222;
+
+            background-color: #f7f5f1;
+            color: #1f1f1f;
 
             font-family:
                 "Avenir Next",
@@ -78,8 +53,7 @@
                 sans-serif;
         }
 
-        img,
-        video {
+        img {
             display: block;
             max-width: 100%;
         }
@@ -88,1376 +62,1138 @@
             color: inherit;
         }
 
-        h1, h2 {
-            font-family: "Playfair Display", Georgia, serif;
-            font-weight: 700;
-        }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         .floating-header {
             position: fixed;
+
             top: 0;
             right: 0;
             left: 0;
-            z-index: 9999;
+
+            z-index: 1000;
+
+            height: 56px;
+
+            padding: 0 20px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            min-height: 52px;
-            padding: 5px 18px;
+            background-color: rgba(247, 245, 241, 0.95);
 
-            background-color: #ffffff;
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid rgba(0, 0, 0, 0.06);
         }
+
 
         .logo-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: #cf1b1b;
 
-            width: 120px;
-            min-height: 42px;
-
-            background-color: #cf1b1b;
-            color: #ffffff;
-
-            font-size: 13px;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-            line-height: 1;
-            text-align: center;
             text-decoration: none;
             text-transform: uppercase;
-            white-space: nowrap;
 
-            transition: background-color 0.3s ease;
+            font-size: 11px;
+
+            letter-spacing: 0.14em;
         }
 
-        .logo-box:hover,
-        .logo-box:focus-visible {
-            background-color: #b51616;
-        }
-
-        .logo-box:focus-visible {
-            outline: 3px solid #222222;
-            outline-offset: 3px;
-        }
 
         .main-nav {
             display: flex;
-            align-items: center;
-            gap: 32px;
+
+            gap: 24px;
         }
+
 
         .main-nav a {
             color: #222222;
-            font-size: 13px;
-            font-weight: 400;
+
             text-decoration: none;
-            transition: color 0.3s ease;
+
+            font-size: 11px;
         }
 
-        .main-nav a:hover,
-        .main-nav a:focus-visible {
-            color: #cf1b1b;
-        }
 
-        .main-nav a:focus-visible {
-            outline: 2px solid #cf1b1b;
-            outline-offset: 4px;
-        }
 
-        /* COURSES DROPDOWN */
+        /* =========================
+           MAIN LANDING SECTION
+        ========================= */
 
-        .main-nav .has-dropdown {
+        .dancer-scene {
             position: relative;
+
+            width: 100%;
+
+            height: 100svh;
+            min-height: 720px;
+
+            overflow: hidden;
+
+            background-color: #f7f5f1;
         }
 
-        .dropdown-toggle {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
 
-            background: none;
-            border: none;
-            padding: 0;
 
-            color: #222222;
-            font-family: inherit;
-            font-size: 13px;
-            font-weight: 400;
-            cursor: pointer;
+        /* =========================
+           INTRO TEXT
+        ========================= */
 
-            transition: color 0.3s ease;
+        .dancer-copy {
+            position: absolute;
+
+            top: 21%;
+            left: 7vw;
+
+            z-index: 4;
+
+            max-width: 520px;
         }
 
-        .dropdown-toggle:hover,
-        .dropdown-toggle:focus-visible,
-        .has-dropdown.open .dropdown-toggle {
+
+        .dancer-kicker {
+            margin-bottom: 18px;
+
             color: #cf1b1b;
-        }
 
-        .dropdown-toggle:focus-visible {
-            outline: 2px solid #cf1b1b;
-            outline-offset: 4px;
-        }
-
-        .dropdown-toggle .caret {
             font-size: 10px;
-            transition: transform 0.2s ease;
+
+            letter-spacing: 0.24em;
+
+            text-transform: uppercase;
+
+            opacity: 0;
         }
 
-        .has-dropdown.open .dropdown-toggle .caret,
-        .has-dropdown:hover .dropdown-toggle .caret {
-            transform: rotate(180deg);
-        }
 
-        /* This outer wrapper starts flush against the nav item (no gap),
-           so the mouse never leaves a hoverable area between "Courses"
-           and the menu. The visual gap is created with padding-top
-           on the INSIDE, which is still part of the hoverable zone. */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-
-            padding-top: 14px;
-            min-width: 220px;
-
-            z-index: 10000;
-        }
-
-        .has-dropdown:hover .dropdown-menu,
-        .has-dropdown:focus-within .dropdown-menu,
-        .has-dropdown.open .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-menu-inner {
-            padding: 10px 0;
-
-            background-color: #ffffff;
-            border-radius: 4px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-            overflow: hidden;
-        }
-
-        .dropdown-menu-inner a {
-            display: block;
-            padding: 10px 20px;
-
-            font-family: "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
-            font-size: 13px;
-            font-weight: 400;
-            white-space: nowrap;
-
-            transition:
-                background-color 0.2s ease,
-                color 0.2s ease;
-        }
-
-        .dropdown-menu-inner a:hover,
-        .dropdown-menu-inner a:focus-visible {
-            background-color: #cf1b1b;
-            color: #ffffff;
-            outline: none;
-        }
-
-        /* HERO */
-
-        .hero-image {
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-            padding-top: 52px;
-            overflow: hidden;
-            background-color: #ffffff;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        #typewriter-container {
-            position: absolute;
-            top: 79%;
-            left: 13%;
-
-            color: #ffffff;
-            font-family: "Courier New", Courier, monospace;
-            font-size: 24px;
-            line-height: 1.3;
-            white-space: nowrap;
-        }
-
-        #typewriter::after {
-            content: "|";
-            margin-left: 4px;
-            animation: cursor-blink 0.8s infinite;
-        }
-
-        @keyframes cursor-blink {
-            0%,
-            50%,
-            100% {
-                opacity: 1;
-            }
-
-            25%,
-            75% {
-                opacity: 0;
-            }
-        }
-
-        /* SOCIAL BAR */
-
-        .social-bar {
-            position: fixed;
-            top: 50%;
-            right: 18px;
-            z-index: 9998;
-
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            transform: translateY(-50%);
-        }
-
-        .social-bar a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            width: 32px;
-            height: 32px;
-
-            color: #8a8a8a;
-            font-size: 18px;
-            text-decoration: none;
-
-            transition:
-                color 0.3s ease,
-                transform 0.3s ease;
-        }
-
-        .social-bar a:hover,
-        .social-bar a:focus-visible {
-            color: #cf1b1b;
-            transform: translateX(-3px);
-        }
-
-        .social-bar a:focus-visible {
-            outline: 2px solid #cf1b1b;
-            outline-offset: 2px;
-        }
-
-        /* CONNECT BUTTON */
-
-        .contact-box {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            z-index: 9999;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-
-            width: 170px;
-            min-height: 52px;
-            padding: 10px 16px;
-
-            background-color: #ef2020;
-            color: #ffffff;
-
-            font-family: "Playfair Display", Georgia, serif;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 1.2;
-            text-align: center;
-            text-decoration: none;
-
-            transition:
-                background-color 0.3s ease,
-                transform 0.3s ease;
-        }
-
-        .contact-box span {
-            font-size: 22px;
-            line-height: 1;
-        }
-
-        .contact-box:hover,
-        .contact-box:focus-visible {
-            background-color: #d71920;
-            transform: translateY(-2px);
-        }
-
-        .contact-box:focus-visible {
-            outline: 3px solid #222222;
-            outline-offset: 3px;
-        }
-
-        /* YOUR FUTURE IS LOOKING UP */
-
-        .wbt-section {
-            display: grid;
-
-            grid-template-columns:
-                minmax(260px, 430px)
-                2px
-                minmax(300px, 430px);
-
-            justify-content: center;
-            align-items: center;
-            column-gap: 48px;
-
-            width: 100%;
-            padding: 110px 8%;
-
-            background-color: #ffffff;
-        }
-
-        .wbt-title {
-            margin: 0;
-
-            color: #ef2020;
-            font-size: 46px;
-            line-height: 1.12;
-            text-align: right;
-        }
-
-        .wbt-divider {
-            width: 2px;
-            height: 120px;
-            background-color: #ef2020;
-        }
-
-        .wbt-content {
-            width: 100%;
-            max-width: 390px;
-        }
-
-        .wbt-description {
-            width: 100%;
-            margin: 0;
-
-            color: #444444;
+        .dancer-title {
+            color: #1c1c1c;
 
             font-family:
-                "Avenir Light",
-                "Avenir Next",
-                Avenir,
-                Helvetica,
-                Arial,
-                sans-serif;
+                "Playfair Display",
+                Georgia,
+                serif;
 
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 1.7;
+            font-size:
+                clamp(
+                    42px,
+                    5.4vw,
+                    76px
+                );
+
+            font-weight: 500;
+
+            line-height: 0.98;
+
+            letter-spacing: -0.03em;
         }
 
-        .wbt-link {
-            display: inline-block;
-            margin-top: 26px;
 
-            color: #ef2020;
-            font-size: 18px;
-            text-decoration: none;
-
-            transition:
-                color 0.3s ease,
-                transform 0.3s ease;
-        }
-
-        .wbt-link:hover,
-        .wbt-link:focus-visible {
-            color: #c61616;
-            transform: translateX(4px);
-        }
-
-        .wbt-link:focus-visible {
-            outline: 2px solid #ef2020;
-            outline-offset: 4px;
-        }
-
-        /* VIDEO */
-
-        .video-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            width: 100%;
-            padding: 35px;
+        .dancer-title-line {
+            display: block;
 
             overflow: hidden;
-            background-color: #ffffff;
         }
 
-        .video-wrapper {
-            width: 100%;
-            aspect-ratio: 16 / 9;
+
+        .dancer-title-line > span {
+            display: block;
+
+            transform: translateY(115%);
         }
 
-        .video-section video {
+
+
+        /* =========================
+           SMALL SUPPORTING TEXT
+        ========================= */
+
+        .dancer-note {
+            position: absolute;
+
+            left: 7vw;
+            bottom: 11vh;
+
+            z-index: 4;
+
+            width: min(
+                360px,
+                34vw
+            );
+
+            color: #4a4a4a;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            opacity: 0;
+        }
+
+
+        .dancer-note strong {
+            color: #cf1b1b;
+
+            font-weight: 500;
+        }
+
+
+
+        /* =========================
+           IMAGE FRAME
+
+           THIS is the important part.
+
+           We animate this container
+           from a small portrait frame
+           into full screen.
+        ========================= */
+
+        .dancer-image-wrap {
+            position: absolute;
+
+            right: 8vw;
+            bottom: 7vh;
+
+            z-index: 2;
+
+            width: 34vw;
+            height: 58vh;
+
+            overflow: hidden;
+
+            background-color: #dddddd;
+
+            will-change:
+                width,
+                height,
+                right,
+                bottom,
+                transform;
+        }
+
+
+
+        /* =========================
+           IMAGE
+        ========================= */
+
+        .dancer-image {
             width: 100%;
             height: 100%;
 
-            object-fit: contain;
-            object-position: center 2%;
+            object-fit: cover;
+
+            object-position: center center;
+
+            transform: scale(1.14);
+
+            will-change:
+                transform,
+                filter;
         }
 
-        /* QUESTIONS AND CONNECTIONS */
 
-        .connections-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            width: 100%;
-            min-height: 460px;
-            padding: 110px 12%;
+        /* =========================
+           DARK OVERLAY
+        ========================= */
 
-            background-color: #ffffff;
+        .dancer-image-shade {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 1;
+
+            pointer-events: none;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.22) 0%,
+                    rgba(0, 0, 0, 0.05) 45%,
+                    rgba(0, 0, 0, 0) 70%
+                );
+
+            opacity: 0;
         }
 
-        .connections-content {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-        }
 
-        .connections-title {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
 
-            color: #ef2020;
+        /* =========================
+           TEXT AFTER FULLSCREEN
+        ========================= */
 
-            font-size: 46px;
-            line-height: 1.28;
+        .fullscreen-copy {
+            position: absolute;
 
-            text-align: justify;
-            text-align-last: left;
-            text-justify: inter-word;
-            hyphens: auto;
-        }
+            left: 6vw;
+            bottom: 8vh;
 
-        .connections-learn-more {
-            display: inline;
+            z-index: 5;
 
-            color: #ef2020;
+            color: #ffffff;
 
             font-family:
-                "Avenir Light",
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    28px,
+                    4vw,
+                    54px
+                );
+
+            font-weight: 500;
+
+            letter-spacing: -0.02em;
+
+            opacity: 0;
+
+            transform: translateY(40px);
+        }
+
+
+        .fullscreen-copy span {
+            display: block;
+
+            margin-top: 10px;
+
+            font-family:
                 "Avenir Next",
                 Avenir,
                 Helvetica,
                 Arial,
                 sans-serif;
 
-            font-size: 22px;
-            font-weight: 300;
-            line-height: inherit;
+            font-size: 10px;
+
+            font-weight: 400;
+
+            letter-spacing: 0.18em;
+
+            text-transform: uppercase;
         }
 
-        /* FULL-WIDTH IMAGE */
 
-        .learn-your-way-section {
-            width: 100%;
-            padding: 90px 0;
-            background-color: #ffffff;
+
+        /* =========================
+           SCROLL LABEL
+        ========================= */
+
+        .scroll-marker {
+            position: absolute;
+
+            right: 26px;
+            bottom: 24px;
+
+            z-index: 6;
+
+            color: #777777;
+
+            font-size: 9px;
+
+            letter-spacing: 0.18em;
+
+            text-transform: uppercase;
+
+            writing-mode: vertical-rl;
         }
 
-        .learn-your-way-section img {
-            display: block;
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
 
-        /* ---------- GOALS: Pick a goal ---------- */
-        .topics-section {
-            position: relative;
-            padding: 90px 8% 130px;
-            background-color: #ffffff;
-        }
 
-        .topics-title {
-            text-align: center;
-            color: #ef2020;
-            font-family: "Avenir Light", "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            font-size: 43px;
-            line-height: 1.2;
-            white-space: nowrap;
-            margin-bottom: 90px;
-        }
+        /* =========================
+           NEXT SECTION
+        ========================= */
 
-        .topic-grid {
+        .next-section {
+            min-height: 78vh;
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 56px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
 
-        .topic-card {
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.3s ease;
-        }
+            grid-template-columns:
+                0.9fr
+                1.1fr;
 
-        .topic-card:hover,
-        .topic-card:focus-visible {
-            transform: translateY(-4px);
-        }
+            align-items: center;
 
-        .topic-card:focus-visible {
-            outline: 2px solid #ef2020;
-            outline-offset: 4px;
-        }
+            gap: 8vw;
 
-        .topic-card img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-        }
+            padding: 120px 8vw;
 
-        .topic-card p {
-            text-align: center;
-            margin-top: 8px;
-            font-size: 14px;
-            font-weight: 300;
-            color: #444444;
-            line-height: 1.5;
-        }
-
-        .topic-card .card-title {
-            margin-top: 16px;
-            font-family: "Playfair Display", Georgia, serif;
-            font-weight: 700;
-            font-size: 18px;
-            color: #222222;
-        }
-
-        /* ---------- PROCESS (red band) ---------- */
-        .process-section {
-            background-color: #ef2020;
-            color: #ffffff;
-            padding: 90px 8%;
-            position: relative;
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .process-grid .step-number {
-            font-family: "Playfair Display", Georgia, serif;
-            font-weight: 700;
-            font-size: 64px;
-            margin-bottom: 14px;
-        }
-
-        .process-grid .step-label {
-            font-family: "Avenir Light", "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
-            font-size: 17px;
-            font-weight: 300;
-            letter-spacing: .3px;
-        }
-
-        /* ---------- TESTIMONIALS ---------- */
-        .testimonial-section {
-            padding: 100px 8% 80px;
             background-color: #ffffff;
         }
 
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            max-width: 1100px;
-            margin: 0 auto;
-            text-align: center;
+
+        .next-section h2 {
+            color: #cf1b1b;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    40px,
+                    5vw,
+                    72px
+                );
+
+            font-weight: 500;
+
+            line-height: 1.02;
+
+            letter-spacing: -0.03em;
         }
 
-        .testimonial-grid .quote-mark {
-            color: #ef2020;
-            font-size: 180px;
-            font-family: "Playfair Display", Georgia, serif;
-            font-weight: 700;
-            line-height: 1;
-        }
 
-        .testimonial-grid p {
-            font-family: "Avenir Light", "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+        .next-section p {
+            max-width: 500px;
+
+            color: #454545;
+
             font-size: 16px;
-            font-weight: 300;
-            line-height: 1.7;
-            color: #444444;
-            margin: 10px 0 20px;
+
+            line-height: 1.8;
         }
 
-        .testimonial-grid .author {
-            color: #ef2020;
-            font-family: "Avenir Light", "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            font-weight: 300;
-        }
 
-        /* ---------- SUBSCRIBE ---------- */
-        .subscribe-section {
-            background-color: #f2f2f2;
-            padding: 90px 8% 60px;
-            position: relative;
-        }
 
-        .subscribe-title {
-            text-align: center;
-            color: #ef2020;
-            font-family: "Playfair Display", Georgia, serif;
-            font-weight: 700;
-            font-size: 46px;
-            margin-bottom: 16px;
-        }
+        /* =========================
+           MOBILE
+        ========================= */
 
-        .subscribe-subtext {
-            text-align: center;
-            max-width: 480px;
-            margin: 0 auto 40px;
-            color: #444444;
-            font-size: 15px;
-            font-weight: 300;
-            line-height: 1.6;
-        }
-
-        .subscribe-form {
-            max-width: 440px;
-            margin: 0 auto;
-        }
-
-        .subscribe-form label {
-            display: block;
-            font-size: 13px;
-            font-weight: 300;
-            margin-bottom: 6px;
-        }
-
-        .subscribe-form input[type="email"] {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #cccccc;
-            font-size: 14px;
-            font-family: inherit;
-            margin-bottom: 18px;
-        }
-
-        .subscribe-checkbox {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .subscribe-checkbox .check-label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            font-weight: 300;
-            margin: 0;
-        }
-
-        .subscribe-btn {
-            background-color: #222222;
-            color: #ffffff;
-            border: none;
-            padding: 12px 26px;
-            font-family: inherit;
-            font-size: 14px;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: background-color 0.3s ease;
-        }
-
-        .subscribe-btn:hover,
-        .subscribe-btn:focus-visible {
-            background-color: #ef2020;
-        }
-
-        /* ---------- FOOTER ---------- */
-        .site-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 16px;
-            padding: 22px 8% 60px;
-            background-color: #ffffff;
-            font-size: 12px;
-            font-weight: 300;
-            color: #555555;
-        }
-
-        .site-footer a {
-            color: #555555;
-            text-decoration: underline;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 16px;
-        }
-
-        .footer-social a {
-            color: #8a8a8a;
-            font-size: 16px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            color: #ef2020;
-        }
-
-        /* TABLET */
-
-        @media (max-width: 900px) {
-            .floating-header {
-                position: relative;
-                flex-direction: column;
-                justify-content: center;
-                gap: 10px;
-
-                min-height: auto;
-                padding: 12px;
-            }
+        @media (max-width: 850px) {
 
             .main-nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px 18px;
+                gap: 14px;
             }
 
-            .hero-image {
-                min-height: auto;
-                padding-top: 0;
+
+            .dancer-scene {
+                min-height: 680px;
             }
 
-            #typewriter-container {
-                top: 82%;
-                left: 8%;
-                font-size: 16px;
+
+            .dancer-copy {
+                top: 16%;
+
+                left: 7vw;
+                right: 7vw;
             }
 
-            .social-bar {
-                right: 8px;
+
+            .dancer-title {
+                font-size:
+                    clamp(
+                        40px,
+                        11vw,
+                        64px
+                    );
             }
 
-            .contact-box {
-                right: 14px;
-                bottom: 14px;
 
-                width: 150px;
-                min-height: 46px;
-                font-size: 16px;
+            .dancer-image-wrap {
+                width: 62vw;
+                height: 48vh;
+
+                right: 7vw;
+                bottom: 8vh;
             }
 
-            .wbt-section {
-                grid-template-columns: 1fr;
-                justify-content: initial;
-                gap: 24px;
 
-                padding: 64px 8%;
-            }
+            .dancer-note {
+                left: 7vw;
+                bottom: 8vh;
 
-            .wbt-divider {
-                display: none;
-            }
+                width: 38vw;
 
-            .wbt-title {
-                font-size: 46px;
-                text-align: left;
-            }
-
-            .wbt-content,
-            .wbt-description {
-                width: 100%;
-                max-width: 480px;
-            }
-
-            .video-section {
-                padding: 18px;
-            }
-
-            .connections-section {
-                min-height: 380px;
-                padding: 90px 9%;
-            }
-
-            .connections-content,
-            .connections-title {
-                max-width: 720px;
-            }
-
-            .connections-title {
-                font-size: 40px;
-                line-height: 1.3;
-            }
-
-            .connections-learn-more {
-                font-size: 22px;
-            }
-
-            .learn-your-way-section {
-                padding: 70px 0;
-            }
-
-            .topic-grid,
-            .process-grid,
-            .testimonial-grid {
-                grid-template-columns: repeat(2, 1fr);
-                row-gap: 40px;
-            }
-
-            .topics-title {
-                font-size: 40px;
-            }
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 560px) {
-            .main-nav {
-                gap: 10px 14px;
-            }
-
-            .main-nav a,
-            .dropdown-toggle {
                 font-size: 12px;
             }
 
-            #typewriter-container {
-                top: 78%;
-                right: 20px;
-                left: 6%;
 
-                font-size: 13px;
-                white-space: normal;
-            }
-
-            .social-bar {
-                display: none;
-            }
-
-            .wbt-section {
-                padding: 52px 7%;
-            }
-
-            .wbt-title {
-                font-size: 40px;
-            }
-
-            .wbt-content,
-            .wbt-description {
-                max-width: 100%;
-            }
-
-            .contact-box {
-                width: 142px;
-                min-height: 44px;
-                padding: 8px 12px;
-                font-size: 15px;
-            }
-
-            .video-section {
-                padding: 10px;
-            }
-
-            .connections-section {
-                min-height: auto;
-                padding: 70px 8%;
-            }
-
-            .connections-title {
-                font-size: 32px;
-                line-height: 1.3;
-                text-align: left;
-                text-align-last: left;
-            }
-
-            .connections-learn-more {
-                font-size: 22px;
-            }
-
-            .learn-your-way-section {
-                padding: 50px 0;
-            }
-
-            .topic-grid,
-            .process-grid,
-            .testimonial-grid {
+            .next-section {
                 grid-template-columns: 1fr;
-            }
 
-            .topics-section,
-            .process-section,
-            .testimonial-section,
-            .subscribe-section {
-                padding-left: 7%;
-                padding-right: 7%;
-            }
+                gap: 36px;
 
-            .topics-title {
-                font-size: 26px;
-                white-space: normal;
-            }
-
-            .subscribe-title {
-                font-size: 28px;
+                padding-left: 7vw;
+                padding-right: 7vw;
             }
         }
 
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================= */
+
         @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
 
             *,
             *::before,
             *::after {
-                scroll-behavior: auto !important;
-                transition-duration: 0.01ms !important;
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
+                animation-duration:
+                    0.01ms !important;
+
+                transition-duration:
+                    0.01ms !important;
+            }
+
+
+            .dancer-kicker,
+            .dancer-note,
+            .dancer-title-line > span {
+                opacity: 1 !important;
+
+                transform: none !important;
             }
         }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
     </style>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "The French Up",
-        "description": "Online French classes built around your goal: general fluency, TCF for Canadian immigration, SLE for government roles, and IB French support.",
-        "sameAs": [
-            "https://www.facebook.com/",
-            "https://www.instagram.com/",
-            "https://www.youtube.com/",
-            "https://www.linkedin.com/"
-        ]
-    }
-    </script>
 </head>
 
+
 <body>
-    <h1 class="sr-only">The French Up: Online French Classes Built Around Your Goal</h1>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
 
     <header class="floating-header">
+
         <a
             href="index.html"
             class="logo-box"
-            aria-label="The French Up home page"
         >
             The French Up
         </a>
 
-        <nav
-            class="main-nav"
-            aria-label="Main navigation"
-        >
-            <a href="index.html">Home</a>
 
-            <span class="has-dropdown" id="courses-dropdown">
-                <button
-                    type="button"
-                    class="dropdown-toggle"
-                    aria-expanded="false"
-                    aria-controls="courses-dropdown-menu"
-                >
-                    Courses
-                    <span class="caret" aria-hidden="true">▾</span>
-                </button>
+        <nav class="main-nav">
 
-                <div class="dropdown-menu" id="courses-dropdown-menu">
-                    <div class="dropdown-menu-inner">
-                        <a href="courses/general-french.html">General French</a>
-                        <a href="courses/exam-success.html">Exam Success</a>
-                        <a href="courses/ib-french-support.html">IB French Support</a>
-                        <a href="courses/french-skills-lab.html">French Skills Lab</a>
-                    </div>
-                </div>
-            </span>
+            <a href="#">
+                Courses
+            </a>
 
-            <a href="#">About Us</a>
-            <a href="#">More</a>
+            <a href="#">
+                About
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
         </nav>
+
     </header>
 
-    <aside
-        class="social-bar"
-        aria-label="Social media links"
-    >
-        <a
-            href="#"
-            aria-label="Visit The French Up on Facebook"
-        >
-            <i
-                class="fa-brands fa-facebook-f"
-                aria-hidden="true"
-            ></i>
-        </a>
 
-        <a
-            href="#"
-            aria-label="Visit The French Up on Instagram"
-        >
-            <i
-                class="fa-brands fa-instagram"
-                aria-hidden="true"
-            ></i>
-        </a>
-
-        <a
-            href="#"
-            aria-label="Visit The French Up on YouTube"
-        >
-            <i
-                class="fa-brands fa-youtube"
-                aria-hidden="true"
-            ></i>
-        </a>
-
-        <a
-            href="#"
-            aria-label="Visit The French Up on LinkedIn"
-        >
-            <i
-                class="fa-brands fa-linkedin-in"
-                aria-hidden="true"
-            ></i>
-        </a>
-    </aside>
-
-    <a
-        href="mailto:contact.frenchup@gmail.com"
-        class="contact-box"
-        aria-label="Email The French Up"
-    >
-        <span aria-hidden="true">💬</span>
-        Let's Chat!
-    </a>
 
     <main>
-        <section
-            class="hero-image"
-            aria-label="The French Up introduction"
-        >
-            <img
-                src="images/dancer_homepage.png"
-                alt="A dancer representing The French Up language-learning experience"
-            >
+
+
+        <!-- =========================
+             EXPANDING DANCER SECTION
+        ========================== -->
+
+        <section class="dancer-scene">
+
+
+            <!-- Intro text -->
+
+            <div class="dancer-copy">
+
+                <div class="dancer-kicker">
+                    The French Up
+                </div>
+
+
+                <h1 class="dancer-title">
+
+                    <span class="dancer-title-line">
+                        <span>
+                            Because
+                        </span>
+                    </span>
+
+
+                    <span class="dancer-title-line">
+                        <span>
+                            Language
+                        </span>
+                    </span>
+
+
+                    <span class="dancer-title-line">
+                        <span>
+                            is Power.
+                        </span>
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+
+            <!-- Small supporting text -->
+
+            <p class="dancer-note">
+
+                French that grows with your goals —
+
+                <strong>
+                    one connection at a time.
+                </strong>
+
+            </p>
+
+
+
+            <!--
+                IMAGE FRAME
+
+                This starts small.
+
+                GSAP expands this entire frame
+                to 100vw x 100vh.
+            -->
+
+            <div class="dancer-image-wrap">
+
+
+                <img
+                    class="dancer-image"
+                    src="images/dancer_homepage.png"
+                    alt="A dancer representing The French Up language-learning experience"
+                >
+
+
+                <div
+                    class="dancer-image-shade"
+                    aria-hidden="true"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- Appears only after image fills screen -->
+
+            <div class="fullscreen-copy">
+
+                Move through French differently.
+
+                <span>
+                    Grammar · Vocabulary · Pronunciation · Culture
+                </span>
+
+            </div>
+
+
 
             <div
-                id="typewriter-container"
-                aria-label="Because language is power"
+                class="scroll-marker"
+                aria-hidden="true"
             >
-                <span
-                    id="typewriter"
-                    aria-hidden="true"
-                ></span>
+                Scroll
             </div>
+
+
         </section>
 
-        <section
-            class="wbt-section"
-            aria-labelledby="wbt-heading"
-        >
-            <h2
-                id="wbt-heading"
-                class="wbt-title"
-            >
-                Your Future is<br>
+
+
+        <!-- =========================
+             YOUR NEXT HOMEPAGE SECTION
+        ========================== -->
+
+        <section class="next-section">
+
+            <h2>
+                Your Future is
                 Looking Up
             </h2>
 
-            <div
-                class="wbt-divider"
-                aria-hidden="true"
-            ></div>
 
-            <div class="wbt-content">
-                <p class="wbt-description">
-                    Virtual French classes that connect grammar, vocabulary,
-                    pronunciation, and culture. Simple, structured, and shaped
-                    for real progress.
-                </p>
+            <p>
 
-                <a
-                    href="#"
-                    class="wbt-link"
-                >
-                    Start Online
-                </a>
-            </div>
+                Virtual French classes that connect grammar,
+                vocabulary, pronunciation, and culture.
+
+                Simple, structured, and shaped for real progress.
+
+            </p>
+
         </section>
 
-        <section
-            class="video-section"
-            aria-label="Learn real French video"
-        >
-            <div class="video-wrapper">
-                <video
-                    src="video_learnrealfrench.mp4"
-                    title="Learn real French"
-                    controls
-                    playsinline
-                    preload="metadata"
-                >
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
 
-        <section
-            class="connections-section"
-            aria-labelledby="connections-heading"
-        >
-            <div class="connections-content">
-                <h2
-                    id="connections-heading"
-                    class="connections-title"
-                >
-                    French learning built on questions and connections.
-                    Fun and easy to understand how the language works
-                    &mdash; and why.
-                    <span class="connections-learn-more">
-                        Learn More
-                    </span>
-                </h2>
-            </div>
-        </section>
-
-        <section
-            class="learn-your-way-section"
-            aria-label="Learn French your way with AI"
-        >
-            <img
-                src="images/learn%20french%20your%20way%20AI.jpg"
-                alt="Learn French your way with AI"
-            >
-        </section>
-
-        <!-- GOALS: You Choose the Goal -->
-        <section class="topics-section" aria-labelledby="topics-heading">
-            <h2 id="topics-heading" class="topics-title">You Choose the Goal. We Guide the Journey.</h2>
-
-            <div class="topic-grid">
-                <a class="topic-card" href="courses/general-french.html">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=560&fit=crop" alt="Single student studying French independently">
-                    <p class="card-title">General French</p>
-                    <p>Build your French from beginner to advanced</p>
-                </a>
-                <a class="topic-card" href="courses/exam-success.html">
-                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=560&fit=crop" alt="Student focused on exam preparation">
-                    <p class="card-title">Exam Success</p>
-                    <p>Prepare for important French assessments</p>
-                </a>
-                <a class="topic-card" href="courses/ib-french-support.html">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=560&fit=crop" alt="Students learning together in a classroom">
-                    <p class="card-title">IB French Support</p>
-                    <p>Academic French support for students and schools</p>
-                </a>
-                <a class="topic-card" href="courses/french-skills-lab.html">
-                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=560&fit=crop" alt="Two people practicing French conversation">
-                    <p class="card-title">French Skills Lab</p>
-                    <p>Improve specific skills and confidence</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- PROCESS steps -->
-        <section class="process-section" aria-label="How it works">
-            <div class="process-grid">
-                <div>
-                    <div class="step-number">01</div>
-                    <div class="step-label">Choose Your Goal</div>
-                </div>
-                <div>
-                    <div class="step-number">02</div>
-                    <div class="step-label">Choose Your Format</div>
-                </div>
-                <div>
-                    <div class="step-number">03</div>
-                    <div class="step-label">Find Your Level</div>
-                </div>
-                <div>
-                    <div class="step-number">04</div>
-                    <div class="step-label">Start Learning</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TESTIMONIALS -->
-        <section class="testimonial-section" aria-label="Testimonials">
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-                    <p>I needed a strong TCF score for my Canadian PR application and was starting from B1 with about eight months to prepare. French Up built my prep around the actual exam format, timed listening, speaking practice, and writing feedback every week. I scored high enough for the extra CRS points I needed, and my application went in three months ahead of schedule.</p>
-                    <div class="author">Ankit Verma, Mississauga</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-                    <p>I was stuck at Level B for two years, and my job needed Level C on the SLE, both speaking and writing, for a promotion. French Up helped me figure out exactly where I was losing marks, mostly oral spontaneity and formal writing. Weekly mock interviews and corrected writing prompts got me to Level C on my next attempt, and the promotion followed a month later.</p>
-                    <div class="author">Sarah Thompson, Ottawa</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-                    <p>My wife's family speaks French at home and I'd nod along at dinners for years, understanding maybe half of it. I started lessons mainly so I'd stop feeling left out of conversations. We spent a lot of time on just listening and responding quickly instead of writing exercises. Last Christmas I followed the whole conversation at dinner and even added a joke. Small thing, but it mattered to me.</p>
-                    <div class="author">Michael Ferreira, Toronto</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- STAY CONNECTED -->
-        <section class="subscribe-section" aria-labelledby="subscribe-heading">
-            <h2 id="subscribe-heading" class="subscribe-title">Don't Miss a Class. Stay Connected Today.</h2>
-            <p class="subscribe-subtext">Leave your email and we'll reach out about class openings, French tips, and new courses that fit your goal.</p>
-            <form class="subscribe-form" onsubmit="return false;">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
-                <div class="subscribe-checkbox">
-                    <label class="check-label">
-                        <input type="checkbox" name="stay-connected"> Yes, keep me updated on new courses and openings. *
-                    </label>
-                    <button type="submit" class="subscribe-btn">Stay Connected</button>
-                </div>
-            </form>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="site-footer">
-            <span>&copy; 2026 The French Up. All rights reserved.</span>
-            <div class="footer-social">
-                <a href="#" aria-label="Visit The French Up on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                <a href="#" aria-label="Visit The French Up on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                <a href="#" aria-label="Visit The French Up on YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-                <a href="#" aria-label="Visit The French Up on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-            </div>
-        </footer>
     </main>
 
+
+
+    <!-- =========================
+         GSAP
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+    ></script>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+    ></script>
+
+
+
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const typewriterElement =
-                document.getElementById("typewriter");
 
-            if (typewriterElement) {
-                const text = "Because Language is Power.";
-                const typingSpeed = 150;
-                const initialDelay = 1000;
-                const repeatDelay = 2000;
+        gsap.registerPlugin(
+            ScrollTrigger
+        );
 
-                let characterIndex = 0;
-                let typingTimer;
 
-                function typeText() {
-                    if (characterIndex < text.length) {
-                        typewriterElement.textContent +=
-                            text.charAt(characterIndex);
 
-                        characterIndex += 1;
+        const reducedMotion =
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
 
-                        typingTimer = window.setTimeout(
-                            typeText,
-                            typingSpeed
-                        );
 
-                        return;
+
+        if (!reducedMotion) {
+
+
+            /*
+             * Main animation timeline.
+             *
+             * The section stays pinned
+             * while the user scrolls.
+             */
+
+            const landingTimeline =
+                gsap.timeline({
+
+                    scrollTrigger: {
+
+                        trigger:
+                            ".dancer-scene",
+
+                        start:
+                            "top top",
+
+                        /*
+                         * Larger number:
+                         * slower expansion.
+                         */
+
+                        end:
+                            "+=2100",
+
+                        pin:
+                            true,
+
+                        scrub:
+                            1.15,
+
+                        anticipatePin:
+                            1
                     }
 
-                    typingTimer = window.setTimeout(() => {
-                        typewriterElement.textContent = "";
-                        characterIndex = 0;
+                });
 
-                        typingTimer = window.setTimeout(
-                            typeText,
-                            initialDelay
-                        );
-                    }, repeatDelay);
+
+
+            /*
+             * 1.
+             * Show small kicker.
+             */
+
+            landingTimeline.to(
+
+                ".dancer-kicker",
+
+                {
+
+                    opacity:
+                        1,
+
+                    duration:
+                        0.28
+
+                },
+
+                0.05
+
+            );
+
+
+
+            /*
+             * 2.
+             * Reveal heading lines upward.
+             */
+
+            landingTimeline.to(
+
+                ".dancer-title-line > span",
+
+                {
+
+                    y:
+                        "0%",
+
+                    stagger:
+                        0.08,
+
+                    duration:
+                        0.62,
+
+                    ease:
+                        "power3.out"
+
+                },
+
+                0.12
+
+            );
+
+
+
+            /*
+             * 3.
+             * Show supporting copy.
+             */
+
+            landingTimeline.to(
+
+                ".dancer-note",
+
+                {
+
+                    opacity:
+                        1,
+
+                    duration:
+                        0.35
+
+                },
+
+                0.58
+
+            );
+
+
+
+            /*
+             * 4.
+             * THE MAIN EFFECT.
+             *
+             * Expand the actual IMAGE FRAME
+             * from its small rectangle
+             * to full viewport size.
+             */
+
+            landingTimeline.to(
+
+                ".dancer-image-wrap",
+
+                {
+
+                    width:
+                        "100vw",
+
+                    height:
+                        "100vh",
+
+                    right:
+                        0,
+
+                    bottom:
+                        0,
+
+                    duration:
+                        1.65,
+
+                    ease:
+                        "none"
+
+                },
+
+                0.72
+
+            );
+
+
+
+            /*
+             * 5.
+             * Counter zoom.
+             *
+             * While the FRAME gets larger,
+             * the image inside gets slightly smaller.
+             *
+             * This prevents it from looking like
+             * a simple browser zoom.
+             */
+
+            landingTimeline.to(
+
+                ".dancer-image",
+
+                {
+
+                    scale:
+                        1,
+
+                    duration:
+                        1.65,
+
+                    ease:
+                        "none"
+
+                },
+
+                0.72
+
+            );
+
+
+
+            /*
+             * 6.
+             * Original title disappears
+             * as image takes over.
+             */
+
+            landingTimeline.to(
+
+                ".dancer-copy",
+
+                {
+
+                    y:
+                        -55,
+
+                    opacity:
+                        0,
+
+                    duration:
+                        0.48,
+
+                    ease:
+                        "none"
+
+                },
+
+                1.36
+
+            );
+
+
+
+            landingTimeline.to(
+
+                ".dancer-note",
+
+                {
+
+                    y:
+                        -35,
+
+                    opacity:
+                        0,
+
+                    duration:
+                        0.4,
+
+                    ease:
+                        "none"
+
+                },
+
+                1.32
+
+            );
+
+
+
+            /*
+             * 7.
+             * Darken image slightly when
+             * it reaches fullscreen.
+             */
+
+            landingTimeline.to(
+
+                ".dancer-image-shade",
+
+                {
+
+                    opacity:
+                        1,
+
+                    duration:
+                        0.38
+
+                },
+
+                1.78
+
+            );
+
+
+
+            /*
+             * 8.
+             * Reveal new text over
+             * fullscreen dancer image.
+             */
+
+            landingTimeline.to(
+
+                ".fullscreen-copy",
+
+                {
+
+                    opacity:
+                        1,
+
+                    y:
+                        0,
+
+                    duration:
+                        0.5,
+
+                    ease:
+                        "power2.out"
+
+                },
+
+                1.88
+
+            );
+
+
+
+            /*
+             * 9.
+             * Small final push-in.
+             */
+
+            landingTimeline.to(
+
+                ".dancer-image",
+
+                {
+
+                    scale:
+                        1.035,
+
+                    duration:
+                        0.65,
+
+                    ease:
+                        "none"
+
+                },
+
+                2.05
+
+            );
+
+
+
+            /*
+             * NEXT SECTION
+             */
+
+            gsap.from(
+
+                ".next-section h2",
+
+                {
+
+                    scrollTrigger: {
+
+                        trigger:
+                            ".next-section",
+
+                        start:
+                            "top 75%"
+
+                    },
+
+                    y:
+                        65,
+
+                    opacity:
+                        0,
+
+                    duration:
+                        1.05,
+
+                    ease:
+                        "power3.out"
+
                 }
 
-                const reducedMotionQuery = window.matchMedia(
-                    "(prefers-reduced-motion: reduce)"
-                );
+            );
 
-                if (reducedMotionQuery.matches) {
-                    typewriterElement.textContent = text;
-                } else {
-                    typingTimer = window.setTimeout(
-                        typeText,
-                        initialDelay
-                    );
 
-                    window.addEventListener("beforeunload", () => {
-                        window.clearTimeout(typingTimer);
-                    });
+
+            gsap.from(
+
+                ".next-section p",
+
+                {
+
+                    scrollTrigger: {
+
+                        trigger:
+                            ".next-section",
+
+                        start:
+                            "top 72%"
+
+                    },
+
+                    y:
+                        45,
+
+                    opacity:
+                        0,
+
+                    duration:
+                        1,
+
+                    delay:
+                        0.08,
+
+                    ease:
+                        "power3.out"
+
                 }
-            }
 
-            /* COURSES DROPDOWN: click/tap to open, so it works on
-               mobile too (not just hover), and never navigates away. */
-            const dropdownWrapper = document.getElementById("courses-dropdown");
-            const dropdownToggle = dropdownWrapper.querySelector(".dropdown-toggle");
+            );
 
-            dropdownToggle.addEventListener("click", (event) => {
-                event.stopPropagation();
+        }
 
-                const isOpen = dropdownWrapper.classList.toggle("open");
-                dropdownToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-            });
-
-            document.addEventListener("click", (event) => {
-                if (!dropdownWrapper.contains(event.target)) {
-                    dropdownWrapper.classList.remove("open");
-                    dropdownToggle.setAttribute("aria-expanded", "false");
-                }
-            });
-
-            document.addEventListener("keydown", (event) => {
-                if (event.key === "Escape") {
-                    dropdownWrapper.classList.remove("open");
-                    dropdownToggle.setAttribute("aria-expanded", "false");
-                }
-            });
-        });
     </script>
+
+
 </body>
 </html>
-
