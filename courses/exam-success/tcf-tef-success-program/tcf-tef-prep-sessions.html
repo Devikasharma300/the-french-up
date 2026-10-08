@@ -1063,6 +1063,96 @@
             line-height: 1.7;
         }
 
+        /* PRIVATE COACHING */
+
+        .private-section {
+            padding: 0 0 70px;
+
+            background-color: #ffffff;
+        }
+
+        .private-box {
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+
+            gap: 40px;
+
+            align-items: center;
+
+            padding: 40px;
+
+            background-color: #f7f7f7;
+            border: 1px solid #eaeaea;
+        }
+
+        .private-copy h2 {
+            margin: 10px 0 14px;
+
+            color: #222222;
+
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
+        .private-copy p:not(.section-label) {
+            color: #555555;
+
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.75;
+        }
+
+        .private-price {
+            text-align: right;
+        }
+
+        .private-price strong {
+            display: block;
+            margin-bottom: 4px;
+
+            color: #222222;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .private-price span {
+            display: block;
+            margin-bottom: 18px;
+
+            color: #888888;
+
+            font-size: 13px;
+        }
+
+        .private-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+            padding: 13px 24px;
+
+            background-color: #222222;
+            border: 1px solid #222222;
+
+            color: #ffffff;
+
+            font-size: 14px;
+            text-decoration: none;
+
+            transition:
+                background-color 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .private-btn:hover,
+        .private-btn:focus-visible {
+            background-color: #ef2020;
+            border-color: #ef2020;
+        }
+
         .page-faq {
             padding: 70px 0;
 
@@ -1268,6 +1358,17 @@
 
         @media (max-width: 900px) {
 
+            .private-box {
+                grid-template-columns: 1fr;
+
+                padding: 28px 22px;
+            }
+
+            .private-price {
+                text-align: left;
+            }
+
+
             .floating-header {
                 position: relative;
 
@@ -1451,7 +1552,7 @@
     </header>
 
     <a
-        href="mailto:contact.frenchup@gmail.com?subject=TCF%20%26%20TEF%20Canada%20Prep%20-%20Question"
+        href="mailto:contact.frenchup@gmail.com?subject=TCF%20%26%20TEF%20Canada%20Preparation%20-%20Question"
         class="contact-box"
         aria-label="Email The French Up"
     >
@@ -1503,7 +1604,7 @@
 
                 <img
                     class="course-photo"
-                    src="../../../images/tcf-tef-canada-prep.jpg"
+                    src="../../../images/tcf-tef-prep-page.jpg"
                     alt="French exam preparation session with timed practice and feedback"
                 >
 
@@ -1746,17 +1847,14 @@
                         <div class="learn-item">
                             <h4>Speaking under time limits</h4>
                             <p>
-                                Build answers quickly, ask useful questions,
-                                defend a point of view and keep speaking when the
-                                conversation does not follow a script.
+                                Build answers quickly, organize them as you speak and keep going when a question catches you off guard.
                             </p>
                         </div>
 
                         <div class="learn-item">
                             <h4>Writing to the task</h4>
                             <p>
-                                Plan efficiently, stay within the task requirements,
-                                organize ideas and leave time to check your work.
+                                Plan quickly, organize ideas clearly and leave time to check your work.
                             </p>
                         </div>
 
@@ -1874,7 +1972,6 @@
                     <ul class="check-list">
                         <li>asking relevant questions naturally in the interaction task</li>
                         <li>developing and defending a point of view with enough detail</li>
-                        <li>planning the three writing tasks without losing too much writing time</li>
                         <li>respecting the purpose, audience and word requirements of each written task</li>
                     </ul>
 
@@ -2076,14 +2173,14 @@
                         <strong>Email:</strong>
 
                         <a
-                            href="mailto:contact.frenchup@gmail.com?subject=TCF%20%26%20TEF%20Canada%20Prep%20-%20Question"
+                            href="mailto:contact.frenchup@gmail.com?subject=TCF%20%26%20TEF%20Canada%20Preparation%20-%20Question"
                         >
                             contact.frenchup@gmail.com
                         </a>
                     </p>
 
                     <a
-                        href="mailto:contact.frenchup@gmail.com?subject=TCF%20%26%20TEF%20Canada%20Prep%20-%20Question"
+                        href="mailto:contact.frenchup@gmail.com?subject=TCF%20%26%20TEF%20Canada%20Preparation%20-%20Question"
                         class="contact-panel-btn"
                     >
                         <i
@@ -2257,6 +2354,55 @@
 
         </section>
 
+        <!-- PRIVATE COACHING -->
+
+        <section class="private-section">
+
+            <div class="difference-wrap">
+
+                <div class="private-box">
+
+                    <div class="private-copy">
+
+                        <p class="section-label">
+                            Optional support
+                        </p>
+
+                        <h2>
+                            Add private coaching when you need extra support.
+                        </h2>
+
+                        <p>
+                            Private coaching can complement any stage of the
+                            pathway. Use one-to-one sessions for targeted
+                            speaking practice, writing feedback, clear
+                            explanations of any grammar concept, exam
+                            preparation or individual language support.
+                        </p>
+
+                    </div>
+
+                    <div class="private-price">
+
+                        <strong>$65</strong>
+                        <span>per hour</span>
+
+                        <a
+                            href="mailto:contact.frenchup@gmail.com?subject=Private%20TCF%2FTEF%20Coaching"
+                            class="private-btn"
+                        >
+                            Ask About Coaching
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
         <!-- FAQ -->
 
         <section class="page-faq">
@@ -2364,30 +2510,6 @@
                             practice outside class and performance on the official
                             test. Our role is to help you prepare more deliberately
                             and identify what is most useful to improve before exam day.
-                        </div>
-
-                    </div>
-
-                    <div class="faq-item">
-
-                        <button
-                            class="faq-question"
-                            type="button"
-                            aria-expanded="false"
-                        >
-                            <span>
-                                Can I add private coaching?
-                            </span>
-
-                            <span aria-hidden="true">
-                                +
-                            </span>
-                        </button>
-
-                        <div class="faq-answer">
-                            Yes. Private coaching is available at $65/hour as an
-                            optional add-on if you want extra speaking practice,
-                            writing correction or focused work on a particular task.
                         </div>
 
                     </div>
