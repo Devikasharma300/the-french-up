@@ -460,6 +460,8 @@
         }
 
         .program-card {
+            position: relative;
+
             display: flex;
             flex-direction: column;
 
@@ -599,9 +601,28 @@
             text-decoration: none;
         }
 
+        .program-jump::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            z-index: 1;
+        }
+
+        .program-card:hover .program-jump,
         .program-jump:hover,
         .program-jump:focus-visible {
             text-decoration: underline;
+        }
+
+        .program-card:hover .program-card-title-link {
+            color: #ef2020;
+        }
+
+        .program-jump:focus-visible::after {
+            outline: 3px solid #222222;
+            outline-offset: 3px;
         }
 
         /* UNSURE STRIP */
@@ -1751,7 +1772,7 @@
 
                         <span class="program-step">Building your French</span>
 
-                        <h3>TCF / TEF Pathway</h3>
+                        <h3><a href="tcf-tef-success-program/tcf-pathway.html" class="program-card-title-link">TCF / TEF Pathway</a></h3>
 
                         <p class="program-for">
                             For learners who already have basic French.
@@ -1778,7 +1799,7 @@
 
                         <span class="program-step">Exam Ready</span>
 
-                        <h3>TCF / TEF Canada Preparation</h3>
+                        <h3><a href="tcf-tef-success-program/tcf-tef-canada-prep.html" class="program-card-title-link">TCF / TEF Canada Preparation</a></h3>
 
                         <p class="program-for">
                             For intermediate learners ready to focus on
