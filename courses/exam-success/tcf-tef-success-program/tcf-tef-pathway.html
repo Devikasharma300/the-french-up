@@ -411,7 +411,7 @@
             align-items: center;
             gap: 8px;
 
-            margin-bottom: 20px;
+            margin-bottom: 8px;
 
             color: #666666;
 
@@ -420,6 +420,23 @@
         }
 
         .duration-row svg {
+            flex-shrink: 0;
+        }
+
+        .location-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 20px;
+
+            color: #666666;
+
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        .location-row svg {
             flex-shrink: 0;
         }
 
@@ -1501,6 +1518,17 @@
                     </svg>
 
                     10 weeks · 20 one-hour sessions
+
+                </div>
+
+                <div class="location-row">
+
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" aria-hidden="true">
+                        <path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"></path>
+                        <circle cx="12" cy="10" r="2.5"></circle>
+                    </svg>
+
+                    Virtual, Microsoft Teams
 
                 </div>
 
