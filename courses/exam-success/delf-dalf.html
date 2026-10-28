@@ -1,6 +1,2552 @@
----
-layout: default
-title: DELF-DALF
----
-<h1>DELF-DALF</h1>
-<p>Content about DELF-DALF goes here.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="DELF A1–B2 and DALF C1–C2 preparation at The French Up: 12 live online sessions, exam-style practice and personal feedback at your level."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://www.thefrenchup.com/courses/exam-success/delf-dalf.html"
+    >
+
+    <title>DELF &amp; DALF Preparation | A1–C2 Exam Practice | The French Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100%;
+            overflow-x: hidden;
+
+            background-color: #ffffff;
+            color: #222222;
+
+            font-family:
+                "Avenir Next",
+                Avenir,
+                Helvetica,
+                Arial,
+                sans-serif;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 700;
+        }
+
+        /* HEADER */
+
+        .floating-header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            min-height: 52px;
+            padding: 5px 18px;
+
+            background-color: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 120px;
+            min-height: 42px;
+
+            background-color: #cf1b1b;
+            color: #ffffff;
+
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            line-height: 1;
+
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .logo-box:hover,
+        .logo-box:focus-visible {
+            background-color: #b51616;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .main-nav a {
+            color: #222222;
+            font-size: 13px;
+            text-decoration: none;
+
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover,
+        .main-nav a:focus-visible {
+            color: #cf1b1b;
+        }
+
+        .main-nav .has-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+
+            padding: 0;
+
+            background: none;
+            border: none;
+
+            color: #222222;
+
+            font-family: inherit;
+            font-size: 13px;
+
+            cursor: pointer;
+
+            transition: color 0.3s ease;
+        }
+
+        .dropdown-toggle:hover,
+        .has-dropdown.open .dropdown-toggle {
+            color: #cf1b1b;
+        }
+
+        .caret {
+            font-size: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .has-dropdown.open .caret,
+        .has-dropdown:hover .caret {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            display: none;
+
+            position: absolute;
+            top: 100%;
+            left: 0;
+
+            min-width: 220px;
+            padding-top: 14px;
+
+            z-index: 10000;
+        }
+
+        .has-dropdown:hover .dropdown-menu,
+        .has-dropdown:focus-within .dropdown-menu,
+        .has-dropdown.open .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu-inner {
+            padding: 10px 0;
+
+            background-color: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+            overflow: hidden;
+        }
+
+        .dropdown-menu-inner a {
+            display: block;
+
+            padding: 10px 20px;
+
+            font-size: 13px;
+            white-space: nowrap;
+
+            transition:
+                background-color 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .dropdown-menu-inner a:hover,
+        .dropdown-menu-inner a:focus-visible {
+            background-color: #cf1b1b;
+            color: #ffffff;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            width: 170px;
+            min-height: 52px;
+            padding: 10px 16px;
+
+            background-color: #ef2020;
+            color: #ffffff;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.2;
+
+            text-align: center;
+            text-decoration: none;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .contact-box:hover,
+        .contact-box:focus-visible {
+            background-color: #d71920;
+            transform: translateY(-2px);
+        }
+
+        /* HERO BAND */
+
+        .course-band {
+            margin-top: 52px;
+            padding: 22px 4% 34px;
+
+            background-color: #ef2020;
+            color: #ffffff;
+        }
+
+        .breadcrumb {
+            margin-bottom: 14px;
+
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 12px;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover,
+        .breadcrumb a:focus-visible {
+            color: #ffffff;
+        }
+
+        .breadcrumb span[aria-hidden] {
+            margin: 0 6px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            color: rgba(255, 255, 255, 0.86);
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .course-band h1 {
+            max-width: 780px;
+
+            font-size: 36px;
+            line-height: 1.2;
+        }
+
+        .course-band .hero-subhead {
+            max-width: 760px;
+            margin-top: 12px;
+
+            color: rgba(255, 255, 255, 0.92);
+
+            font-size: 15.5px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        /* COURSE TOP */
+
+        .course-top {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.6fr)
+                minmax(300px, 380px);
+
+            gap: 48px;
+
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 46px 4% 0;
+        }
+
+        .course-visual {
+            position: relative;
+        }
+
+        .course-photo {
+            width: 100%;
+            aspect-ratio: 16 / 11;
+
+            margin-top: 48px;
+
+            object-fit: cover;
+        }
+
+        .image-caption {
+            margin-top: 10px;
+
+            color: #555555;
+
+            font-size: 11.5px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        /* SIDEBAR */
+
+        .course-sidebar {
+            align-self: start;
+        }
+
+        .price-display {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+
+            margin-bottom: 4px;
+        }
+
+        .price-display .price {
+            color: #222222;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .price-display .price-unit {
+            color: #555555;
+
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .duration-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 8px;
+
+            color: #444444;
+
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .duration-row svg {
+            flex-shrink: 0;
+        }
+
+        .location-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 20px;
+
+            color: #444444;
+
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .location-row svg {
+            flex-shrink: 0;
+        }
+
+        .sidebar-divider {
+            margin: 20px 0;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .cohort-note {
+            padding: 16px 18px;
+
+            background-color: #f9f9f9;
+            border: 1px solid #eaeaea;
+        }
+
+        .cohort-note .cohort-label {
+            display: block;
+            margin-bottom: 4px;
+
+            color: #555555;
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .cohort-note .cohort-value {
+            color: #222222;
+
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .sidebar-who {
+            margin-top: 18px;
+
+            color: #444444;
+
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .sidebar-who strong {
+            color: #222222;
+            font-weight: 400;
+        }
+
+        .sidebar-highlight {
+            margin-top: 16px;
+            padding: 14px 16px;
+
+            background-color: #fff7f7;
+            border-left: 3px solid #ef2020;
+
+            color: #444444;
+
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.55;
+        }
+
+        .register-btn {
+            display: block;
+
+            width: 100%;
+            margin-top: 22px;
+            padding: 14px;
+
+            background-color: #222222;
+            border: none;
+
+            color: #ffffff;
+
+            font-family: inherit;
+            font-size: 14px;
+
+            text-align: center;
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .register-btn:hover,
+        .register-btn:focus-visible {
+            background-color: #ef2020;
+        }
+
+        .sidebar-fineprint {
+            margin-top: 20px;
+
+            color: #555555;
+
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .sidebar-fineprint a {
+            color: #ef2020;
+            text-decoration: underline;
+        }
+
+        /* INFO SECTION */
+
+        .info-section {
+            display: grid;
+
+            grid-template-columns:
+                minmax(220px, 260px)
+                minmax(0, 1fr);
+
+            gap: 0;
+
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 60px 4% 100px;
+        }
+
+        .info-tabs {
+            display: flex;
+            flex-direction: column;
+
+            border-top: 1px solid #eaeaea;
+        }
+
+        .info-tab {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 100%;
+            padding: 16px 18px;
+
+            background-color: #ffffff;
+            border: none;
+            border-bottom: 1px solid #eaeaea;
+
+            color: #444444;
+
+            font-family: inherit;
+            font-size: 14px;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .info-tab::after {
+            content: "→";
+            color: #bbbbbb;
+        }
+
+        .info-tab:hover {
+            color: #ef2020;
+        }
+
+        .info-tab.active {
+            background-color: #ef2020;
+            color: #ffffff;
+        }
+
+        .info-tab.active::after {
+            color: #ffffff;
+        }
+
+        .info-tab:focus-visible {
+            outline: 2px solid #222222;
+            outline-offset: -2px;
+        }
+
+        .info-panels {
+            padding: 4px 0 0 56px;
+        }
+
+        .info-panel {
+            display: none;
+        }
+
+        .info-panel.active {
+            display: block;
+        }
+
+        .info-panel h2 {
+            margin-bottom: 18px;
+
+            color: #222222;
+
+            font-size: 26px;
+        }
+
+        .info-panel p {
+            max-width: 64ch;
+            margin-bottom: 14px;
+
+            color: #444444;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.75;
+        }
+
+        .lead-line {
+            margin-bottom: 20px !important;
+
+            color: #222222 !important;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            line-height: 1.45 !important;
+        }
+
+        .check-list,
+        .x-list {
+            display: flex;
+            flex-direction: column;
+
+            gap: 10px;
+
+            margin-top: 4px;
+            margin-bottom: 14px;
+
+            list-style: none;
+        }
+
+        .check-list li,
+        .x-list li {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 10px;
+
+            color: #444444;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .check-list li::before {
+            content: "✓";
+
+            flex-shrink: 0;
+
+            color: #ef2020;
+            font-weight: 700;
+        }
+
+        .x-list li::before {
+            content: "×";
+
+            flex-shrink: 0;
+
+            color: #555555;
+            font-weight: 700;
+        }
+
+        .fit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 32px;
+
+            margin-top: 18px;
+        }
+
+        .fit-panel {
+            padding: 20px 22px;
+            border: 1px solid #eaeaea;
+        }
+
+        .fit-panel h3 {
+            margin-bottom: 12px;
+
+            color: #222222;
+
+            font-size: 16px;
+        }
+
+        .learn-heading {
+            margin-top: 30px;
+            margin-bottom: 12px;
+
+            color: #222222;
+
+            font-size: 16px;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 14px;
+
+            margin-top: 6px;
+        }
+
+        .learn-item {
+            padding: 18px 20px;
+            border: 1px solid #eaeaea;
+        }
+
+        .learn-item h4 {
+            margin-bottom: 6px;
+
+            color: #222222;
+
+            font-size: 15.5px;
+        }
+
+        .learn-item p {
+            margin: 0;
+
+            color: #444444;
+
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .pathway-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 14px;
+
+            margin-top: 22px;
+        }
+
+        .pathway-step {
+            padding: 20px 18px;
+
+            background-color: #f9f9f9;
+            border: 1px solid #eaeaea;
+        }
+
+        .pathway-step span {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #ef2020;
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        .pathway-step h4 {
+            margin-bottom: 7px;
+            font-size: 15px;
+        }
+
+        .pathway-step p {
+            margin: 0;
+
+            color: #444444;
+
+            font-size: 12.8px;
+            line-height: 1.55;
+        }
+
+        .levels-note {
+            padding: 16px 18px;
+            margin: 18px 0 4px;
+
+            background-color: #f9f9f9;
+            border-left: 3px solid #ef2020;
+
+            color: #444444;
+
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .contact-panel-btn {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 8px;
+
+            margin-top: 10px;
+            padding: 12px 22px;
+
+            background-color: #ef2020;
+            color: #ffffff;
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-panel-btn:hover,
+        .contact-panel-btn:focus-visible {
+            background-color: #cf1b1b;
+        }
+
+        /* EXAM FORMAT */
+
+        .exam-format-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .exam-format-card {
+            padding: 20px;
+            border: 1px solid #eaeaea;
+            background-color: #ffffff;
+        }
+
+        .exam-format-card h3 {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .exam-format-card ul {
+            list-style: none;
+        }
+
+        .exam-format-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eeeeee;
+            color: #444444;
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .exam-format-card li:last-child {
+            border-bottom: none;
+        }
+
+        .exam-format-card strong {
+            color: #222222;
+            font-weight: 400;
+        }
+
+        /* DIFFERENCE SECTION */
+
+        .difference-section {
+            padding: 76px 0;
+
+            background-color: #1d1d1d;
+            color: #ffffff;
+        }
+
+        .difference-wrap {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 4%;
+        }
+
+        .difference-label {
+            margin-bottom: 10px;
+
+            color: #ef2020;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .difference-title {
+            max-width: 760px;
+            margin-bottom: 16px;
+
+            color: #ffffff;
+
+            font-size: 34px;
+            line-height: 1.2;
+        }
+
+        .difference-title + .difference-grid {
+            margin-top: 28px;
+        }
+
+        .difference-intro {
+            max-width: 70ch;
+            margin-bottom: 14px;
+
+            color: #c9c9c9;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+
+        .difference-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 28px 40px;
+        }
+
+        .difference-item {
+            padding: 4px 0 4px 24px;
+
+            border-left: 3px solid #ef2020;
+        }
+
+        .difference-item h3 {
+            margin-bottom: 8px;
+
+            color: #ffffff;
+
+            font-size: 19px;
+            line-height: 1.3;
+        }
+
+        .difference-item p {
+            color: #c2c2c2;
+
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.65;
+        }
+
+        /* COURSE PATH */
+
+        .next-step-section {
+            padding: 70px 0;
+            background-color: #ffffff;
+        }
+
+        .next-step-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .next-step-card {
+            padding: 28px 26px;
+
+            border: 1px solid #e5e5e5;
+            background-color: #ffffff;
+        }
+
+        .next-step-card.emphasis {
+            border: 2px solid #ef2020;
+        }
+
+        .next-step-tag {
+            display: inline-block;
+
+            margin-bottom: 12px;
+            padding: 4px 9px;
+
+            background-color: #fdeaea;
+            color: #ef2020;
+
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        .next-step-card h3 {
+            margin-bottom: 8px;
+
+            font-size: 19px;
+        }
+
+        .next-step-card p {
+            color: #444444;
+
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.65;
+        }
+
+        .next-step-compare {
+            margin-top: 20px;
+
+            color: #444444;
+
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .next-step-compare a {
+            color: #ef2020;
+            font-weight: 400;
+            text-decoration: underline;
+        }
+
+        .next-step-compare a:hover,
+        .next-step-compare a:focus-visible {
+            color: #cf1b1b;
+        }
+
+
+
+
+        /* FAQ */
+
+        .section-label {
+            margin-bottom: 10px;
+
+            color: #ef2020;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            margin-bottom: 8px;
+
+            color: #222222;
+
+            font-size: 28px;
+            line-height: 1.25;
+        }
+
+        .section-intro {
+            max-width: 70ch;
+
+            color: #444444;
+
+            font-size: 14.5px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        /* PRIVATE COACHING */
+
+        .private-section {
+            padding: 0 0 70px;
+
+            background-color: #ffffff;
+        }
+
+        .private-box {
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+
+            gap: 40px;
+
+            align-items: center;
+
+            padding: 40px;
+
+            background-color: #f7f7f7;
+            border: 1px solid #eaeaea;
+        }
+
+        .private-copy h2 {
+            margin: 10px 0 14px;
+
+            color: #222222;
+
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
+        .private-copy p:not(.section-label) {
+            color: #444444;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.75;
+        }
+
+        .private-price {
+            text-align: right;
+        }
+
+        .private-price strong {
+            display: block;
+            margin-bottom: 4px;
+
+            color: #222222;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .private-price span {
+            display: block;
+            margin-bottom: 18px;
+
+            color: #555555;
+
+            font-size: 13px;
+        }
+
+        .private-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+            padding: 13px 24px;
+
+            background-color: #222222;
+            border: 1px solid #222222;
+
+            color: #ffffff;
+
+            font-size: 14px;
+            text-decoration: none;
+
+            transition:
+                background-color 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .private-btn:hover,
+        .private-btn:focus-visible {
+            background-color: #ef2020;
+            border-color: #ef2020;
+        }
+
+        .page-faq {
+            padding: 70px 0;
+
+            background-color: #f7f7f7;
+        }
+
+        .faq-list {
+            margin-top: 30px;
+
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            width: 100%;
+            padding: 18px 0;
+
+            background: none;
+            border: none;
+
+            color: #222222;
+
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 400;
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+        .faq-question span:last-child {
+            flex-shrink: 0;
+
+            color: #ef2020;
+            font-size: 18px;
+
+            transition: transform 0.2s ease;
+        }
+
+        .faq-answer {
+            display: none;
+
+            max-width: 72ch;
+            padding: 0 0 18px;
+
+            color: #444444;
+
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .faq-item.open .faq-question span:last-child {
+            transform: rotate(45deg);
+        }
+
+        /* FINAL CTA */
+
+        .final-cta {
+            padding: 58px 4%;
+
+            background-color: #ef2020;
+            color: #ffffff;
+
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            max-width: 760px;
+            margin: 0 auto 12px;
+
+            font-size: 30px;
+            line-height: 1.25;
+        }
+
+        .final-cta p {
+            max-width: 650px;
+            margin: 0 auto 22px;
+
+            color: rgba(255, 255, 255, 0.92);
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .final-cta-footnote {
+            margin-top: 24px !important;
+
+            color: rgba(255, 255, 255, 0.85) !important;
+
+            font-size: 13px !important;
+            font-weight: 400;
+        }
+
+        .final-cta-footnote a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .final-cta-footnote a:hover,
+        .final-cta-footnote a:focus-visible {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .final-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+            padding: 13px 24px;
+
+            background-color: #222222;
+            color: #ffffff;
+
+            font-size: 14px;
+            text-decoration: none;
+
+            transition:
+                background-color 0.25s ease,
+                color 0.25s ease;
+        }
+
+        .final-cta-btn:hover,
+        .final-cta-btn:focus-visible {
+            background-color: #ffffff;
+            color: #ef2020;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            gap: 16px;
+
+            padding: 34px 4% 70px;
+
+            background-color: #f2f2f2;
+            color: #444444;
+
+            font-size: 12px;
+            font-weight: 400;
+
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+        .site-footer a {
+            color: #444444;
+            text-decoration: underline;
+        }
+
+        .footer-policy-link:hover,
+        .footer-policy-link:focus-visible {
+            color: #ef2020;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            color: #555555;
+            font-size: 16px;
+            text-decoration: none;
+
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover,
+        .footer-social a:focus-visible {
+            color: #ef2020;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+
+            .private-box {
+                grid-template-columns: 1fr;
+
+                padding: 28px 22px;
+            }
+
+            .private-price {
+                text-align: left;
+            }
+
+
+            .floating-header {
+                position: relative;
+
+                flex-direction: column;
+                justify-content: center;
+
+                gap: 10px;
+
+                min-height: auto;
+                padding: 12px;
+            }
+
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                gap: 12px 18px;
+            }
+
+            .course-band {
+                margin-top: 0;
+            }
+
+            .course-top {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding-top: 30px;
+            }
+
+            .course-photo {
+                margin-top: 0;
+            }
+
+            .info-section {
+                grid-template-columns: 1fr;
+                padding-top: 40px;
+            }
+
+            .info-panels {
+                padding-left: 0;
+                padding-top: 30px;
+            }
+
+            .learn-grid,
+            .difference-grid,
+            .fit-grid,
+            .pathway-steps,
+            .next-step-grid,
+            .exam-format-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                right: 14px;
+                bottom: 14px;
+
+                width: 150px;
+                min-height: 46px;
+
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .course-band h1 {
+                font-size: 28px;
+            }
+
+            .course-band .hero-subhead {
+                font-size: 14.5px;
+            }
+
+            .difference-title {
+                font-size: 28px;
+            }
+
+            .final-cta h2 {
+                font-size: 27px;
+            }
+
+            .contact-box {
+                width: 142px;
+                min-height: 44px;
+                padding: 8px 12px;
+
+                font-size: 15px;
+            }
+
+            .site-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    
+        /* ---------- DELF / DALF ---------- */
+
+        .skip-link {
+            position: absolute;
+            top: -80px;
+            left: 10px;
+            z-index: 10001;
+
+            padding: 8px 14px;
+
+            background-color: #ffffff;
+            border: 2px solid #222222;
+
+            color: #222222;
+
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 10px;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        select:focus-visible {
+            outline: 3px solid #222222;
+            outline-offset: 3px;
+        }
+
+        .level-label {
+            display: block;
+
+            color: #444444;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .level-select {
+            width: 100%;
+            margin: 8px 0 18px;
+            padding: 12px;
+
+            background-color: #ffffff;
+            border: 1px solid #767676;
+            border-radius: 0;
+
+            color: #222222;
+
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        .location-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 20px;
+
+            color: #444444;
+
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .location-row svg {
+            flex-shrink: 0;
+        }
+
+        .duration-row {
+            margin-bottom: 8px;
+        }
+
+        .page-section {
+            padding: 70px 0;
+
+            background-color: #ffffff;
+        }
+
+        .page-section-soft {
+            background-color: #f7f7f7;
+        }
+
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+
+            margin-top: 26px;
+        }
+
+        .focus-box {
+            margin-top: 24px;
+            padding: 20px 24px;
+
+            background-color: #f9f9f9;
+            border-left: 3px solid #ef2020;
+        }
+
+        .focus-box h3 {
+            margin-bottom: 6px;
+
+            color: #222222;
+
+            font-size: 18px;
+        }
+
+        .focus-box p {
+            margin-bottom: 12px;
+
+            color: #444444;
+
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .focus-box .check-list {
+            margin-bottom: 0;
+        }
+
+        .focus-box .check-list li {
+            font-size: 14px;
+        }
+
+        .difference-grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .difference-intro + .difference-grid {
+            margin-top: 24px;
+        }
+
+        .diploma-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 14px;
+
+            margin-top: 22px;
+        }
+
+        .diploma-summary > div {
+            padding: 18px;
+
+            background-color: #ffffff;
+            border: 1px solid #e5e5e5;
+        }
+
+        .diploma-summary strong {
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: #222222;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .diploma-summary span {
+            color: #444444;
+
+            font-size: 13px;
+        }
+
+        .small-note {
+            max-width: 78ch;
+            margin-top: 18px;
+
+            color: #444444;
+
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .small-note a,
+        .faq-answer a {
+            color: #ef2020;
+
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .small-note a:hover,
+        .faq-answer a:hover {
+            color: #cf1b1b;
+        }
+
+        .exam-format-card p {
+            margin-bottom: 10px;
+
+            color: #444444;
+
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .fit-panel p {
+            margin-bottom: 14px;
+
+            color: #444444;
+
+            font-size: 14.5px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        /* dark gray body text (as in the original draft); light grays kept for small print only */
+
+        .sidebar-who,
+        .cohort-note .cohort-value,
+        .section-intro,
+        .learn-item p,
+        .exam-format-card li,
+        .private-copy p:not(.section-label),
+        .faq-answer {
+            color: #444444;
+        }
+
+        .sidebar-fineprint,
+        .cohort-note .cohort-label,
+        .price-display .price-unit {
+            color: #444444;
+        }
+
+        @media (max-width: 900px) {
+
+            .offerings-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .difference-grid-3,
+            .diploma-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .offerings-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="floating-header">
+
+        <a
+            href="../../index.html"
+            class="logo-box"
+            aria-label="The French Up home page"
+        >
+            The French Up
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <a href="../../index.html">Home</a>
+
+            <span class="has-dropdown" id="courses-dropdown">
+
+                <button
+                    type="button"
+                    class="dropdown-toggle"
+                    aria-expanded="false"
+                    aria-controls="courses-dropdown-menu"
+                >
+                    Courses
+                    <span class="caret" aria-hidden="true">▾</span>
+                </button>
+
+                <div
+                    class="dropdown-menu"
+                    id="courses-dropdown-menu"
+                >
+                    <div class="dropdown-menu-inner">
+
+                        <a href="../general-french.html">
+                            General French
+                        </a>
+
+                        <a href="../exam-success.html">
+                            Exam Success
+                        </a>
+
+                        <a href="tcf-tef-success-program.html">
+                            TCF &amp; TEF Canada
+                        </a>
+
+                        <a href="../ib-french-support.html">
+                            IB French Support
+                        </a>
+
+                        <a href="../french-skills-lab.html">
+                            French Skills Lab
+                        </a>
+
+                    </div>
+                </div>
+
+            </span>
+
+            <a href="../../index.html#wbt-heading">
+                About Us
+            </a>
+
+            <a href="#">
+                More
+            </a>
+
+        </nav>
+
+    </header>
+
+    <a
+        href="mailto:contact.frenchup@gmail.com?subject=DELF%20DALF%20Question"
+        class="contact-box"
+        aria-label="Email The French Up"
+    >
+        <span aria-hidden="true">💬</span>
+        Let's Chat!
+    </a>
+
+    <main id="main">
+
+        <!-- HERO -->
+
+        <div class="course-band">
+
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+
+                <a href="https://devikasharma300.github.io/the-french-up/index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="https://devikasharma300.github.io/the-french-up/courses/exam-success.html">Exam Success</a>
+                <span aria-hidden="true">/</span>
+                DELF &amp; DALF Preparation
+
+            </nav>
+
+            <h1>DELF &amp; DALF Preparation</h1>
+
+        </div>
+
+
+        <!-- COURSE TOP -->
+
+        <div class="course-top">
+
+            <div class="course-visual">
+
+                <img
+                    class="course-photo"
+                    src="../../images/Delfdalf_prep.jpg"
+                    alt="A student preparing for the DELF or DALF exam"
+                >
+
+            </div>
+
+            <aside class="course-sidebar">
+
+                <label class="level-label" for="level-select">Select your exam level</label>
+
+                <select class="level-select" id="level-select">
+                    <option value="A1">DELF A1</option>
+                    <option value="A2">DELF A2</option>
+                    <option value="B1">DELF B1</option>
+                    <option value="B2">DELF B2</option>
+                    <option value="C1">DALF C1</option>
+                    <option value="C2">DALF C2</option>
+                </select>
+
+                <div class="price-display">
+                    <span class="price" id="price">$245</span>
+                    <span class="price-unit">CAD / student</span>
+                </div>
+
+                <div class="duration-row">
+
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+
+                    6 weeks · 12 sessions
+
+                </div>
+
+                <div class="location-row">
+
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+
+                    Virtual, Microsoft Teams, 1 hour each
+
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="cohort-note">
+                    <span class="cohort-label">Next Cohort</span>
+                    <span class="cohort-value">
+                        Contact us to find the next group at your level.
+                    </span>
+                </div>
+
+                <p class="sidebar-who">
+                    Level-specific preparation for learners who already know
+                    which <strong>DELF or DALF level</strong> they plan to attempt.
+                </p>
+                <div class="sidebar-highlight">
+                    <strong style="color:#222222;">
+                        Preparation fees do not include the official examination fee.
+                    </strong>
+                </div>
+
+
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScCkO2v0sqZXiM2xHBkGkVNuf7m3m9hE6PN01SoGi52A72rtA/viewform?usp=pp_url&amp;entry.839337160=DELF/DALF+Preparation&amp;entry.1332690371=Group+program"
+                    class="register-btn"
+                    id="register-main"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Register for DELF A1
+                </a>
+
+            </aside>
+
+        </div>
+
+
+        <!-- WHAT YOU GET -->
+
+        <section class="page-section" id="included">
+
+            <div class="difference-wrap">
+
+                <p class="section-label">What you get</p>
+
+                <h2 class="section-title">Preparation that focuses on the exam</h2>
+
+                <div class="offerings-grid">
+
+                    <div class="learn-item">
+                        <h4>Listening &amp; reading</h4>
+                        <p>Practice questions and strategies for understanding texts and recordings.</p>
+                    </div>
+
+                    <div class="learn-item">
+                        <h4>Speaking</h4>
+                        <p>Level-appropriate oral tasks, simulations and feedback.</p>
+                    </div>
+
+                    <div class="learn-item">
+                        <h4>Writing</h4>
+                        <p>Exam-style writing tasks, structure and correction.</p>
+                    </div>
+
+                    <div class="learn-item">
+                        <h4>Mock practice</h4>
+                        <p>Timed exercises to build confidence and exam familiarity.</p>
+                    </div>
+
+                </div>
+
+                <div class="focus-box" aria-live="polite">
+
+                    <h3 id="focus-heading">For DELF A1: key milestones</h3>
+
+                    <p id="focus-text">By exam day, aim to be comfortable with:</p>
+
+                    <ul class="check-list" id="focus-list">
+                        <li>Introducing yourself; describing people, routines and preferences</li>
+                        <li>Present-tense regular verbs, être, avoir, aller and faire</li>
+                        <li>Articles, adjective agreement, basic questions and negation</li>
+                        <li>Understanding short notices and writing simple messages</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- APPROACH -->
+
+        <section class="difference-section">
+
+            <div class="difference-wrap">
+
+                <p class="difference-label">The French Up Approach</p>
+
+                <h2 class="difference-title">Practice, feedback, improvement.</h2>
+
+                <p class="difference-intro">
+                    Sessions combine the language skills you need at your level
+                    with the demands of the exam.
+                </p>
+
+                <div class="difference-grid difference-grid-3">
+
+                    <div class="difference-item">
+                        <h3>01 · Learn the task</h3>
+                        <p>Understand the instructions, expected response and assessment criteria.</p>
+                    </div>
+
+                    <div class="difference-item">
+                        <h3>02 · Try it under exam conditions</h3>
+                        <p>Practise with sample prompts, oral role-plays and timed writing.</p>
+                    </div>
+
+                    <div class="difference-item">
+                        <h3>03 · Apply your corrections</h3>
+                        <p>Work on grammar, vocabulary, structure and pronunciation before trying again.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- THE DIPLOMAS -->
+
+        <section class="page-section" id="about-diplomas">
+
+            <div class="difference-wrap">
+
+                <p class="section-label">The diplomas explained</p>
+
+                <h2 class="section-title">What are DELF and DALF?</h2>
+
+                <p class="section-intro">
+                    DELF (<em lang="fr">Diplôme d’études en langue française</em>) and DALF
+                    (<em lang="fr">Diplôme approfondi de langue française</em>) are official
+                    French-language diplomas awarded by France’s Ministry of National
+                    Education. Unlike time-limited proficiency tests,
+                    <strong>these diplomas are valid for life</strong>.
+                </p>
+
+                <div class="diploma-summary">
+
+                    <div>
+                        <strong>DELF · A1–B2</strong>
+                        <span>Beginner to upper-intermediate French</span>
+                    </div>
+
+                    <div>
+                        <strong>DALF · C1–C2</strong>
+                        <span>Advanced to proficient French</span>
+                    </div>
+
+                    <div>
+                        <strong>Four language skills</strong>
+                        <span>Listening, reading, speaking and writing</span>
+                    </div>
+
+                </div>
+
+                <p class="small-note">
+                    Wondering what <strong>A1, A2, B1, B2, C1 or C2</strong> means? Read the
+                    <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F34739?lang=en" target="_blank" rel="noopener noreferrer">French government’s guide to CEFR language levels ↗</a>
+                    for a clear description of each level.
+                </p>
+
+                <p class="small-note">
+                    For official exam information, available versions (including Junior and
+                    Tout Public), Canadian exam centres, registration and fees, visit
+                    <a href="https://www.institutfrancais.ca/en/delfdalf-exams" target="_blank" rel="noopener noreferrer">Institut français du Canada — DELF/DALF exams ↗</a>.
+                    The French Up offers preparation, not the official diploma examinations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHAT CHANGES -->
+
+        <section class="page-section page-section-soft" id="exam-guide">
+
+            <div class="difference-wrap">
+
+                <p class="section-label">Understand the exams</p>
+
+                <h2 class="section-title">DELF and DALF: what changes?</h2>
+
+                <div class="exam-format-grid">
+
+                    <div class="exam-format-card">
+                        <h3>DELF · A1 to B2</h3>
+                        <p>
+                            Four assessed skills: listening, reading, writing and speaking.
+                            Tasks become more independent and argumentative as the level rises.
+                        </p>
+                        <ul>
+                            <li><strong>A1–A2:</strong> familiar situations, short messages and everyday interactions</li>
+                            <li><strong>B1:</strong> experiences, reasons, opinions and connected texts</li>
+                            <li><strong>B2:</strong> nuanced opinions, structured arguments and formal writing</li>
+                        </ul>
+                    </div>
+
+                    <div class="exam-format-card">
+                        <h3>DALF · C1 and C2</h3>
+                        <p>
+                            Advanced academic and professional communication, where clarity,
+                            precision and synthesis matter.
+                        </p>
+                        <ul>
+                            <li><strong>C1:</strong> synthesize documents, write an argument and give a structured oral presentation</li>
+                            <li><strong>C2:</strong> complete integrated listening–speaking and reading–writing tasks</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <p class="small-note">
+                    Exam formats and sample papers:
+                    <a href="https://www.france-education-international.fr/hub/diplomes-tests?langue=en" target="_blank" rel="noopener noreferrer">France Éducation international</a>.
+                    The diploma exam is booked separately.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FIT -->
+
+        <section class="page-section" id="fit">
+
+            <div class="difference-wrap">
+
+                <p class="section-label">Before enrolling</p>
+
+                <h2 class="section-title">Is this the right preparation for you?</h2>
+
+                <div class="fit-grid">
+
+                    <div class="fit-panel">
+
+                        <h3>A good fit if you...</h3>
+
+                        <ul class="check-list">
+                            <li>know the diploma level you plan to attempt</li>
+                            <li>can already use some French at that level and want exam practice</li>
+                            <li>are ready to revise and practise between sessions</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="fit-panel">
+
+                        <h3>Still deciding your level?</h3>
+
+                        <p>
+                            You do not need to pass earlier diplomas first.
+                            Choose the level that matches your current skills,
+                            not just your desired certificate.
+                        </p>
+
+                        <a
+                            href="mailto:contact.frenchup@gmail.com?subject=DELF%20DALF%20Level%20Guidance"
+                            class="contact-panel-btn"
+                        >
+                            Ask about placement
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRIVATE COACHING -->
+
+        <section class="private-section">
+
+            <div class="difference-wrap">
+
+                <div class="private-box">
+
+                    <div class="private-copy">
+
+                        <p class="section-label">Optional support</p>
+
+                        <h2>Need one-to-one help?</h2>
+
+                        <p>
+                            Private sessions for a difficult skill, oral practice
+                            or detailed writing correction.
+                        </p>
+
+                    </div>
+
+                    <div class="private-price">
+
+                        <strong>$65</strong>
+                        <span>per hour</span>
+
+                        <a
+                            href="mailto:contact.frenchup@gmail.com?subject=Private%20DELF%20DALF%20Coaching"
+                            class="private-btn"
+                        >
+                            Ask About Coaching
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+
+        <section class="page-faq">
+
+            <div class="difference-wrap">
+
+                <p class="section-label">FAQ</p>
+
+                <h2 class="section-title">Common Questions About DELF &amp; DALF</h2>
+
+                <div class="faq-list">
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Are DELF/DALF the same as TCF or TEF Canada?</span>
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            No. DELF and DALF are level-specific diplomas; TCF and TEF are different French-language tests. If you need proof of language for a particular immigration or education process, check which qualification that institution or authority accepts.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can I register directly for B2, C1 or C2?</span>
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Yes. You can choose the level that matches your abilities and objective; you do not need to pass every earlier diploma first. We recommend discussing your current level before selecting a preparation course.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Do DELF and DALF diplomas expire?</span>
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            No. The official diplomas do not expire once awarded. They are valid for life.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Will I practise mock exams and receive corrections?</span>
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Yes. The course includes exam-style activities, timed practice where appropriate, and targeted speaking and writing feedback. The precise scope of a full-length mock exam depends on the level and course schedule.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Are official exam fees included in the course price?</span>
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            No. Preparation classes and official exam registration are separate. Register for the diploma with an authorized exam centre and confirm current exam fees and deadlines directly with the <a href="https://www.institutfrancais.ca/en/delfdalf-exams" target="_blank" rel="noopener noreferrer">Institut français du Canada’s list of exam centres</a> or an Alliance Française in your city.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can you guarantee I will pass?</span>
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            No. Results depend on your current skills, practice, exam readiness and performance on the day. Our aim is to give you a clear, realistic preparation plan.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CTA -->
+
+        <section class="final-cta">
+
+            <h2>Ready for your DELF or DALF?</h2>
+
+            <p>
+                Tell us your level and intended exam date, and we’ll help you
+                find the right group.
+            </p>
+
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScCkO2v0sqZXiM2xHBkGkVNuf7m3m9hE6PN01SoGi52A72rtA/viewform?usp=pp_url&amp;entry.839337160=DELF/DALF+Preparation&amp;entry.1332690371=Group+program"
+                class="final-cta-btn"
+                id="register-bottom"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Register for DELF A1
+            </a>
+
+            <p class="final-cta-footnote">
+                <a href="mailto:contact.frenchup@gmail.com?subject=DELF%20DALF%20Question">contact.frenchup@gmail.com</a>
+                ·
+                <a href="tel:+16139089604">(+1) 613 908 9604</a>
+            </p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="site-footer">
+
+            <div class="footer-left">
+
+                <span>
+                    &copy; 2026 The French Up. All rights reserved.
+                </span>
+
+                <a
+                    href="https://devikasharma300.github.io/the-french-up/cancellation-policy.html"
+                    class="footer-policy-link"
+                >
+                    Cancellation Policy
+                </a>
+
+            </div>
+
+            <div class="footer-social">
+
+                <a
+                    href="#"
+                    aria-label="Visit The French Up on Facebook"
+                >
+                    <i
+                        class="fa-brands fa-facebook-f"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Visit The French Up on Instagram"
+                >
+                    <i
+                        class="fa-brands fa-instagram"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Visit The French Up on YouTube"
+                >
+                    <i
+                        class="fa-brands fa-youtube"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Visit The French Up on LinkedIn"
+                >
+                    <i
+                        class="fa-brands fa-linkedin-in"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            /* COURSES DROPDOWN */
+
+            const dropdownWrapper = document.getElementById("courses-dropdown");
+            const dropdownToggle = dropdownWrapper.querySelector(".dropdown-toggle");
+
+            dropdownToggle.addEventListener("click", (event) => {
+                event.stopPropagation();
+                const isOpen = dropdownWrapper.classList.toggle("open");
+                dropdownToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!dropdownWrapper.contains(event.target)) {
+                    dropdownWrapper.classList.remove("open");
+                    dropdownToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    dropdownWrapper.classList.remove("open");
+                    dropdownToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            /* FAQ */
+
+            document.querySelectorAll(".faq-question").forEach((button) => {
+                button.addEventListener("click", () => {
+                    const item = button.closest(".faq-item");
+                    const isOpen = item.classList.toggle("open");
+                    button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                });
+            });
+
+            /* LEVEL SELECTOR */
+
+            const levels = {
+                A1: {
+                    name: "DELF A1",
+                    price: "$245",
+                    milestones: [
+                        "Introduce yourself; talk about family, work, routines and likes",
+                        "Use present tense (regular verbs; être, avoir, aller, faire), articles and adjective agreement",
+                        "Form simple questions and negatives; use basic prepositions and numbers",
+                        "Understand signs, short recordings and notices; write postcards, forms and simple messages"
+                    ]
+                },
+                A2: {
+                    name: "DELF A2",
+                    price: "$275",
+                    milestones: [
+                        "Describe everyday experiences, make plans, requests and invitations",
+                        "Use passé composé, near future, common reflexive verbs and frequent irregular verbs",
+                        "Compare people or things; use object pronouns, time expressions and basic connectors",
+                        "Follow short conversations; write informal letters and describe past events"
+                    ]
+                },
+                B1: {
+                    name: "DELF B1",
+                    price: "$325",
+                    milestones: [
+                        "Narrate events, explain plans and justify opinions with examples",
+                        "Control passé composé vs imparfait, future, conditional and common relative pronouns",
+                        "Use cause, consequence, opposition and purpose connectors to organize ideas",
+                        "Write connected opinion texts; manage a structured oral discussion and follow main points of recordings"
+                    ]
+                },
+                B2: {
+                    name: "DELF B2",
+                    price: "$375",
+                    milestones: [
+                        "Defend a position, respond to counterarguments and build a convincing argument",
+                        "Use the subjunctive in common contexts, conditional structures and complex relative clauses",
+                        "Choose precise connectors, register and vocabulary for nuanced discussion",
+                        "Write formal argumentative texts and deliver a structured oral presentation"
+                    ]
+                },
+                C1: {
+                    name: "DALF C1",
+                    price: "$445",
+                    milestones: [
+                        "Synthesize several documents objectively before developing a supported argument",
+                        "Use advanced logical connectors, nominalization and nuanced modal expressions",
+                        "Control complex sentence structures, tense choices and formal academic register",
+                        "Prepare structured oral presentations, interpret detailed audio and respond to challenging questions"
+                    ]
+                },
+                C2: {
+                    name: "DALF C2",
+                    price: "$495",
+                    milestones: [
+                        "Combine and evaluate multiple sources in integrated oral and written tasks",
+                        "Express subtle distinctions, implicit meaning and sophisticated arguments",
+                        "Use highly precise vocabulary, idioms, sophisticated syntax and register shifts",
+                        "Produce coherent extended responses and defend interpretations under exam conditions"
+                    ]
+                }
+            };
+
+            const select = document.getElementById("level-select");
+            const priceEl = document.getElementById("price");
+            const focusHeading = document.getElementById("focus-heading");
+            const focusList = document.getElementById("focus-list");
+            const registerLinks = [
+                document.getElementById("register-main"),
+                document.getElementById("register-bottom")
+            ];
+
+            function setLevel(level) {
+
+                const data = levels[level];
+
+                if (!data) {
+                    return;
+                }
+
+                select.value = level;
+                priceEl.textContent = data.price;
+                focusHeading.textContent = "For " + data.name + ": key milestones";
+
+                focusList.replaceChildren(
+                    ...data.milestones.map((text) => {
+                        const li = document.createElement("li");
+                        li.textContent = text;
+                        return li;
+                    })
+                );
+
+                registerLinks.forEach((link) => {
+                    link.textContent = "Register for " + data.name;
+                });
+
+            }
+
+            select.addEventListener("change", () => setLevel(select.value));
+
+        });
+    </script>
+
+</body>
+</html>
