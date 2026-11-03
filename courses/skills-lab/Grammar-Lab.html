@@ -1,1 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<meta name="description" content="Grammar Lab Saturdays at The French Up: small-group online French grammar workshops, one tricky topic at a time. $30 single or $100 four-session pass.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.thefrenchup.com/courses/skills-lab/Grammar-Lab.html">
+
+<title>Grammar Lab | French Skills Lab | The French Up</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+:root {
+  --red: #ef2020;
+  --dark-red: #cf1b1b;
+  --ink: #222;
+  --muted: #444;
+  --line: #e5e5e5;
+  --blush: #fff7f7;
+  --grey: #f7f7f7;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: var(--ink); font-family: var(--sans); }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 700; }
+a { color: inherit; }
+button { font: inherit; cursor: pointer; }
+img { display: block; max-width: 100%; }
+[hidden] { display: none !important; }
+.wrap { width: min(1160px, 92%); margin: auto; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+
+.skip { position: absolute; top: -80px; left: 12px; background: white; padding: 10px 16px; z-index: 100; }
+.skip:focus { top: 8px; }
+
+/* ===== HEADER ===== */
+
+.site-header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; z-index: 20; }
+.header-inner { min-height: 52px; padding: 5px 18px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.logo { width: 120px; min-height: 42px; background: var(--dark-red); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; text-transform: uppercase; font-size: 13px; letter-spacing: .3px; }
+.nav { display: flex; align-items: center; gap: 32px; font-size: 13px; }
+.nav a { text-decoration: none; }
+.nav a:hover { color: var(--red); }
+.nav-dropdown { position: relative; }
+.nav-toggle { border: 0; background: none; padding: 10px 0; font-size: 13px; }
+.nav-toggle span { font-size: 10px; margin-left: 4px; }
+.nav-menu { display: none; position: absolute; right: 0; top: 100%; min-width: 250px; background: white; box-shadow: 0 8px 24px #0002; padding: 8px 0; }
+.nav-menu a { display: block; padding: 12px 18px; }
+.nav-menu a:hover { background: var(--dark-red); color: white; }
+.nav-dropdown:hover .nav-menu, .nav-dropdown:focus-within .nav-menu, .nav-dropdown.open .nav-menu { display: block; }
+.nav-cta { background: #222; color: white !important; padding: 11px 16px; }
+.nav-cta:hover { background: var(--red); }
+
+.brand-contact { position: fixed; right: 20px; bottom: 20px; background: var(--red); color: white; text-decoration: none; padding: 15px 24px; font: 700 18px var(--serif); z-index: 21; }
+.brand-contact:hover { background: var(--dark-red); }
+
+/* ===== COURSE BAND ===== */
+
+.course-band { background: var(--red); color: white; padding: 24px 0 34px; }
+.crumbs { font-size: 12px; margin-bottom: 18px; }
+.crumbs a { text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+.crumbs span { margin: 0 10px; }
+.course-kicker { font-size: 11px; letter-spacing: .12em; margin-bottom: 6px; }
+.course-band h1 { font-size: 36px; font-weight: 700; }
+
+/* ===== HERO ===== */
+
+.hero { background: #fff; overflow: hidden; }
+.hero-inner { padding: 55px 0 65px; }
+.hero-grid { display: grid; grid-template-columns: 1.14fr .86fr; gap: 45px; align-items: center; }
+.eyebrow { font-size: 12px; color: var(--red); letter-spacing: .12em; text-transform: uppercase; font-weight: 700; margin-bottom: 13px; }
+.hero-title { font-size: clamp(36px, 4vw, 48px); line-height: 1.15; letter-spacing: 0; font-weight: 700; }
+.hero-title span { display: block; color: var(--red); }
+.hero-description { color: var(--muted); font-size: 15px; line-height: 1.75; margin-top: 20px; max-width: 560px; }
+.hero-sub { font: 400 24px/1.4 var(--serif); margin-top: 16px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 22px; border: 1px solid transparent; text-decoration: none; font-size: 14px; font-weight: 700; transition: background .2s; }
+.btn-red { background: var(--red); color: white; }
+.btn-red:hover { background: var(--dark-red); }
+.btn-outline { background: white; border-color: #ccc; color: var(--ink); }
+.btn-outline:hover { background: var(--blush); }
+
+.hero-art { display: grid; place-items: center; min-height: 300px; }
+.hero-art svg { display: block; width: 100%; max-width: 530px; height: auto; overflow: visible; }
+
+/* ===== QUICK BAR ===== */
+
+.quickbar { background: var(--red); color: white; }
+.quickbar-inner { display: grid; grid-template-columns: repeat(3, 1fr); }
+.quick-item { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 21px 16px; font-size: 13px; font-weight: 700; text-align: center; }
+.quick-item + .quick-item { border-left: 1px solid #ffffff50; }
+.q-icon { flex-shrink: 0; }
+
+/* ===== COMMON SECTIONS ===== */
+
+.section { padding: 70px 0; }
+.section h2, .lab-photo-copy h2 { font-size: 28px; line-height: 1.3; letter-spacing: 0; font-weight: 700; }
+.section-head { max-width: 840px; }
+.section-lead { font-size: 14.5px; line-height: 1.75; color: var(--muted); margin-top: 15px; }
+.section-grey { background: var(--grey); }
+
+/* ===== WHY GRAMMAR LAB ===== */
+
+.lab-photo-section { padding: 64px 0 62px; background: white; }
+.lab-photo-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 48px; align-items: center; }
+.lab-photo-image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 35%; }
+.lab-photo-copy p:not(.eyebrow) { color: var(--muted); line-height: 1.75; font-size: 15px; margin-top: 17px; }
+
+.feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+.feature { border: 1px solid var(--line); background: white; padding: 20px 18px; }
+.feature .number { display: block; color: var(--red); font: 700 15px var(--serif); }
+.feature h3 { font-size: 18px; margin: 10px 0 8px; }
+.feature p { color: var(--muted); font-size: 13.5px; line-height: 1.65; }
+
+/* ===== HOW IT WORKS ===== */
+
+.process { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
+.process-item { border-top: 3px solid var(--red); padding: 16px 0; }
+.process-item h3 { font-size: 19px; }
+.process-item p { font-size: 14px; line-height: 1.7; color: var(--muted); margin-top: 9px; }
+
+/* ===== PRICING ===== */
+
+.pricing { background: white; }
+.pricing-intro { max-width: 720px; margin: auto; text-align: center; }
+.price-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 19px; max-width: 920px; margin: 55px auto 0; align-items: stretch; }
+.price-card { position: relative; display: flex; flex-direction: column; padding: 34px 27px 28px; border: 1px solid var(--line); }
+.price-card.featured { border: 2px solid var(--red); background: var(--blush); }
+.price-card .tag { position: absolute; top: -17px; left: 24px; background: var(--red); color: white; padding: 9px 13px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.price-card .muted-tag { background: #222; }
+.price-card h3 { font-size: 19px; margin-bottom: 15px; }
+.price-note { color: var(--muted); font-size: 14px; line-height: 1.7; min-height: 48px; }
+.amount { font: 700 40px/1 var(--serif); margin-top: 16px; }
+.amount small { font: 400 13px var(--sans); color: var(--muted); }
+.per-session { color: var(--red); font-weight: 700; font-size: 13px; margin-top: 13px; min-height: 18px; }
+.price-divider { border-top: 1px solid var(--line); margin: 27px 0 24px; }
+.price-list { list-style: none; padding: 0; margin: 0 0 30px; display: grid; gap: 13px; flex: 1; }
+.price-list li { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.price-card .btn { width: 100%; margin-top: auto; }
+.price-card:not(.featured) .btn { background: #222; color: white; }
+.price-card:not(.featured) .btn:hover { background: var(--red); }
+.price-footnote { grid-column: 2; grid-row: 2; color: #555; font-size: 12px; line-height: 1.6; margin-top: 6px; }
+
+/* ===== EXAMPLES ===== */
+
+.samples-section .section-head { max-width: 100%; text-align: center; }
+.samples-section .section-lead { max-width: 800px; margin: 12px auto 0; font-size: 14px; }
+.example-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+.example-card { border: 1px solid var(--line); background: white; padding: 22px 24px; }
+.example-level { display: block; color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px; }
+.example-fr { font: 700 19px/1.5 var(--serif); }
+.example-card h3 { font-size: 16px; line-height: 1.4; margin-top: 13px; }
+.example-card p { font-size: 13px; color: var(--muted); margin-top: 7px; line-height: 1.6; }
+.examples-note { font-size: 12px; color: #555; font-style: italic; line-height: 1.7; margin-top: 16px; }
+
+/* ===== PRIVATE BAND ===== */
+
+.info-band { background: #1d1d1d; color: white; padding: 40px 0; }
+.info-band .wrap { display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+.info-band h2 { font-size: 27px; line-height: 1.3; }
+.info-band p { font-size: 14px; color: #ddd; line-height: 1.7; margin-top: 8px; }
+.info-band strong { color: #fff; }
+.info-band .btn { background: var(--red); color: white; white-space: nowrap; }
+.info-band .btn:hover { background: white; color: var(--red); }
+
+/* ===== FAQ ===== */
+
+#faq { background: #fff7f7; padding: 64px 0; }
+.faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; }
+.faq-list { border-top: 1px solid #ddd; }
+.faq-item { border-bottom: 1px solid #ddd; }
+.faq-q { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 20px 2px; gap: 20px; border: 0; background: none; text-align: left; color: var(--ink); font-size: 15px; font-weight: 700; }
+.faq-q .plus { color: var(--red); font-size: 22px; line-height: 1; font-weight: 400; transition: transform .2s; }
+.faq-q[aria-expanded="true"] .plus { transform: rotate(45deg); }
+.faq-a { padding: 0 32px 20px 2px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+
+/* ===== FINAL CTA ===== */
+
+.final-cta { background: var(--red); color: white; padding: 70px 0; }
+.final-cta .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px 30px; }
+.final-cta h2 { grid-column: 1; font-size: 30px; line-height: 1.25; }
+.final-cta p { grid-column: 1; font-size: 15px; line-height: 1.7; }
+.final-cta .btn { grid-column: 2; grid-row: 1 / span 2; background: #222; color: white; white-space: nowrap; }
+.final-cta .btn:hover { background: white; color: var(--red); }
+
+/* ===== FOOTER ===== */
+
+.site-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 34px 4% 70px; background: #f2f2f2; color: #444; font-size: 12px; border-top: 1px solid var(--line); }
+.footer-left { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+.site-footer a { color: #444; text-decoration: underline; }
+.site-footer a:hover { color: var(--red); }
+.footer-social { display: flex; gap: 16px; }
+.footer-social a { font-size: 16px; text-decoration: none; }
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 950px) {
+  .hero-grid, .faq-grid { grid-template-columns: 1fr; gap: 35px; }
+  .hero-art { min-height: 0; }
+  .price-grid { grid-template-columns: 1fr; max-width: 570px; }
+  .price-note { min-height: 0; }
+  .price-footnote { grid-column: 1; grid-row: auto; }
+  .feature-grid, .process { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  .site-header { position: relative; }
+  .lab-photo-layout { grid-template-columns: 1fr; gap: 25px; }
+  .lab-photo-image { grid-row: 1; }
+  .lab-photo-copy { grid-row: 2; }
+  .quickbar-inner { grid-template-columns: 1fr; }
+  .quick-item + .quick-item { border-left: 0; border-top: 1px solid #ffffff35; }
+}
+
+@media (max-width: 760px) {
+  .example-grid { grid-template-columns: 1fr; }
+  .info-band .wrap { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 650px) {
+  .header-inner { flex-wrap: wrap; justify-content: center; padding: 12px; }
+  .nav { justify-content: center; flex-wrap: wrap; gap: 12px 18px; }
+  .nav-menu { right: auto; left: 0; }
+  .course-band h1 { font-size: 28px; }
+  .hero-inner { padding: 40px 0 55px; }
+  .hero-title { font-size: 36px; }
+  .hero-sub { font-size: 21px; }
+  .section { padding: 55px 0; }
+  .section h2, .lab-photo-copy h2 { font-size: 25px; }
+  .info-band h2, .final-cta h2 { font-size: 27px; }
+  .final-cta { padding: 66px 0 73px; }
+  .final-cta .wrap { display: block; text-align: center; }
+  .final-cta p { margin-top: 12px; }
+  .final-cta .btn { margin-top: 20px; }
+  .brand-contact { right: 12px; bottom: 12px; padding: 12px; font-size: 15px; }
+  .site-footer { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+/* ===== review changes ===== */
+
+/* booking: original blush section and original Flex Pass colours */
+#booking { background: #fff7f7; }
+#booking .price-card:not(.featured) { background: #fff; border-color: #ecd9d6; }
+#booking .price-card.featured { background: #ffdfda; border: 2px solid #d92b2b; box-shadow: 0 7px 25px #ac3c3c14; }
+
+/* private help: price as a red box, enquiry line as its subtext */
+.private-cta { display: flex; flex-direction: column; align-items: center; gap: 5px; min-width: 250px; padding: 16px 30px; background: var(--red); color: #fff; text-align: center; text-decoration: none; transition: background .2s, color .2s; }
+.private-cta strong { font: 700 28px/1.1 var(--serif); color: #fff; }
+.private-cta span { font-size: 12px; }
+.private-cta:hover, .private-cta:focus-visible { background: #fff; color: var(--red); }
+.private-cta:hover strong, .private-cta:focus-visible strong { color: var(--red); }
+
+/* final call to action: centred */
+.final-cta .wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+.final-cta .btn { margin-top: 10px; }
+
+/* ===== review changes (round 2) ===== */
+.feature { text-align: center; }
+.private-cta { min-width: 0; padding: 16px 34px; }
+.private-cta strong small { font: 400 14px var(--sans); }
+</style>
+</head>
+
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ==================================
+     HEADER
+================================== -->
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <a class="logo" href="../../index.html" aria-label="The French Up home">
+      The French Up
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+
+      <a href="../../index.html">Home</a>
+
+      <div class="nav-dropdown" id="courses-dropdown">
+
+        <button class="nav-toggle" type="button" aria-controls="courses-menu" aria-expanded="false">
+          Courses <span aria-hidden="true">▾</span>
+        </button>
+
+        <div class="nav-menu" id="courses-menu">
+          <a href="../general-french.html">General French</a>
+          <a href="../exam-success.html">Exam Success</a>
+          <a href="../exam-success/tcf-tef-success-program.html">TCF &amp; TEF Canada</a>
+          <a href="../ib-french-advantage-program.html">IB French Advantage Program</a>
+          <a href="../french-skills-lab.html">French Skills Lab</a>
+          <a href="Grammar-Lab.html" aria-current="page">Grammar Lab</a>
+        </div>
+
+      </div>
+
+      <a href="../../index.html#wbt-heading">About Us</a>
+
+      <a class="nav-cta" href="#booking">Book a Workshop</a>
+
+    </nav>
+  </div>
+</header>
+
+<a class="brand-contact" href="mailto:contact.frenchup@gmail.com?subject=Grammar%20Lab%20Question">
+  💬 Let's Chat!
+</a>
+
+<main id="main">
+
+<!-- ==================================
+     COURSE BAND
+================================== -->
+
+<section class="course-band">
+  <div class="wrap">
+
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span>/</span>
+      Courses
+      <span>/</span>
+      <a href="../french-skills-lab.html">French Skills Lab</a>
+      <span>/</span>
+      Grammar Lab
+    </nav>
+
+    <p class="course-kicker">THE FRENCH UP · FRENCH SKILLS LAB</p>
+
+    <h1>Grammar Lab</h1>
+
+  </div>
+</section>
+
+<!-- ==================================
+     HERO
+================================== -->
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-inner">
+
+    <div class="hero-grid">
+
+      <div>
+
+        <h2 class="hero-title" id="hero-title">
+          Grammar rules, made clearer.
+          <span>One concept at a time.</span>
+        </h2>
+
+        <p class="hero-description">
+          You’ve watched tutorials, gone through grammar lessons, and
+          thought, <em>“Okay, I finally get it!”</em> But when it’s time to
+          use the rule, you’re unsure all over again.
+        </p>
+
+        <p class="hero-sub">That’s what we’re here for.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-red" href="#booking">Explore booking options <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="#examples">See examples</a>
+        </div>
+
+      </div>
+
+      <div class="hero-art" role="img" aria-label="A winding dotted learning journey through French grammar, with small illustrations and progress markers">
+<svg aria-hidden="true" focusable="false" viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg">
+  <!-- A visual learning journey, without words or an enclosing box. -->
+  <path d="M35 278 C90 313 145 280 135 232 C124 177 45 181 68 126 C91 73 199 92 220 139 C243 190 191 260 265 277 C334 295 374 247 355 200 C331 144 354 87 424 89 C483 90 511 137 521 61" fill="none" stroke="#333" stroke-width="2.5" stroke-dasharray="7 12" stroke-linecap="round"/>
+  <!-- hand-drawn book near the start -->
+  <g transform="translate(29 258) rotate(-8)" fill="white" stroke="#262626" stroke-width="3" stroke-linejoin="round">
+    <path d="M0 0 Q25 -10 48 4 V47 Q23 32 0 40Z"/><path d="M48 4 Q72 -10 95 0 V40 Q72 32 48 47Z"/>
+    <path d="M48 5V46" fill="none"/><path d="M10 12L36 12 M10 21L31 21 M61 12L84 8 M61 21L78 19" stroke="#d83b43" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- first marker -->
+  <g transform="translate(73 112)"><path d="M0 -22 C-30 -22 -30 12 0 38 C30 12 30 -22 0 -22Z" fill="#ef2020"/><circle r="10" cy="-4" fill="white"/></g>
+  <!-- modest practice puzzle -->
+  <g transform="translate(189 49) rotate(8)" stroke="#222" stroke-width="3" stroke-linejoin="round">
+    <path d="M0 0H29 Q27 10 37 11 Q47 11 45 0 H73 V25 Q62 21 62 34 Q62 44 73 41 V70 H45 Q48 60 37 60 Q27 60 29 70 H0 V42 Q12 45 12 33 Q12 21 0 25Z" fill="#fff6f3"/>
+    <path d="M37 14V54" stroke="#ef2020" stroke-width="2" stroke-dasharray="3 5"/>
+  </g>
+  <!-- second marker -->
+  <g transform="translate(215 151)"><path d="M0 -20C-28 -20 -28 11 0 36C28 11 28 -20 0 -20Z" fill="#ef2020"/><circle cy="-4" r="9" fill="white"/></g>
+  <!-- smiling, confident pencil doodle -->
+  <g transform="translate(265 228) rotate(-12)" stroke="#222" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0 45L56 -22 L78 -4L22 63L-6 69Z" fill="#fff"/><path d="M56 -22L78 -4L68 8L46 -11Z" fill="#ef2020"/><path d="M0 45L22 63L-6 69Z" fill="#ffe3cb"/>
+    <path d="M12 30l26 -31"/><circle cx="36" cy="22" r="2" fill="#222"/><circle cx="47" cy="9" r="2" fill="#222"/><path d="M36 35q10 5 17 -5" fill="none"/>
+  </g>
+  <!-- third marker -->
+  <g transform="translate(365 197)"><path d="M0 -20C-28 -20 -28 11 0 36C28 11 28 -20 0 -20Z" fill="#ef2020"/><circle cy="-4" r="9" fill="white"/></g>
+  <!-- final achievement, no words -->
+  <g transform="translate(449 25)" stroke="#222" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0 70V8" fill="none"/><path d="M0 9Q28 -5 63 9L56 45Q28 29 0 44Z" fill="#fff7f4"/>
+    <path d="M14 24L26 35L46 15" fill="none" stroke="#ef2020" stroke-width="5"/>
+    <path d="M-10 71H10" fill="none"/>
+  </g>
+  <!-- small moments of discovery -->
+  <g fill="none" stroke="#ef2020" stroke-width="3" stroke-linecap="round">
+    <path d="M140 82v-18 M131 73h18"/><path d="M398 64v-16 M390 56h16"/>
+    <path d="M480 233l6 -12 7 12 12 6 -12 6 -7 12 -6 -12 -12 -6Z" fill="#fff0ed"/>
+  </g>
+</svg>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================================
+     QUICK BAR
+================================== -->
+
+<div class="quickbar">
+  <div class="wrap quickbar-inner">
+
+    <div class="quick-item">
+      <svg class="q-icon" viewBox="0 0 448 512" width="16" height="16" aria-hidden="true" focusable="false"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M120 0c13.3 0 24 10.7 24 24v40h160V24c0-13.3 10.7-24 24-24s24 10.7 24 24v40h32c35.3 0 64 28.7 64 64v288c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128c0-35.3 28.7-64 64-64h32V24c0-13.3 10.7-24 24-24m0 112H64c-8.8 0-16 7.2-16 16v48h352v-48c0-8.8-7.2-16-16-16zM48 224v192c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16V224z"/></svg>
+      Saturdays · 4–5 PM · live online workshops
+    </div>
+
+    <div class="quick-item">
+      <svg class="q-icon" viewBox="0 0 640 512" width="16" height="16" aria-hidden="true" focusable="false"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M320 16a104 104 0 1 1 0 208 104 104 0 1 1 0-208M96 88a72 72 0 1 1 0 144 72 72 0 1 1 0-144M0 416c0-70.7 57.3-128 128-128 12.8 0 25.2 1.9 36.9 5.4C132 330.2 112 378.8 112 432v16c0 11.4 2.4 22.2 6.7 32H32c-17.7 0-32-14.3-32-32zm521.3 64c4.3-9.8 6.7-20.6 6.7-32v-16c0-53.2-20-101.8-52.9-138.6 11.7-3.5 24.1-5.4 36.9-5.4 70.7 0 128 57.3 128 128v32c0 17.7-14.3 32-32 32zM472 160a72 72 0 1 1 144 0 72 72 0 1 1-144 0M160 432c0-88.4 71.6-160 160-160s160 71.6 160 160v16c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32z"/></svg>
+      Small groups of 4–8
+    </div>
+
+    <div class="quick-item">
+      <svg class="q-icon" viewBox="0 0 512 512" width="16" height="16" aria-hidden="true" focusable="false"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M224 0c35.3 0 64 21.5 64 48 0 10.4-4.4 20-12 27.9-6.6 6.9-12 15.3-12 24.9 0 15 12.2 27.2 27.2 27.2H336c26.5 0 48 21.5 48 48v44.8c0 15 12.2 27.2 27.2 27.2 9.5 0 18-5.4 24.9-12 7.9-7.5 17.5-12 27.9-12 26.5 0 48 28.7 48 64s-21.5 64-48 64c-10.4 0-20.1-4.4-27.9-12-6.9-6.6-15.3-12-24.9-12-15 0-27.2 12.2-27.2 27.2V464c0 26.5-21.5 48-48 48h-56.8c-12.8 0-23.2-10.4-23.2-23.2 0-9.2 5.8-17.3 13.2-22.8 11.6-8.7 18.8-20.7 18.8-34 0-26.5-28.7-48-64-48s-64 21.5-64 48c0 13.3 7.2 25.3 18.8 34 7.4 5.5 13.2 13.5 13.2 22.8 0 12.8-10.4 23.2-23.2 23.2H48c-26.5 0-48-21.5-48-48V343.2C0 330.4 10.4 320 23.2 320c9.2 0 17.3 5.8 22.8 13.2 8.7 11.6 20.7 18.8 34 18.8 26.5 0 48-28.7 48-64s-21.5-64-48-64c-13.3 0-25.3 7.2-34 18.8-5.5 7.4-13.5 13.2-22.8 13.2C10.4 256 0 245.6 0 232.8V176c0-26.5 21.5-48 48-48h108.8c15 0 27.2-12.2 27.2-27.2 0-9.5-5.4-18-12-24.9-7.5-7.9-12-17.5-12-27.9 0-26.5 28.7-48 64-48"/></svg>
+      One tricky topic at a time
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================================
+     WHY GRAMMAR LAB
+================================== -->
+
+<section class="lab-photo-section" id="approach">
+  <div class="wrap">
+
+    <div class="lab-photo-layout">
+
+      <img
+        class="lab-photo-image"
+        src="../../images/french_grammar%20lab.jpg"
+        alt="A French Grammar Lab workshop"
+        loading="lazy">
+
+      <div class="lab-photo-copy">
+
+        <p class="eyebrow">Why Grammar Lab?</p>
+
+        <h2>Knowing the rule is one thing. Using it is another.</h2>
+
+        <p>
+          The subjunctive, <em>ne explétif</em>, confusing agreements, tricky
+          prepositions, pronouns <em>y</em> and <em>en</em>, <em>dont</em>
+          versus <em>que</em>, <em>passé composé</em> versus <em>imparfait</em>—and
+          those exceptions that never seem to stick. We focus on the parts that
+          trip you up when you actually need them.
+        </p>
+
+        <p>
+          Bring a sentence from a book, a confusing correction or a question
+          that a tutorial never quite settled. It might become a future Lab topic.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="feature-grid">
+
+      <article class="feature">
+        <span class="number">01</span>
+        <h3>Pick the sticking point</h3>
+        <p>Spend time on one tricky concept instead of revisiting an entire syllabus.</p>
+      </article>
+
+      <article class="feature">
+        <span class="number">02</span>
+        <h3>Work through it</h3>
+        <p>Compare examples, notice useful patterns and get a handle on the exceptions.</p>
+      </article>
+
+      <article class="feature">
+        <span class="number">03</span>
+        <h3>Try using it</h3>
+        <p>Bring your questions, test a few sentences and practise choosing the right form.</p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================================
+     HOW IT WORKS
+================================== -->
+
+<section class="section section-grey" id="how-it-works">
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <p class="eyebrow">How Grammar Lab Saturdays work</p>
+
+      <h2>One Saturday. One tricky topic. A little more clarity.</h2>
+
+      <p class="section-lead">
+        Small-group, 60-minute online workshops. Choose the Saturday topics
+        that interest you; no full-course commitment. Upcoming topics are
+        shared when booking.
+      </p>
+
+    </div>
+
+    <div class="process">
+
+      <div class="process-item">
+        <h3>Spot the confusion</h3>
+        <p>Start with a sentence that makes you stop and think.</p>
+      </div>
+
+      <div class="process-item">
+        <h3>Sort it out</h3>
+        <p>Compare examples and find ways to remember what matters.</p>
+      </div>
+
+      <div class="process-item">
+        <h3>Give it a go</h3>
+        <p>Use the concept in a few new situations, not just the example you saw.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================================
+     BOOKING
+================================== -->
+
+<section class="section pricing" id="booking">
+  <div class="wrap">
+
+    <div class="pricing-intro">
+
+      <p class="eyebrow">Join your way</p>
+
+      <h2>Just the Saturdays you need.</h2>
+
+      <p class="section-lead">
+        Try one workshop or keep a few in your pocket. No fixed syllabus and
+        no ongoing commitment.
+      </p>
+
+    </div>
+
+    <div class="price-grid">
+
+      <!-- SINGLE WORKSHOP -->
+
+      <article class="price-card">
+
+        <span class="tag muted-tag">Try one topic</span>
+
+        <h3>Single Workshop</h3>
+
+        <p class="price-note">For the one grammar question you want to finally untangle.</p>
+
+        <div class="amount">
+          $30
+          <small>CAD / workshop</small>
+        </div>
+
+        <div class="per-session"></div>
+
+        <div class="price-divider"></div>
+
+        <ul class="price-list">
+          <li>One 60-minute live group workshop</li>
+          <li>Choose the Saturday topic that interests you</li>
+          <li>No membership required</li>
+        </ul>
+
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScCkO2v0sqZXiM2xHBkGkVNuf7m3m9hE6PN01SoGi52A72rtA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+          Book a Workshop <span aria-hidden="true">→</span>
+        </a>
+
+      </article>
+
+      <!-- FLEX PASS -->
+
+      <article class="price-card featured">
+
+        <span class="tag">Best for flexibility</span>
+
+        <h3>4-Session Flex Pass</h3>
+
+        <p class="price-note">For the grammar points you want to revisit over time.</p>
+
+        <div class="amount">
+          $100
+          <small>CAD / 4 workshops</small>
+        </div>
+
+        <div class="per-session">$25 per workshop · Save $20 vs singles</div>
+
+        <div class="price-divider"></div>
+
+        <ul class="price-list">
+          <li>Choose four available Saturday workshops</li>
+          <li>Use your sessions within eight weeks*</li>
+          <li>Attend the topics that suit your needs</li>
+        </ul>
+
+        <a class="btn btn-red" href="https://docs.google.com/forms/d/e/1FAIpQLScCkO2v0sqZXiM2xHBkGkVNuf7m3m9hE6PN01SoGi52A72rtA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+          Get the Flex Pass <span aria-hidden="true">→</span>
+        </a>
+
+      </article>
+
+      <p class="price-footnote">
+        <strong>* Booking terms:</strong>
+        Flex Pass expires after 8 weeks. Cancel booked Flex Pass or single
+        workshops at least 24 hours ahead. No refunds after use, except as
+        required by law. Any workshops cancelled by us are credited or replaced.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================================
+     A LOOK INSIDE
+================================== -->
+
+<section class="section section-grey samples-section" id="examples">
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <p class="eyebrow">A look inside</p>
+
+      <h2>Sound familiar?</h2>
+
+      <p class="section-lead">
+        Each Saturday brings a different grammar focus. Here are four examples
+        of the questions a workshop might explore.
+      </p>
+
+    </div>
+
+    <div class="example-grid">
+
+      <article class="example-card">
+        <span class="example-level">Workshop topic 01 · The subjunctive</span>
+        <div class="example-fr" lang="fr">Je pense qu'il vient.<br>Je ne pense pas qu'il vienne.</div>
+        <h3>Why does the verb change?</h3>
+        <p>Explore how meaning and sentence structure affect the mood.</p>
+      </article>
+
+      <article class="example-card">
+        <span class="example-level">Workshop topic 02 · Ne explétif</span>
+        <div class="example-fr" lang="fr">Je crains qu'il ne soit trop tard.</div>
+        <h3>Why is there a <em>ne</em> without a negative meaning?</h3>
+        <p>Make sense of a little word that can be surprisingly confusing.</p>
+      </article>
+
+      <article class="example-card">
+        <span class="example-level">Workshop topic 03 · Hypothetical situations</span>
+        <div class="example-fr" lang="fr">Si j'avais su, je serais venu.</div>
+        <h3>Why these two verb forms together?</h3>
+        <p>Practise expressing unreal situations in the past.</p>
+      </article>
+
+      <article class="example-card">
+        <span class="example-level">Workshop topic 04 · Past participle agreement</span>
+        <div class="example-fr" lang="fr">Elle s'est lavé les mains.</div>
+        <h3>Why isn't <em>lavé</em> feminine here?</h3>
+        <p>See what changes the agreement in this construction.</p>
+      </article>
+
+    </div>
+
+    <p class="examples-note">
+      Illustrative workshop topics, not a fixed monthly timetable. Upcoming
+      Saturday topics are announced before booking and may reflect learners’
+      questions.
+    </p>
+
+  </div>
+</section>
+
+<!-- ==================================
+     PRIVATE HELP
+================================== -->
+
+<section class="info-band">
+  <div class="wrap">
+
+    <div>
+      <h2>Prefer one-to-one help?</h2>
+      <p>Book a private Grammar Lab session.</p>
+    </div>
+
+    <a class="private-cta" href="mailto:contact.frenchup@gmail.com?subject=Private%20Grammar%20Lab%20Session">
+      <strong>$44 <small>CAD</small></strong>
+    </a>
+
+  </div>
+</section>
+
+<!-- ==================================
+     FAQ
+================================== -->
+
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+
+    <div>
+      <p class="eyebrow">Good to know</p>
+      <h2>Quick questions.</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq1">
+          Is this a full French grammar course?
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq1" hidden>
+          No. Grammar Lab Saturdays are independent, topic-focused workshops
+          rather than a complete beginner-to-advanced course. Come to the
+          Saturdays that interest you.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq2">
+          Can I suggest a topic?
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq2" hidden>
+          Yes. Send us a grammar question or sentence you find confusing.
+          Suggestions can inform upcoming sessions.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq3">
+          Do I need to know French already?
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq3" hidden>
+          Some previous French study is helpful, because workshops revisit
+          concepts learners have already encountered. Contact us if you're
+          unsure whether a particular Saturday topic suits your level.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq4">
+          When are sessions and how much do they cost?
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq4" hidden>
+          Workshops are planned for Saturdays from 4 to 5 PM, live online, in
+          small groups of 4–8. The options are $30 CAD for a single workshop
+          or $100 CAD for a four-session pass. Availability and booking
+          details will be confirmed before enrollment.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq5">
+          Do I have to come every Saturday?
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq5" hidden>
+          Not at all. Each Saturday covers a different grammar point, so you
+          can book a single workshop or use your Flex Pass on the topics that
+          interest you.
+        </div>
+      </div>
+
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq6">
+          Can I book private grammar help?
+          <span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq6" hidden>
+          Yes. One-to-one Grammar Lab sessions are $44 CAD. Get in touch to
+          arrange a session and discuss the grammar point you want to work on.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================================
+     FINAL CTA
+================================== -->
+
+<section class="final-cta">
+  <div class="wrap">
+
+    <h2>Bring the grammar that keeps tripping you up.</h2>
+
+    <p>Let’s work on it together.</p>
+
+    <a class="btn" href="#booking">Explore booking options <span aria-hidden="true">→</span></a>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ==================================
+     FOOTER
+================================== -->
+
+<footer class="site-footer">
+
+  <div class="footer-left">
+
+    <span>&copy; 2026 The French Up. All rights reserved.</span>
+
+    <a class="footer-policy-link" href="https://devikasharma300.github.io/the-french-up/cancellation-policy.html">
+      Cancellation Policy
+    </a>
+
+  </div>
+
+  <div class="footer-social">
+
+    <a href="#" aria-label="Visit The French Up on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+    <a href="#" aria-label="Visit The French Up on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+    <a href="#" aria-label="Visit The French Up on YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+    <a href="#" aria-label="Visit The French Up on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+
+  </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* Courses dropdown */
+
+  const dropdown = document.getElementById('courses-dropdown');
+  const toggle = dropdown.querySelector('.nav-toggle');
+
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = dropdown.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+
+  document.addEventListener('click', e => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      dropdown.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  /* FAQ accordion */
+
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      document.getElementById(btn.getAttribute('aria-controls')).hidden = open;
+    });
+  });
+
+});
+</script>
+
+</body>
+</html>
