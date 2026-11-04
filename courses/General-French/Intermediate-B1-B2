@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="French Intermediate (B1–B2) at The French Up: live online intermediate French classes, small groups and private coaching for learners in Ottawa and beyond.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.thefrenchup.com/courses/general-french/french-intermediate.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The French Up">
+  <meta property="og:title" content="French Intermediate (B1–B2) | The French Up">
+  <meta property="og:description" content="Develop independent French communication with structured online small-group classes and one-to-one coaching.">
+  <meta property="og:url" content="https://www.thefrenchup.com/courses/general-french/french-intermediate.html">
+  <title>French Intermediate (B1–B2) | The French Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{--red:#ef2020;--red-dark:#cf1b1b;--ink:#222;--muted:#444;--line:#e5e5e5;--cream:#f7f7f7;--pink:#fff7f7;--shadow:0 14px 48px rgba(20,20,20,.07)}
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:'Avenir Next',Avenir,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65}a{color:inherit}button{font:inherit}h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}h1,h2,h3,p{margin-top:0}button,a{ -webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px}.wrap{width:min(1160px,92%);margin-inline:auto}
+    .header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #eee}.header-inner{min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:25px;width:auto;margin-inline:0;padding:5px 18px}.brand{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;min-width:120px;min-height:42px;background:var(--red-dark);color:#fff;font-size:13px;line-height:1.15;letter-spacing:.07em;text-decoration:none;text-transform:uppercase}.nav{display:flex;align-items:center;gap:32px}.nav a,.nav button{font-size:13px;text-decoration:none;background:none;border:0;color:var(--ink);cursor:pointer;padding:9px 0}.nav a:hover,.nav button:hover{color:var(--red)}.nav-drop{position:relative}.nav-drop>button span{margin-left:5px;font-size:12px}.drop-menu{display:none;position:absolute;right:0;top:100%;padding:8px 0;min-width:225px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:4px}.nav-drop:hover .drop-menu,.nav-drop.open .drop-menu,.nav-drop:focus-within .drop-menu{display:block}.drop-menu a{display:block;padding:12px 18px}.drop-menu a:hover{background:var(--red-dark);color:#fff}.nav .nav-cta{background:#222;color:#fff;padding:11px 16px}.nav .nav-cta:hover{background:var(--red);color:#fff}
+    .hero{background:var(--red);color:#fff;overflow:hidden;position:relative}.hero-inner{padding:25px 0 51px;position:relative;z-index:1}.crumbs{font-size:12px;color:#ffe3e2;margin-bottom:24px}.crumbs a{text-decoration:none}.crumbs span{margin:0 9px;opacity:.65}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:700}.hero .eyebrow{color:#ffe1df;margin-bottom:12px}.hero h1{font-size:clamp(34px,4vw,48px);max-width:780px;margin-bottom:15px}.hero-sub{max-width:560px;font-size:16px;color:#fff3f2;margin:0}.hero-pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.hero-pills span{border:1px solid rgba(255,255,255,.45);border-radius:50px;padding:5px 12px;font-size:12px}
+    .top{display:grid;grid-template-columns:minmax(0,1.48fr) minmax(310px,.86fr);gap:55px;padding-top:50px;align-items:start}.photo{min-height:360px;border-radius:5px;overflow:hidden;position:relative;background:#e9e2dc}.photo img{width:100%;height:100%;min-height:360px;object-fit:cover;display:block}.intro{padding-top:36px}.section-kicker{color:var(--red);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:10px}.intro h2{font-size:clamp(27px,3vw,38px);max-width:540px;margin-bottom:19px}.intro p{color:#444;font-size:15px;max-width:650px}.mini-features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:28px}.mini-feature{border-top:2px solid var(--red);padding-top:13px}.mini-feature strong{font-size:13px;display:block}.mini-feature span{font-size:12px;color:var(--muted)}
+    .sidebar{border:1px solid var(--line);box-shadow:var(--shadow);padding:29px 26px 25px;border-radius:6px;background:#fff}.price-row{display:flex;justify-content:center;align-items:baseline;gap:7px}.price{font:700 43px 'Playfair Display',Georgia,serif;line-height:1.1}.price-unit{font-size:13px;color:#555}.toggle{display:grid;grid-template-columns:1fr 1fr;border:1px solid #ddd;border-radius:4px;overflow:hidden}.toggle button{border:0;background:#fff;color:#444;font-size:12px;padding:13px 8px;cursor:pointer}.toggle button+button{border-left:1px solid #ddd}.toggle button[aria-pressed="true"]{background:var(--red);color:#fff}.details{padding-top:24px}.detail-line{display:flex;align-items:start;gap:11px;margin-bottom:14px;color:#444;font-size:13px}.detail-line svg{flex:none;margin-top:2px;color:var(--red)}.detail-line strong{color:var(--ink);font-weight:700}.soft-note{font-size:12px;background:var(--cream);border-left:3px solid var(--red);padding:13px 15px;color:#444;margin:10px 0 19px}.registration{display:block;width:100%;border:0;background:var(--ink);padding:15px 10px;border-radius:3px;text-decoration:none;text-align:center;color:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:background .2s}.registration:hover{background:var(--red)}.registration.group-primary{background:var(--red)}.registration.group-primary:hover{background:var(--red-dark)}.group-perks{margin:0 0 17px;padding:14px 16px;border:1px solid #f0c4c4;background:#fff7f7;border-radius:4px}.group-perks h3{font-size:14px;margin:0 0 5px}.group-perks ul{padding-left:18px;margin:0;color:#444;font-size:12px;line-height:1.8}.group-tag{font-size:11px;letter-spacing:.07em;color:var(--red);font-weight:700;text-align:center;margin:0 0 9px}.group-perks[hidden],.group-tag[hidden]{display:none}.side-bottom{margin:13px 0 0;color:#555;text-align:center;font-size:11px}.side-bottom a{color:var(--red)}
+    .benefits{background:var(--cream);margin-top:75px;padding:52px 0}.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}.benefit-num{color:var(--red);font-weight:700;letter-spacing:.1em;font-size:12px}.benefits h3{font-size:20px;margin:8px 0 7px}.benefits p{font-size:13px;color:var(--muted);margin:0}
+    .information{padding:70px 0 90px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:60px}.tabs{border-top:1px solid var(--line)}.tab{width:100%;display:flex;align-items:center;justify-content:space-between;background:white;padding:17px 16px;border:0;border-bottom:1px solid var(--line);text-align:left;cursor:pointer;color:#444;font-size:14px}.tab[aria-selected="true"]{background:var(--red);color:#fff}.tab:not([aria-selected="true"]):hover{color:var(--red)}.panel[hidden]{display:none}.panel h2{font-size:26px;margin-bottom:20px}.panel h3{font-size:18px;margin-top:27px;margin-bottom:12px}.panel h4{font-size:14px;margin:24px 0 9px}.panel p{color:#444;max-width:680px}.checklist{list-style:none;padding:0;margin:0 0 22px}.checklist li{position:relative;padding:5px 0 5px 27px;color:#444}.checklist li::before{content:'✓';position:absolute;top:5px;left:0;color:var(--red);font-weight:700}.learning-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0 30px}.learning-card{background:var(--cream);padding:20px;border:1px solid #e5e5e5;border-radius:4px}.learning-card h3{font-size:18px;margin:0 0 12px}.learning-card ul{padding-left:17px;margin:0;color:#444;font-size:13px}.learning-card li{margin-bottom:6px}.specs{border-top:1px solid var(--line);max-width:520px}.spec{display:grid;grid-template-columns:170px 1fr;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}.spec span:first-child{color:#555}.email-cta{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:11px 20px;font-size:13px;font-weight:700;margin-top:5px}.email-cta:hover{background:var(--red-dark)}.chat{position:fixed;bottom:20px;right:20px;z-index:90;background:var(--red);color:white;text-decoration:none;font:700 18px 'Playfair Display',Georgia,serif;padding:15px 24px}.chat:hover{background:var(--red-dark)}
+    @media(max-width:900px){.wrap{width:min(680px,88%)}.top{grid-template-columns:1fr;gap:28px}.photo img{max-height:430px}.intro{padding-top:25px}.sidebar{max-width:520px;width:100%;margin:auto}.information{grid-template-columns:1fr;gap:25px}.tabs{display:grid;grid-template-columns:repeat(2,1fr)}.tab{border-right:1px solid var(--line)}.benefits-grid{gap:20px}}@media(max-width:600px){.header-inner{min-height:60px;flex-wrap:wrap;justify-content:center;padding:10px 0;gap:6px}.nav{gap:15px;flex-wrap:wrap;justify-content:center}.nav a,.nav button{font-size:12px}.hero-inner{padding:20px 0 35px}.hero .crumbs{margin-bottom:17px}.photo img{min-height:240px}.top{padding-top:29px}.intro{padding-top:10px}.mini-features{gap:9px}.mini-feature strong{font-size:12px}.mini-feature span{font-size:11px}.benefits{margin-top:45px}.benefits-grid{grid-template-columns:1fr;gap:26px}.information{padding:48px 0 75px}.learning-grid{grid-template-columns:1fr}.tabs{grid-template-columns:1fr 1fr}.tab{padding:13px 9px;font-size:12px}.sidebar{padding:25px 20px}.chat{right:12px;bottom:12px;padding:11px 15px;font-size:15px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+    .level-explainer{padding:64px 0 70px;background:var(--cream)}.level-intro{max-width:760px;margin:0 auto 26px;text-align:center}.level-explainer h2{font-size:clamp(27px,3.2vw,36px);margin:0 0 16px}.level-explainer .lead{color:#444;font-size:15px;line-height:1.75}.levels-layout{display:block}.level-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.level-card{border:2px solid var(--red);padding:22px 25px;background:#fff}.level-card.b2{background:#fff}.level-card .level-name{font:700 22px 'Playfair Display',Georgia,serif;margin:0 0 7px}.level-card .level-plain{color:#333;font-weight:600;font-size:14px;margin:0 0 9px}.level-card ul{margin:0;padding-left:19px;color:#444;font-size:13px;line-height:1.8}.level-takeaway{border-top:1px solid var(--line);padding-top:18px;margin-top:24px;font-size:14px;color:#444}.level-takeaway strong{color:var(--red)}
+    @media(max-width:900px){.level-explainer{padding:55px 0}.level-intro{margin-bottom:20px}}
+@media(max-width:700px){.level-cards{grid-template-columns:1fr}}
+  
+.skip{position:absolute;top:-80px;left:12px;background:#fff;padding:10px 16px;z-index:200}.skip:focus{top:8px}
+.benefits-grid>div{text-align:center}
+.price-row{margin-bottom:22px}
+.examples-note{font-size:13px;font-style:italic;color:var(--muted)}
+.final-cta{padding:58px 4%;background:var(--red);color:#fff;text-align:center}
+.final-cta h2{max-width:760px;margin:0 auto 12px;font-size:30px;line-height:1.25}
+.final-cta p{max-width:650px;margin:0 auto 22px;color:rgba(255,255,255,.92);font-size:15px;line-height:1.7}
+.final-cta-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 24px;background:#222;color:#fff;font-size:14px;font-weight:700;text-decoration:none;transition:background-color .25s ease,color .25s ease}
+.final-cta-btn:hover,.final-cta-btn:focus-visible{background:#fff;color:var(--red)}
+.final-cta-btn:focus-visible{outline-color:#fff}
+.site-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding:34px 4% 70px;background:#f2f2f2;color:#444;font-size:12px;border-top:1px solid var(--line)}
+.footer-left{display:flex;align-items:center;flex-wrap:wrap;gap:20px}
+.site-footer a{color:#444;text-decoration:underline}
+.site-footer a:hover{color:var(--red)}
+.footer-social{display:flex;gap:16px}
+.footer-social a{font-size:16px;text-decoration:none}
+@media(max-width:600px){.site-footer{flex-direction:column;align-items:flex-start}}
+@media(max-width:560px){.final-cta h2{font-size:27px}}
+
+.level-takeaway{text-align:center}
+.final-cta .eyebrow{color:#ffe1df;margin:0 auto 12px}
+
+.final-cta .eyebrow{font-size:10px;letter-spacing:.12em}
+.red-note{border:2px solid var(--red);padding:16px 20px;background:#fff;margin:22px 0 0;max-width:680px;font-size:14px;line-height:1.7;color:var(--muted)}
+
+.help-note{border:2px solid var(--red);padding:12px 14px;margin:14px 0 0;background:#fff;color:var(--muted);font-size:13px;line-height:1.6;text-align:center}
+.help-note strong{color:var(--ink);font-weight:700}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header"><div class="wrap header-inner"><a class="brand" href="../../index.html" aria-label="The French Up homepage">The French Up</a><nav class="nav" aria-label="Main navigation"><a href="../../index.html">Home</a><div class="nav-drop" id="courses-drop"><button type="button" id="courses-toggle" aria-controls="courses-menu" aria-haspopup="true" aria-expanded="false">Courses <span aria-hidden="true">⌄</span></button><div class="drop-menu" id="courses-menu"><a href="../general-french.html">General French</a><a href="../exam-success.html">Exam Success</a><a href="../exam-success/tcf-tef-success-program.html">TCF &amp; TEF Canada</a><a href="../ib-french-advantage-program.html">IB French Advantage Program</a><a href="../french-skills-lab.html">French Skills Lab</a></div></div><a href="../../index.html#wbt-heading">About Us</a><a href="#">More</a></nav></div></header>
+<main id="main">
+<section class="hero"><div class="wrap hero-inner"><div class="crumbs"><a href="../../index.html">Home</a><span>/</span>Courses
+<span>/</span>
+<a href="../general-french.html">General French</a><span>/</span>French Intermediate</div><div class="eyebrow">02 / General French</div><h1>French Intermediate <span style="white-space:nowrap">(B1–B2)</span></h1><p class="hero-sub">Build fluency, communicate with greater independence, and express yourself across real-life situations.</p><div class="hero-pills"><span>Intermediate level</span><span>Live online</span><span>Small groups</span></div></div></section>
+<section class="top wrap" id="enroll" aria-label="Program overview and registration"><div><div class="photo"><img src="../../images/Intermediate-B1-B2.jpg" alt="Students learning French together" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#fae8e1,#f5c5b7)'"></div><div class="intro"><div class="section-kicker">About the program</div><h2>Go beyond the basics.<br>Express more, express better.</h2><p>French Intermediate helps learners move beyond basic structures and build confidence in social, academic, and professional communication.</p><p>Through discussions, real-life scenarios and structured language practice, you'll strengthen your speaking, listening, reading and writing in French.</p><div class="mini-features"><div class="mini-feature"><strong>Build on A2</strong><span>Prior French learning recommended</span></div><div class="mini-feature"><strong>Learn together</strong><span>4–8 learners per group</span></div><div class="mini-feature"><strong>Learn anywhere</strong><span>Live online classes</span></div></div></div></div>
+<aside class="sidebar" aria-label="Program pricing and enrollment"><p class="group-tag" id="group-tag">RECOMMENDED · COMPLETE GROUP PATHWAY</p><div class="price-row"><span class="price" id="price">$579</span><span class="price-unit" id="price-unit">/ student</span></div><div class="toggle" role="group" aria-label="Choose course format"><button type="button" id="group-btn" aria-pressed="true">Group Program ★</button><button type="button" id="private-btn" aria-pressed="false">Private Coaching</button></div><div class="details"><div class="detail-line"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span id="hours-line"><strong>8 weeks · 16 sessions</strong> of live instruction, twice a week</span></div><div class="detail-line"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span id="schedule-line"><strong>Upcoming group dates:</strong> contact us for availability</span></div><div class="detail-line"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m8 21 4-3 4 3M8 9h8"/></svg><span id="delivery-line">Virtual, Microsoft Teams, 1.5 hours each</span></div><div class="detail-line" id="size-line"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 6a3 3 0 0 1 0 6M18 15a5 5 0 0 1 3 5"/></svg><span>Small classes of <strong>4–8 students</strong></span></div><p class="soft-note" id="format-note">Group classes begin with a minimum of 4 learners.</p></div><div class="group-perks" id="group-perks"><h3>Included with the group program</h3><ul><li>Guided practice sheets</li><li>Between-class activities</li><li>End-of-course progress review</li><li>Collaborative conversation practice</li></ul></div><a class="registration" id="register" href="https://docs.google.com/forms/d/1L5abSlHXrQlhknWyVNml8PXfkKK8dvltyjexQstuYWc/viewform" target="_blank" rel="noopener noreferrer">Register Now →</a><div class="help-note"><strong>Not sure whether you belong in French Intermediate (B1–B2)?</strong> We can help you choose the stage that matches your current French.</div>
+<p class="side-bottom">Questions? <a href="mailto:contact.frenchup@gmail.com?subject=French%20Intermediate%20Question">Email our team</a></p></aside></section>
+<section class="benefits"><div class="wrap benefits-grid"><div><div class="benefit-num">01 / PRACTICAL</div><h3>French for wider conversations</h3><p>Discuss work, culture, current affairs, and experiences with more nuance.</p></div><div><div class="benefit-num">02 / STRUCTURED</div><h3>Structured language development</h3><p>Build on past and future tenses, conditional forms, and increasingly complex sentences.</p></div><div><div class="benefit-num">03 / PERSONAL</div><h3>Room to participate</h3><p>Small groups give you regular opportunities to discuss, receive feedback, and learn collaboratively.</p></div></div></section>
+<section class="information wrap"><div class="tabs" role="tablist" aria-label="Course information"><button class="tab" id="tab-about" data-tab="about" role="tab" aria-controls="panel-about" aria-selected="true">About This Course <span aria-hidden="true">→</span></button><button class="tab" id="tab-learn" data-tab="learn" role="tab" aria-controls="panel-learn" aria-selected="false">What You'll Learn <span aria-hidden="true">→</span></button><button class="tab" id="tab-who" data-tab="who" role="tab" aria-controls="panel-who" aria-selected="false">Who Should Join <span aria-hidden="true">→</span></button><button class="tab" id="tab-prereq" data-tab="prereq" role="tab" aria-controls="panel-prereq" aria-selected="false">Prerequisites <span aria-hidden="true">→</span></button><button class="tab" id="tab-contact" data-tab="contact" role="tab" aria-controls="panel-contact" aria-selected="false">Contact <span aria-hidden="true">→</span></button></div>
+<div class="panels"><div class="panel" id="panel-about" role="tabpanel" aria-labelledby="tab-about"><div class="section-kicker">Build independent communication</div><h2>About This Course</h2><p>Move beyond basic French and develop the confidence to communicate independently in professional and social situations.</p><p>This structured intermediate course strengthens your language skills through conversation, grammar practice, listening, reading, and writing. You will learn to share experiences, explain ideas, and participate in increasingly detailed discussions.</p><h3>Your learning journey</h3><p>Start with practical B1 tasks—handling everyday situations, describing experiences, and explaining simple opinions—then develop toward B2 tasks, including fuller discussions, more complex texts and confident professional communication.</p><h3>Important note on learning pace</h3><p>Everyone learns at a different pace. Progress may vary depending on your previous experience, current language level, learning style, and the amount of practice you are able to do outside of class.</p><p>Some learners may need additional time, review, or practice to fully develop the skills covered in this course.</p><p>The learning outcomes describe the skills you will work toward during the course, but reaching B1 or B2 may require additional practice and continued use of French in real-life situations.</p></div>
+<div class="panel" id="panel-learn" role="tabpanel" aria-labelledby="tab-learn" hidden><div class="section-kicker">Course curriculum</div><h2>What You'll Learn</h2><p>Strengthen your speaking, grammar, and communication skills for a wider range of situations.</p><div class="learning-grid"><div class="learning-card"><h3>Speaking</h3><ul><li>Tell stories and describe experiences</li><li>Explain plans and give reasons</li><li>Express and support opinions with examples</li><li>Take part in longer discussions</li><li>Build fluency and responsiveness</li></ul></div><div class="learning-card"><h3>Grammar</h3><ul><li>Past and future tenses</li><li>Conditional structures</li><li>Introduction to the subjunctive</li><li>Longer, more complex sentences</li><li>Linking ideas in connected arguments</li></ul></div><div class="learning-card"><h3>Communication</h3><ul><li>Everyday exchanges, travel, shopping and services</li><li>Workplace conversations</li><li>Current events and cultural discussions</li><li>Understanding spoken French and written texts</li><li>Writing connected messages and short texts</li></ul></div></div>
+<p class="examples-note">These topics are illustrative examples, not an exhaustive list.</p>
+<p class="examples-note">Speaking, grammar and communication are integrated with listening, reading, writing and pronunciation throughout the course. Lesson difficulty is adapted to the group's starting level.</p></div>
+<div class="panel" id="panel-who" role="tabpanel" aria-labelledby="tab-who" hidden><div class="section-kicker">For developing French learners</div><h2>Who Should Join</h2><ul class="checklist"><li>Intermediate French learners ready for more challenging material</li><li>Students who understand French but hesitate when speaking</li><li>Learners building skills for higher-level language examinations</li><li>Professionals seeking stronger French communication skills</li></ul><p>This is a general French course, not a dedicated examination preparation program.</p></div>
+<div class="panel" id="panel-prereq" role="tabpanel" aria-labelledby="tab-prereq" hidden><div class="section-kicker">Recommended starting point</div><h2>Prerequisites</h2><p><strong>Prior French study is required.</strong></p><p>This is an Elementary to Developing Intermediate program, generally suited to learners around CEFR A2 and moving toward B1–B2.</p><p>You should consider this course if:</p><ul class="checklist"><li>you’ve completed French Essentials (A1–A2), or have equivalent basic French</li><li>you can hold simple conversations but are not yet ready for intensive exam preparation</li><li>you understand many basic grammar concepts but still struggle to use them consistently in real communication</li><li>you can understand some spoken and written French but lose accuracy when the language becomes faster or more complex</li></ul><div class="red-note">You do not need to identify your own CEFR level perfectly. If you are unsure whether you belong in the French Intermediate (B1–B2) program, contact us and we can help confirm the best starting point.</div></div>
+<div class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" hidden><div class="section-kicker">We're here to help</div><h2>Contact</h2><p>Ask about upcoming group sessions, private coaching availability, or whether this course fits your French level.</p><p><strong>Phone:</strong> <a href="tel:+16139089604">(+1) 613 908 9604</a></p><p><strong>Email:</strong> <a href="mailto:contact.frenchup@gmail.com?subject=French%20Intermediate%20Inquiry">contact.frenchup@gmail.com</a></p><a class="email-cta" href="mailto:contact.frenchup@gmail.com?subject=French%20Intermediate%20Inquiry">Email The French Up →</a></div></div></section>
+<section class="level-explainer" id="what-b1-b2-mean" aria-labelledby="level-title"><div class="wrap">
+<div class="level-intro"><div class="section-kicker">Understanding French levels</div><h2 id="level-title">What do B1 and B2 actually mean?</h2><p class="lead">B1 and B2 are the two <strong>intermediate levels</strong> of the Common European Framework of Reference for Languages (CEFR), a widely used guide to language ability. In simple terms, <strong>B1 means you can manage familiar situations on your own</strong>, while <strong>B2 means you can handle more detailed conversations, ideas and texts with greater ease</strong>.</p></div>
+<div class="levels-layout"><div class="level-cards"><article class="level-card"><h3 class="level-name">B1 · Independent communicator</h3><p class="level-plain">At this level, learners are able to:</p><ul><li>Understand the main ideas in clear conversations and texts about familiar subjects</li><li>Manage common situations while travelling</li><li>Write connected paragraphs about familiar topics</li><li>Describe experiences, plans and goals, and briefly explain your opinions</li></ul></article><article class="level-card b2"><h3 class="level-name">B2 · Confident communicator</h3><p class="level-plain">At this level, learners are able to:</p><ul><li>Interact with fluent French speakers with less strain for both sides</li><li>Express, explain and support opinions clearly</li><li>Understand more complex texts and discussions</li><li>Take an active part in many professional or academic conversations</li></ul></article></div></div>
+<p class="level-takeaway"><strong>Why B2 matters:</strong> Many learners see it as an important milestone on the path toward fluency. This course helps you work toward B1–B2 abilities, but reaching a particular level depends on your starting point and practice outside class.</p>
+</div></section>
+<section class="final-cta">
+<p class="eyebrow">Ready for the next level?</p>
+<h2>Plot twist: you’re ready for more.</h2>
+<p>Richer conversations, bigger ideas and texts that finally click. Your next chapter in French starts here.</p>
+<a class="final-cta-btn" href="https://docs.google.com/forms/d/1L5abSlHXrQlhknWyVNml8PXfkKK8dvltyjexQstuYWc/viewform" target="_blank" rel="noopener noreferrer">Register Now →</a>
+</section>
+</main>
+<footer class="site-footer">
+
+            <div class="footer-left">
+
+                <span>
+                    &copy; 2026 The French Up. All rights reserved.
+                </span>
+
+                <a
+                    href="https://devikasharma300.github.io/the-french-up/cancellation-policy.html"
+                    class="footer-policy-link"
+                >
+                    Cancellation Policy
+                </a>
+
+            </div>
+
+            <div class="footer-social">
+
+                <a
+                    href="#"
+                    aria-label="Visit The French Up on Facebook"
+                >
+                    <i
+                        class="fa-brands fa-facebook-f"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Visit The French Up on Instagram"
+                >
+                    <i
+                        class="fa-brands fa-instagram"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Visit The French Up on YouTube"
+                >
+                    <i
+                        class="fa-brands fa-youtube"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Visit The French Up on LinkedIn"
+                >
+                    <i
+                        class="fa-brands fa-linkedin-in"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+            </div>
+
+        </footer>
+<a class="chat" href="mailto:contact.frenchup@gmail.com?subject=French%20Essentials%20-%20Question" aria-label="Email The French Up">💬 Let's Chat!</a>
+<script>
+(function(){
+ const qs=(id)=>document.getElementById(id);
+ const drop=qs('courses-drop'),toggle=qs('courses-toggle');
+ toggle.addEventListener('click',()=>{const open=drop.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
+ document.addEventListener('click',(e)=>{if(!drop.contains(e.target)){drop.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});
+ document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){drop.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});
+ const tabs=[...document.querySelectorAll('.tab')];function selectTab(id){tabs.forEach(t=>{const selected=t.dataset.tab===id;t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1;qs('panel-'+t.dataset.tab).hidden=!selected;});}tabs.forEach((t,i)=>{t.addEventListener('click',()=>selectTab(t.dataset.tab));t.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowRight'||e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();const next=(i+(e.key==='ArrowDown'||e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;selectTab(tabs[next].dataset.tab);tabs[next].focus();}});});selectTab('about');
+ const pricing={group:{price:'$579',unit:'/ student',delivery:'Virtual, Microsoft Teams, 1.5 hours each',hours:'<strong>8 weeks · 16 sessions</strong> of live instruction, twice a week',schedule:'<strong>Upcoming group dates:</strong> contact us for availability',note:'Group classes begin with a minimum of 4 learners.',cta:'Register Now →',href:'https://docs.google.com/forms/d/1L5abSlHXrQlhknWyVNml8PXfkKK8dvltyjexQstuYWc/viewform',external:true},private:{price:'$650',unit:'/ 10-hour package',delivery:'Virtual, Microsoft Teams, 1 hour each',hours:'<strong>10 sessions</strong> of one-to-one instruction',schedule:'<strong>Flexible scheduling:</strong> arranged individually',note:'Private coaching includes 10 individual 1-hour sessions on Microsoft Teams, with flexible scheduling and one-to-one attention.',cta:'Register Now →',href:'https://docs.google.com/forms/d/1L5abSlHXrQlhknWyVNml8PXfkKK8dvltyjexQstuYWc/viewform',external:true}};
+ function setFormat(format){const d=pricing[format];qs('price').textContent=d.price;qs('price-unit').textContent=d.unit;qs('hours-line').innerHTML=d.hours;qs('delivery-line').textContent=d.delivery;qs('schedule-line').innerHTML=d.schedule;qs('format-note').innerHTML=d.note;qs('size-line').hidden=format==='private';qs('group-perks').hidden=format==='private';qs('group-tag').hidden=format==='private';qs('register').classList.toggle('group-primary',format==='group');qs('register').textContent=d.cta;qs('register').href=d.href;if(d.external){qs('register').target='_blank';qs('register').rel='noopener noreferrer';}else{qs('register').removeAttribute('target');qs('register').removeAttribute('rel');}qs('group-btn').setAttribute('aria-pressed',String(format==='group'));qs('private-btn').setAttribute('aria-pressed',String(format==='private'));}
+ qs('group-btn').addEventListener('click',()=>setFormat('group'));qs('private-btn').addEventListener('click',()=>setFormat('private'));setFormat('group');
+})();
+</script>
+</body>
+</html>
