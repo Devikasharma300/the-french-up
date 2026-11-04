@@ -50,13 +50,10 @@
 .level-card h3{font:700 20px 'Playfair Display',Georgia,serif;margin:0 0 8px}
 .final-cta-btn:focus-visible{outline-color:#fff}
 
-/* desktop: the photo shrinks so the left column ends level with the sidebar */
-@media(min-width:901px){
-.top>div:first-child{display:flex;flex-direction:column;align-self:stretch}
-.top>.sidebar{align-self:start}
-.top>div:first-child .photo{flex:1 1 auto;min-height:200px;height:auto}
-.top>div:first-child .photo img{position:absolute;inset:0;width:100%;height:100%;min-height:0;max-height:none}
-}
+/* mobile fixes */
+@media(max-width:900px){.header{position:relative}}
+@media(max-width:600px){a.chat{width:52px;height:52px;min-height:0;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0;box-shadow:none}a.chat span{font-size:24px;line-height:1}}
+@media(max-width:600px){.eyebrow,.section-kicker,.group-tag,.side-bottom,.mini-feature span,.final-cta .eyebrow,.level-card .level-code{font-size:12px}}
 </style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/></head>
 <body><a class="skip" href="#main">Skip to content</a>
@@ -78,7 +75,7 @@
 </div></section>
 <section class="final-cta"><p class="eyebrow">Ready to elevate your French?</p><h2>Make every word count.</h2><p>Move from confident communication to greater precision, nuance and impact. Your next chapter in French starts here.</p><a class="final-cta-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScCkO2v0sqZXiM2xHBkGkVNuf7m3m9hE6PN01SoGi52A72rtA/viewform?usp=pp_url&amp;entry.839337160=General+French+:+French+Advanced+(C1)&amp;entry.1332690371=Group+program" rel="noopener noreferrer" target="_blank">Register Now →</a></section></main>
 <footer class="site-footer"><div class="footer-left"><span>© 2026 The French Up. All rights reserved.</span><a class="footer-policy-link" href="https://devikasharma300.github.io/the-french-up/cancellation-policy.html">Cancellation Policy</a></div><div class="footer-social"><a aria-label="Visit The French Up on Facebook" href="#"><i aria-hidden="true" class="fa-brands fa-facebook-f"></i></a><a aria-label="Visit The French Up on Instagram" href="#"><i aria-hidden="true" class="fa-brands fa-instagram"></i></a><a aria-label="Visit The French Up on YouTube" href="#"><i aria-hidden="true" class="fa-brands fa-youtube"></i></a><a aria-label="Visit The French Up on LinkedIn" href="#"><i aria-hidden="true" class="fa-brands fa-linkedin-in"></i></a></div></footer>
-<a aria-label="Email The French Up" class="chat" href="mailto:contact.frenchup@gmail.com?subject=French%20Advanced%20-%20Question">💬 Let's Chat!</a>
+<a aria-label="Email The French Up" class="chat" href="mailto:contact.frenchup@gmail.com?subject=French%20Advanced%20-%20Question"><span aria-hidden="true">💬</span> Let's Chat!</a>
 <script>
 (function(){
  const qs=(id)=>document.getElementById(id);
