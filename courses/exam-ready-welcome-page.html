@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Exam Ready at The French Up: dedicated preparation for SLE, TCF and TEF Canada, and DELF and DALF examinations.">
+  <meta name="robots" content="index, follow">
+
+  <title>Exam Ready | SLE, TCF/TEF &amp; DELF/DALF | The French Up</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #ef2020;
+      --dark-red: #cf1b1b;
+      --ink: #222;
+      --muted: #444;
+      --line: #e5e5e5;
+      --soft: #f7f7f7;
+      --pink: #fff3f3;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font: 15px/1.7 'Avenir Next', Avenir, Helvetica, Arial, sans-serif;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--red);
+      outline-offset: 4px;
+    }
+
+    .wrap {
+      width: min(1120px, 90%);
+      margin-inline: auto;
+    }
+
+    .skip {
+      position: absolute;
+      top: -80px;
+      left: 12px;
+      background: white;
+      padding: 10px 16px;
+      z-index: 30;
+    }
+
+    .skip:focus {
+      top: 8px;
+    }
+
+    /* HEADER */
+
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .header-inner {
+      min-height: 62px;
+      padding: 7px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: inline-flex;
+      min-width: 120px;
+      min-height: 42px;
+      padding: 10px 14px;
+      align-items: center;
+      justify-content: center;
+      background: var(--dark-red);
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: .07em;
+      line-height: 1.1;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav a,
+    .nav button {
+      font: inherit;
+      font-size: 13px;
+      text-decoration: none;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      color: var(--ink);
+      padding: 9px 0;
+    }
+
+    .nav a:hover,
+    .nav button:hover {
+      color: var(--red);
+    }
+
+    .nav-drop {
+      position: relative;
+    }
+
+    .drop-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      min-width: 235px;
+      padding: 7px 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 30px #00000016;
+    }
+
+    .drop-menu a {
+      display: block;
+      padding: 10px 16px;
+    }
+
+    .drop-menu a:hover {
+      background: var(--dark-red);
+      color: #fff;
+    }
+
+    .nav-drop:hover .drop-menu,
+    .nav-drop:focus-within .drop-menu,
+    .nav-drop.open .drop-menu {
+      display: block;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: var(--red);
+      color: #fff;
+    }
+
+    .hero-inner {
+      padding: 30px 0 60px;
+    }
+
+    .crumbs {
+      color: #ffe4e4;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    .crumbs a {
+      text-decoration: none;
+    }
+
+    .crumbs span {
+      padding: 0 9px;
+      opacity: .7;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #ffe4e4;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: clamp(39px, 5vw, 58px);
+      letter-spacing: -.025em;
+      margin-bottom: 18px;
+    }
+
+    .hero-lead {
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 670px;
+      color: #fff9f9;
+    }
+
+    /* PROGRAM SELECTION */
+
+    .selection {
+      padding: 95px 0 115px;
+      width: min(1280px, 94%);
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 70px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(31px, 3.7vw, 43px);
+      margin-bottom: 15px;
+    }
+
+    .section-heading > p:last-child {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* THREE COURSE CARDS */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 48px;
+      max-width: 1220px;
+      margin: 0 auto;
+    }
+
+    .course-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 325px;
+      padding: 28px 25px 25px;
+      border: 2px solid var(--red);
+      background: #fff;
+      transition:
+        box-shadow .22s ease,
+        transform .22s ease;
+    }
+
+    .course-card:hover,
+    .course-card:focus-within {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px #00000016;
+    }
+
+    .pill {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 9px 15px;
+      margin-bottom: 19px;
+      background: var(--pink);
+      color: var(--dark-red);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .course-card h3 {
+      font-size: clamp(24px, 2.25vw, 29px);
+      margin-bottom: 14px;
+    }
+
+    .audience {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .description {
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.7;
+      margin-bottom: 23px;
+    }
+
+    /* CENTERED COURSE BUTTONS */
+
+    .course-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      margin-top: auto;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: background .2s ease;
+    }
+
+    /* ENTIRE CARD IS CLICKABLE */
+
+    .course-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    .course-card:hover .course-link {
+      background: var(--red);
+    }
+
+    .course-card:has(.course-link:focus-visible) {
+      outline: 3px solid var(--red);
+      outline-offset: 5px;
+    }
+
+    /* HELP SECTION */
+
+    .help {
+      max-width: 950px;
+      margin: 100px auto 0;
+      padding: 32px 38px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .help h2 {
+      font-size: 23px;
+      margin-bottom: 6px;
+    }
+
+    .help p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .help a {
+      flex: none;
+      text-decoration: none;
+      background: var(--red);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 14px 24px;
+    }
+
+    .help a:hover {
+      background: var(--dark-red);
+    }
+
+    /* FOOTER */
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+      background: #f2f2f2;
+      color: #444;
+      border-top: 1px solid var(--line);
+      padding: 34px 4% 70px;
+      font-size: 12px;
+      align-items: center;
+    }
+
+    .footer a{color:#444}
+    .footer-left{display:flex;align-items:center;flex-wrap:wrap;gap:20px}
+    .footer-social{display:flex;gap:16px}
+    .footer-social a{font-size:16px;text-decoration:none}
+
+    .chat{position:fixed;bottom:20px;right:20px;z-index:90;background:var(--red);color:#fff;text-decoration:none;font:700 18px 'Playfair Display',Georgia,serif;padding:15px 24px}
+    .chat:hover{background:var(--dark-red)}
+
+    @media (max-width: 900px) {
+      .header { position: relative; }
+    }
+
+    .footer a:hover {
+      color: var(--red);
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1000px) {
+      .cards {
+        gap: 24px;
+      }
+
+      .course-card {
+        padding: 25px 21px 23px;
+      }
+
+      .course-card h3 {
+        font-size: 24px;
+      }
+
+      .selection {
+        padding: 70px 0 85px;
+      }
+
+      .section-heading {
+        margin-bottom: 45px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+      .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav {
+        gap: 12px 18px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .nav a,
+      .nav button {
+        font-size: 12px;
+      }
+
+      .hero-inner {
+        padding: 27px 0 45px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero-lead {
+        font-size: 14px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        max-width: 490px;
+      }
+
+      .course-card {
+        min-height: 0;
+        padding: 27px 25px;
+      }
+
+      .help {
+        margin-top: 70px;
+        padding: 27px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section-heading {
+        margin-bottom: 40px;
+      }
+
+      .selection {
+        padding: 65px 0 75px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .chat{right:12px;bottom:12px;padding:11px 15px;font-size:15px}
+      a.chat{width:52px;height:52px;min-height:0;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0}
+      a.chat span{font-size:24px;line-height:1}
+      .eyebrow,.section-label,.pill{font-size:12px}
+      .footer{flex-direction:column;align-items:flex-start}
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+
+  <header class="header">
+    <div class="header-inner">
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="The French Up homepage"
+      >
+        The French Up
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+
+        <a href="../index.html">Home</a>
+
+        <div class="nav-drop" id="courses-drop">
+
+          <button
+            id="courses-toggle"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="courses-menu"
+          >
+            Courses
+            <span aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="drop-menu" id="courses-menu">
+
+            <a href="general-french.html">
+              General French
+            </a>
+
+            <a href="exam-success.html" aria-current="page">
+              Exam Ready
+            </a>
+
+            <a href="exam-success/tcf-tef-success-program.html">
+              TCF &amp; TEF Canada
+            </a>
+
+            <a href="ib-french-advantage-program.html">
+              IB French Advantage Program
+            </a>
+
+            <a href="french-skills-lab-welcome.html">
+              French Skills Lab
+            </a>
+
+          </div>
+
+        </div>
+
+        <a href="../index.html#wbt-heading">
+          About Us
+        </a>
+
+        <a href="mailto:contact.frenchup@gmail.com">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- RED WELCOME BANNER -->
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap hero-inner">
+
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          Courses
+          <span>/</span>
+          Exam Ready
+        </nav>
+
+        <p class="eyebrow">
+          FOCUSED PREPARATION · LIVE ONLINE
+        </p>
+
+        <h1 id="page-title">
+          Exam Ready
+        </h1>
+
+        <p class="hero-lead">
+          From speaking assessments to language proficiency exams,
+          find the preparation that fits your goal.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- PROGRAM SELECTION -->
+
+    <section
+      class="selection wrap"
+      aria-labelledby="selection-title"
+    >
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          CHOOSE YOUR EXAM
+        </p>
+
+        <h2 id="selection-title">
+          The right preparation starts here.
+        </h2>
+
+        <p>
+          Three focused pathways, each designed around a different exam.
+        </p>
+
+      </div>
+
+      <div class="cards">
+
+        <!-- SLE -->
+
+        <article class="course-card">
+
+          <span class="pill">
+            FEDERAL PUBLIC SERVICE
+          </span>
+
+          <h3>
+            SLE Preparation
+          </h3>
+
+          <p class="audience">
+            Government of Canada · Oral Levels B &amp; C
+          </p>
+
+          <p class="description">
+            Practise workplace conversations, build clear responses
+            and prepare for your oral assessment.
+          </p>
+
+          <a
+            class="course-link"
+            href="https://devikasharma300.github.io/the-french-up/courses/exam-success/sle-welcome-page.html"
+            aria-label="Explore SLE oral preparation for Levels B and C"
+          >
+            Explore this course
+          </a>
+
+        </article>
+
+        <!-- TCF / TEF CANADA -->
+
+        <article class="course-card">
+
+          <span class="pill">
+            CANADIAN LANGUAGE TESTS
+          </span>
+
+          <h3>
+            TCF / TEF Canada
+          </h3>
+
+          <p class="audience">
+            Language development &amp; exam preparation
+          </p>
+
+          <p class="description">
+            Build the skills you need, then practise exam tasks,
+            strategies and timing at your stage.
+          </p>
+
+          <a
+            class="course-link"
+            href="https://devikasharma300.github.io/the-french-up/courses/exam-success/tcf-tef-success-program-welcome-page.html"
+            aria-label="Explore TCF Canada and TEF Canada Success Program"
+          >
+            Explore this course
+          </a>
+
+        </article>
+
+        <!-- DELF / DALF -->
+
+        <article class="course-card">
+
+          <span class="pill">
+            FRENCH LANGUAGE DIPLOMAS
+          </span>
+
+          <h3>
+            DELF / DALF
+          </h3>
+
+          <p class="audience">
+            Diploma preparation · A1–C1
+          </p>
+
+          <p class="description">
+            Get level-specific practice across listening,
+            reading, writing and speaking, with feedback.
+          </p>
+
+          <a
+            class="course-link"
+            href="https://devikasharma300.github.io/the-french-up/courses/exam-success/delf-dalf.html"
+            aria-label="Explore DELF and DALF diploma preparation A1 to C1"
+          >
+            Explore this course
+          </a>
+
+        </article>
+
+      </div>
+
+      <!-- HELP SECTION -->
+
+      <aside class="help" aria-labelledby="help-title">
+
+        <div>
+
+          <h2 id="help-title">
+            Not sure where to begin with your preparation?
+          </h2>
+
+          <p>
+            Tell us which exam you're preparing for and your current French level.
+            We’ll help you explore a suitable preparation program.
+          </p>
+
+        </div>
+
+        <a href="mailto:contact.frenchup@gmail.com?subject=Exam%20Preparation%20Guidance">
+          Ask our team &rarr;
+        </a>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div class="footer-left">
+      <span>&copy; 2026 The French Up. All rights reserved.</span>
+      <a href="https://devikasharma300.github.io/the-french-up/cancellation-policy.html">Cancellation Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <a aria-label="Visit The French Up on Facebook" href="#"><i aria-hidden="true" class="fa-brands fa-facebook-f"></i></a>
+      <a aria-label="Visit The French Up on Instagram" href="#"><i aria-hidden="true" class="fa-brands fa-instagram"></i></a>
+      <a aria-label="Visit The French Up on YouTube" href="#"><i aria-hidden="true" class="fa-brands fa-youtube"></i></a>
+      <a aria-label="Visit The French Up on LinkedIn" href="#"><i aria-hidden="true" class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+
+  </footer>
+
+  <a class="chat" aria-label="Email The French Up" href="mailto:contact.frenchup@gmail.com?subject=Exam%20Ready%20-%20Question"><span aria-hidden="true">💬</span> Let's Chat!</a>
+
+  <!-- DROPDOWN SCRIPT -->
+
+  <script>
+    const wrapper = document.getElementById('courses-drop');
+    const toggle = document.getElementById('courses-toggle');
+
+    function closeMenu() {
+      wrapper.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    toggle.addEventListener('click', () => {
+      const open = wrapper.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    document.addEventListener('click', event => {
+      if (!wrapper.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+  </script>
+
+</body>
+</html>
